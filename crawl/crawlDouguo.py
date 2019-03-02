@@ -40,7 +40,7 @@ headers = {
 }
 
 base_url = "https://www.douguo.com"
-base_path = "/root/lsy/graduateDesign/data/"
+base_path = "/root/lsy/dishRetrieval/crawl/data/"
 rank = 0
 
 def check_usable(proxy):
@@ -60,14 +60,19 @@ def check_usable(proxy):
 
 def get(url):
     time.sleep(random.randint(2, 5))
-    r = requests.get(url, headers=headers, proxies=proxy, verify=False, allow_redirects=False)
-    if r.status_code == 200:
-        return r.content
-    else:
-        print("can't get url response")
+    try:
+    	r = requests.get(url, headers=headers, proxies=proxy, verify=False, allow_redirects=False)
+    	if r.status_code == 200:
+		print "get url --- " + url
+        	return r.content
+    	else:
+        	print "get url wrong --- " + url + str(r.status_code)
+    except:
+	print "can't get url --- " + url
 
 
 def get_img(url, name):
+    time.sleep(2)
     global rank
     path = '%s%s' % (base_path, name)
     if not os.path.exists(path):
@@ -95,7 +100,6 @@ def main():
         while retryNum > 0:
             r = get(url)
             if r:
-                print('get url -- ' + url)
                 break
             retryNum -= 1
         if retryNum != 0:
@@ -110,9 +114,6 @@ def main():
                     get_img(url, name)
             else:
                 print('parse error -- ' + url)
-        else:
-            print("can't get url -- " + url)
-        break
 
 
 
