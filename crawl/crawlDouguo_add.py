@@ -7,41 +7,13 @@ import hashlib
 from lxml import etree
 
 
-_version = sys.version_info
-
-is_python3 = (_version[0] == 3)
-
-orderno = "ZF2019315858bCzeHR"
-secret = "101436c38a554304a9047d92638a0cc5"
-
-ip = "forward.xdaili.cn"
-port = "80"
-
-ip_port = ip + ":" + port
-
-timestamp = str(int(time.time()))
-string = ""
-string = "orderno=" + orderno + "," + "secret=" + secret + "," + "timestamp=" + timestamp
-
-if is_python3:
-    string = string.encode()
-
-md5_string = hashlib.md5(string).hexdigest()
-sign = md5_string.upper()
-print(sign)
-auth = "sign=" + sign + "&" + "orderno=" + orderno + "&" + "timestamp=" + timestamp
-
-print(auth)
-proxy = {"http": "http://" + ip_port, "https": "https://" + ip_port}
-#headers = {"Proxy-Authorization": auth}
 headers = {
-	'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0 Safari/605.1.15',
-    "Proxy-Authorization": auth
+	'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0 Safari/605.1.15'
 }
 
 base_url = "https://www.douguo.com"
-base_path = "/root/lsy/dishRetrieval/crawl/data/"
-rank = 0
+base_path = "data/"
+rank = 3645
 
 def check_usable(proxy):
     try:
@@ -59,16 +31,16 @@ def check_usable(proxy):
 
 
 def get(url):
-    time.sleep(random.randint(2, 5))
+    time.sleep(random.randint(30, 60))
     try:
-    	r = requests.get(url, headers=headers, proxies=proxy, verify=False, allow_redirects=False)
-    	if r.status_code == 200:
-		print("get url --- " + url)
-        	return r.content
-    	else:
-        	print("get url wrong --- " + url + str(r.status_code))
+        r = requests.get(url, headers=headers)
+        if r.status_code == 200:
+            print("get url --- " + url)
+            return r.content
+        else:
+            print("get url wrong --- " + url + str(r.status_code))
     except:
-	print("can't get url --- " + url)
+        print("can't get url --- " + url)
 
 
 def get_img(url, name):
@@ -86,13 +58,15 @@ def get_img(url, name):
 
 
 def main():
-    dish_list = []
+    dish_list = ['酱牛肉', '西红柿牛腩', '土豆炖牛腩', '杭椒牛柳', '梅菜扣肉', '回锅肉', '猪肉炖粉条', '水煮肉片', '糖醋里脊']
+    '''
     f = open('dishname.txt', 'r')
     line = f.readline()
     while line:
         line = line.strip().strip('\n')
         dish_list.append(line)
         line = f.readline()
+    '''
     for name in dish_list:
         url = "%s/search/recipe/%s" % (base_url, name)
         retryNum = 3
@@ -103,7 +77,7 @@ def main():
                 break
             retryNum -= 1
         if retryNum != 0:
-	    r = r.decode('utf-8')
+            r = r.decode('utf-8')
             html_obj = etree.HTML(r)
             img_url_list = html_obj.xpath('//a[@class="cook-img"]/@style')
             if img_url_list:
@@ -114,6 +88,7 @@ def main():
                     get_img(url, name)
             else:
                 print('parse error -- ' + url)
+        break
 
 
 

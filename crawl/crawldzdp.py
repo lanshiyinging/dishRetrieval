@@ -3,9 +3,7 @@ import requests
 import random
 import os
 from lxml import etree
-import sys
-reload(sys)
-sys.setdefaultencoding('utf-8')
+
 
 base_url = "http://www.dianping.com"
 base_path = "/root/lsy/graduateDesign/"
@@ -64,7 +62,7 @@ def check_usable(proxy):
         except:
             return None
     except Exception as e:
-        print e
+        print(e)
 
 
 def get(url):
@@ -89,7 +87,7 @@ def get(url):
 	     f.write(url + '\t' + r.content + '\n')
         return r.content
     else:
-        print "can't get url response"
+        print("can't get url response")
 
 
 def get_img(url, d_name, name):
@@ -111,7 +109,7 @@ def parse_dish(url, d_name, name):
     while retryNum > 0:
         r = get(url)
         if r:
-            print 'get url -- ' + url
+            print('get url -- ' + url)
             break
         retryNum -= 1
     if retryNum != 0:
@@ -125,9 +123,9 @@ def parse_dish(url, d_name, name):
 		    src = src.replace("https", "http")
                 get_img(src, d_name, name)
         else:
-            print 'parse error -- ' + url
+            print('parse error -- ' + url)
     else:
-        print "can't get url -- " + url
+        print("can't get url -- " + url)
 
 def parse_shop(url, name):
     url = url+'/photos'
@@ -136,7 +134,7 @@ def parse_shop(url, name):
     while retryNum > 0:
         r = get(url)
         if r:
-            print 'get url -- ' + url
+            print('get url -- ' + url)
             break
         retryNum -= 1
     if retryNum != 0:
@@ -146,7 +144,7 @@ def parse_shop(url, name):
         html_obj = etree.HTML(r)
         dish_url_list = html_obj.xpath('//div[@id="photoNav"]/ul/li[3]/dl/dd/a/@href')
         dish_name_list = html_obj.xpath('//div[@id="photoNav"]/ul/li[3]/dl/dd/a/@title')
-	print '%d %d' % (len(dish_url_list), len(dish_name_list))
+	print('%d %d' % (len(dish_url_list), len(dish_name_list)))
         if len(dish_url_list) == len(dish_name_list):
             for d_url, d_name in zip(dish_url_list, dish_name_list):
                 d_url = d_url.strip().strip('\n').strip('\r\n')
@@ -155,9 +153,9 @@ def parse_shop(url, name):
                 d_name = d_name.strip().strip('\n').strip('\r\n')
                 parse_dish(d_url, d_name, name)
         else:
-            print 'parse error -- ' + url
+            print('parse error -- ' + url)
     else:
-        print "can't get url -- " + url
+        print("can't get url -- " + url)
 
 def parse_branch(ori_url, name):
     for p in range(1, 2):
@@ -167,7 +165,7 @@ def parse_branch(ori_url, name):
         while retryNum > 0:
             r = get(url)
             if r:
-                print 'get url -- ' + url
+                print('get url -- ' + url)
                 break
             retryNum -= 1
         if retryNum != 0:
@@ -181,9 +179,9 @@ def parse_branch(ori_url, name):
 			s_url = s_url.replace('https', 'http')
 		    parse_shop(s_url, name)
             else:
-                print 'parse error -- ' + url
+                print('parse error -- ' + url)
         else:
-            print "can't get url -- " + url
+            print("can't get url -- " + url)
 
 
 def main():
@@ -193,7 +191,7 @@ def main():
     while retryNum > 0:
         r = get(ori_url)
         if r:
-            print 'get url -- '+ori_url
+            print('get url -- '+ori_url)
             break
         retryNum -= 1
     if retryNum != 0:
@@ -209,9 +207,9 @@ def main():
                 name = name.strip().strip('\n').strip('\r\n')
                 parse_branch(url, name)
         else:
-            print 'parse error -- ' + ori_url
+            print('parse error -- ' + ori_url)
     else:
-        print "can't get url -- " + ori_url
+        print("can't get url -- " + ori_url)
 
 if __name__ == '__main__':
     main()
