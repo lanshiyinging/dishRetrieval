@@ -4,10 +4,10 @@ import shutil
 
 
 map_file = 'dishname2.txt'
-data_dir = 'data/'
-train_data_dir = 'train_data/'
-val_data_dir = 'val_data/'
-test_data_dir = 'test_data/'
+data_dir = '../data/all_data/'
+train_data_dir = '../data/train_data/'
+val_data_dir = '../data/val_data/'
+test_data_dir = '../data/test_data/'
 os.mkdir(test_data_dir)
 rank1 = 0
 rank2 = 0
@@ -42,7 +42,7 @@ while line:
         to_path = "%sTest_%04d.jpg" % (test_data_dir, rank3)
         shutil.copyfile(old_path + tfile, to_path)
 
-        with open('val_list.txt', 'a') as vf:
+        with open('../data/val_list.txt', 'a') as vf:
             vf.write("Validate_%04d.jpg\t%s\n" %(rank2, dish_no))
         rank2 += 1
         rank3 += 1
@@ -50,7 +50,7 @@ while line:
     for file in file_list:
         to_path = "%s%s/Train_%04d.jpg" % (train_data_dir, dish_no, rank1)
         shutil.copyfile(old_path + file, to_path)
-        with open('train_list.txt', 'a') as tf:
+        with open('../data/train_list.txt', 'a') as tf:
             tf.write("Train_%04d\t%s\n" % (rank1, dish_no))
         rank1 += 1
     line = f.readline()
