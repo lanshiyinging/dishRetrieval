@@ -34,17 +34,23 @@ while line:
     for i, j in zip(range(val_num), range(test_num)):
         vfile = random.choice(file_list)
         file_list.remove(vfile)
-        shutil.copyfile(old_path+vfile, val_data_dir + dish_no + '/' + str(rank2) + '.jpg')
+        to_path = "%s%s/Validate_%04d.jpg" % (val_data_dir, dish_no, rank2)
+        shutil.copyfile(old_path+vfile, to_path)
+
         tfile = random.choice(file_list)
         file_list.remove(tfile)
-        shutil.copyfile(old_path + tfile, test_data_dir + str(rank3) + '.jpg')
+        to_path = "%sTest_%04d.jpg" % (test_data_dir, rank3)
+        shutil.copyfile(old_path + tfile, to_path)
+
         with open('val_list.txt', 'a') as vf:
-            vf.write("%d\t%s\n" %(rank2, dish_no))
+            vf.write("Validate_%04d.jpg\t%s\n" %(rank2, dish_no))
         rank2 += 1
         rank3 += 1
+
     for file in file_list:
-        shutil.copyfile(old_path + file, train_data_dir + dish_no + '/' + str(rank1) + '.jpg')
+        to_path = "%s%s/Train_%04d.jpg" % (train_data_dir, dish_no, rank1)
+        shutil.copyfile(old_path + file, to_path)
         with open('train_list.txt', 'a') as tf:
-            tf.write("%d\t%s\n" %(rank1, dish_no))
+            tf.write("Train_%04d\t%s\n" % (rank1, dish_no))
         rank1 += 1
     line = f.readline()
