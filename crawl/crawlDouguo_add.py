@@ -12,8 +12,8 @@ headers = {
 }
 
 base_url = "https://www.douguo.com"
-base_path = "data/"
-rank = 3645
+base_path = "/root/lsy/dishRetrieval/crawl/data/"
+rank = 3665
 
 def check_usable(proxy):
     try:
@@ -58,15 +58,13 @@ def get_img(url, name):
 
 
 def main():
-    dish_list = ['酱牛肉', '西红柿牛腩', '土豆炖牛腩', '杭椒牛柳', '梅菜扣肉', '回锅肉', '猪肉炖粉条', '水煮肉片', '糖醋里脊']
-    '''
-    f = open('dishname.txt', 'r')
+    dish_list = []
+    f = open('addlist.txt', 'r')
     line = f.readline()
     while line:
         line = line.strip().strip('\n')
         dish_list.append(line)
         line = f.readline()
-    '''
     for name in dish_list:
         url = "%s/search/recipe/%s" % (base_url, name)
         retryNum = 3
@@ -88,7 +86,7 @@ def main():
                     get_img(url, name)
             else:
                 print('parse error -- ' + url)
-        break
+        time.sleep(1800)
 
 
 
