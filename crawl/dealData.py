@@ -8,7 +8,7 @@ data_dir = '../data/all_data/'
 train_data_dir = '../data/train_data/'
 val_data_dir = '../data/val_data/'
 test_data_dir = '../data/test_data/'
-os.mkdir(test_data_dir)
+os.makedirs(test_data_dir)
 rank1 = 0
 rank2 = 0
 rank3 = 0
