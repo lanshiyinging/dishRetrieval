@@ -124,27 +124,19 @@ def dsh_dish_net(inputs):
 def loss_function(y_conv, label_batches):
     num = batch_size
     shape = y_conv.get_shape().as_list()
-    #if len(shape) == 2 and shape[0] > shape[1]:
-       # num = shape[0]
-    #else:
-        #print("loss shape error")
+    print(shape)
     Lr = 0
     y_conv = tf.transpose(y_conv)
-    #y_conv = y_conv.transpose()
     for i in range(num):
         b1 = y_conv[:, i]
         for j in range(i+1, num):
             b2 = y_conv[:, j]
             l2_dis = tf.sqrt(tf.reduce_sum(tf.square(b1-b2)))
-            norm = alpha * (tf.subtract(tf.abs(b1), 1.0) + tf.subtract(tf.abs(b2), 1.0)
-           
-            #if tf.equal(label_batches[i], label_batches[j]):
-              # Lr = Lr + l2_dis/2.0 + norm
-            #else:
-              # Lr = Lr + tf.maximum(tf.subtract(m, l2_dis), 0)/2.0 + norm
-            Lr = Lr + tf.where(tf.equal(label_batches[i],label_batches[j]), l2_dis/2.0, tf.maximum(tf.subtract(m, l2_dis), 0)/2.0) + norm
+            norm = alpha * (tf.subtract(tf.abs(b1), 1.0)) + tf.subtract(tf.abs(b2), 1.0)
+            Lr = Lr + tf.where(tf.equal(label_batches[i], label_batches[j]), l2_dis/2.0, tf.maximum(tf.subtract(m, l2_dis), 0)/2.0) + norm
     cost = tf.reduce_mean(Lr)
     return cost
+
 
 def main():
     train_data_dir = "../data/train_data/"
