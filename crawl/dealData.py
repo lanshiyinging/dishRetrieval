@@ -6,11 +6,11 @@ import shutil
 map_file = 'dishname2.txt'
 data_dir = '../data/all_data/'
 train_data_dir = '../data/train_data/'
-val_data_dir = '../data/val_data/'
+#val_data_dir = '../data/val_data/'
 test_data_dir = '../data/test_data/'
 os.makedirs(test_data_dir)
 rank1 = 0
-rank2 = 0
+#rank2 = 0
 rank3 = 0
 f = open(map_file, 'r')
 line = f.readline()
@@ -26,25 +26,28 @@ while line:
         continue
     #os.rename(old_path, new_path)
     os.makedirs(train_data_dir + dish_no + '/')
-    os.makedirs(val_data_dir + dish_no + '/')
+    #os.makedirs(val_data_dir + dish_no + '/')
     file_list = os.listdir(old_path)
     total_num = len(file_list)
     val_num = int(total_num * 0.2)
     test_num = val_num
-    for i, j in zip(range(val_num), range(test_num)):
-        vfile = random.choice(file_list)
-        file_list.remove(vfile)
-        to_path = "%s%s/Validate_%04d.jpg" % (val_data_dir, dish_no, rank2)
-        shutil.copyfile(old_path+vfile, to_path)
-
+    #for i, j in zip(range(val_num), range(test_num)):
+    for i in range(test_num):
+	
+        #vfile = random.choice(file_list)
+        #file_list.remove(vfile)
+        #to_path = "%s%s/Validate_%04d.jpg" % (val_data_dir, dish_no, rank2)
+        #shutil.copyfile(old_path+vfile, to_path)
+       
         tfile = random.choice(file_list)
         file_list.remove(tfile)
         to_path = "%sTest_%04d.jpg" % (test_data_dir, rank3)
         shutil.copyfile(old_path + tfile, to_path)
+	
+        #with open('../data/val_list.txt', 'a') as vf:
+           # vf.write("Validate_%04d.jpg\t%s\n" %(rank2, dish_no))
+        #rank2 += 1
 
-        with open('../data/val_list.txt', 'a') as vf:
-            vf.write("Validate_%04d.jpg\t%s\n" %(rank2, dish_no))
-        rank2 += 1
         rank3 += 1
 
     for file in file_list:
