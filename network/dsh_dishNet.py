@@ -3,6 +3,12 @@ import numpy as np
 import os
 import time
 
+config = tf.ConfigProto(log_device_placement=True,
+                        inter_op_parallelism_threads=4,
+                        intra_op_parallelism_threads=4,
+                        allow_soft_placement=True)
+
+
 k = 12
 batch_size = 100
 momentum = 0.9
@@ -13,7 +19,7 @@ alpha = 0.01
 
 
 x = tf.placeholder(tf.float32, shape=[None, 32, 32, 3])
-y = tf.placeholder(tf.float32, shape=[None, k])
+y = tf.placeholder(tf.float32, shape=[batch_size])
 #keep_prob = tf.placeholder(tf.float32)
 
 
@@ -126,15 +132,18 @@ def loss_function(y_conv, label_batches):
     num = batch_size
     shape = y_conv.get_shape().as_list()
     print(shape)
-    Lr = tf.Variable(0, tf.float32)
+    Lr = 0
+    Lr = tf.cast(Lr, tf.float32)
     y_conv = tf.cast(y_conv, tf.float32)
     y_conv = tf.transpose(y_conv)
+    shape = label_batches.get_shape().as_list()
+    print(shape)
     for i in range(num):
         b1 = y_conv[:, i]
         for j in range(i+1, num):
             b2 = y_conv[:, j]
             l2_dis = tf.sqrt(tf.reduce_sum(tf.square(b1-b2)))
-            norm = alpha * (tf.subtract(tf.abs(b1), 1.0)) + tf.subtract(tf.abs(b2), 1.0)
+            norm = alpha * (tf.subtract(tf.abs(b1), 1.0) + tf.subtract(tf.abs(b2), 1.0))
             m = tf.cast(m, tf.float32)
             Lr = Lr + tf.where(tf.equal(label_batches[i], label_batches[j]), l2_dis/2.0, tf.maximum(tf.subtract(m, l2_dis), 0)/2.0) + norm
     cost = tf.reduce_mean(Lr)
@@ -153,7 +162,7 @@ def main():
     global_step = tf.Variable(0, trainable=False)
     learning_rate = tf.train.exponential_decay(learning_rate=base_lr, global_step=global_step, decay_steps=10, decay_rate=0.4, staircase=True)
     train_step = tf.train.GradientDescentOptimizer(learning_rate).minimize(loss)
-    with tf.Session() as sess:
+    with tf.Session(config=config) as sess:
         writer = tf.summary.FileWriter("logs/", sess.graph)
         merged = tf.summary.merge_all()
         saver = tf.train.Saver()
