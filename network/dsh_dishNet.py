@@ -70,11 +70,11 @@ def conv_layer(inputs, W, conv_strides, padding):
 
 
 def max_pool_layer(inputs, kernal_size, pool_strides):
-    return tf.nn.max_pool(inputs, ksize=kernal_size, strides=pool_strides)
+    return tf.nn.max_pool(inputs, ksize=kernal_size, strides=pool_strides, padding='SAME')
 
 
 def average_pool_layer(inputs, kernal_size, pool_strides):
-    return tf.nn.avg_pool(inputs, ksize=kernal_size, strides=pool_strides)
+    return tf.nn.avg_pool(inputs, ksize=kernal_size, strides=pool_strides, padding='SAME')
 
 
 def dsh_dish_net(inputs):
@@ -122,27 +122,32 @@ def dsh_dish_net(inputs):
 
 
 def loss_function(y_conv, label_batches):
-    num = 0
+    num = batch_size
     shape = y_conv.get_shape().as_list()
-    if len(shape) == 2 and shape[0] > shape[1]:
-        num = shape[0]
-    else:
-        print("loss shape error")
+    #if len(shape) == 2 and shape[0] > shape[1]:
+       # num = shape[0]
+    #else:
+        #print("loss shape error")
     Lr = 0
-    y_conv = y_conv.transpose()
+    y_conv = tf.transpose(y_conv)
+    #y_conv = y_conv.transpose()
     for i in range(num):
         b1 = y_conv[:, i]
         for j in range(i+1, num):
             b2 = y_conv[:, j]
             l2_dis = tf.sqrt(tf.reduce_sum(tf.square(b1-b2)))
-            norm = alpha * (tf.subtract(tf.abs(b1), 1.0) + tf.subtract(tf.abs(b2), 1.0))
-            Lr += (tf.where(label_batches[i] == label_batches[j], l2_dis/2, max(m-l2_dis, 0)/2) + norm)
-    pair_num = num*(num-1)/2
-    cost = Lr/pair_num
+            norm = alpha * (tf.subtract(tf.abs(b1), 1.0) + tf.subtract(tf.abs(b2), 1.0)
+           
+            #if tf.equal(label_batches[i], label_batches[j]):
+              # Lr = Lr + l2_dis/2.0 + norm
+            #else:
+              # Lr = Lr + tf.maximum(tf.subtract(m, l2_dis), 0)/2.0 + norm
+            Lr = Lr + tf.where(tf.equal(label_batches[i],label_batches[j]), l2_dis/2.0, tf.maximum(tf.subtract(m, l2_dis), 0)/2.0) + norm
+    cost = tf.reduce_mean(Lr)
     return cost
 
 def main():
-    train_data_dir = "data/train_data/"
+    train_data_dir = "../data/train_data/"
     #val_data_dir = "data/val_data/"
     #test_data_dir = "data/test_data/"
     train_image, train_label, train_num = get_files(train_data_dir)
