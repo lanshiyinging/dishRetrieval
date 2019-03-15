@@ -171,7 +171,8 @@ def main():
         start_time = time.time()
         for iter in range(iteration):
             image_batches, label_batches = get_batches(train_image, train_label, 32, 32, 200, train_num)
-            train_step.run(feed_dict={x: image_batches, y: label_batches})
+            img_batches, lab_batches = sess.run([image_batches, label_batches])
+            train_step.run(feed_dict={x: img_batches, y: lab_batches})
             result = sess.run(merged, feed_dict={x: image_batches, y: label_batches})
             writer.add_summary(result, iter)
             loss_record = sess.run(loss, feed_dict={x: image_batches, y: label_batches})
