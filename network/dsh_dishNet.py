@@ -3,10 +3,10 @@ import numpy as np
 import os
 import time
 
-config = tf.ConfigProto(log_device_placement=True,
+config = tf.ConfigProto(device_count={"CPU": 1},
+                        log_device_placement=True,
                         inter_op_parallelism_threads=4,
-                        intra_op_parallelism_threads=4,
-                        allow_soft_placement=True)
+                        intra_op_parallelism_threads=4)
 
 
 k = 12
@@ -184,7 +184,6 @@ def main():
             os.makedirs("./model/")
         saver.save(sess, "./model/")
         print("Optimization Finished!")
-
 
 if __name__ == '__main__':
     main()
