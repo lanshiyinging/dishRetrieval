@@ -2,6 +2,7 @@ import tensorflow as tf
 import numpy as np
 import os
 import time
+from tensorflow.python import debug as tf_debug
 
 config = tf.ConfigProto(log_device_placement=True,
                         inter_op_parallelism_threads=4,
@@ -10,7 +11,7 @@ config = tf.ConfigProto(log_device_placement=True,
 
 
 k = 12
-batch_size = 100
+batch_size = 10
 momentum = 0.9
 weight_decay = 0.004
 base_lr = 0.001
@@ -163,13 +164,15 @@ def main():
     learning_rate = tf.train.exponential_decay(learning_rate=base_lr, global_step=global_step, decay_steps=10, decay_rate=0.4, staircase=True)
     train_step = tf.train.GradientDescentOptimizer(learning_rate).minimize(loss)
     with tf.Session(config=config) as sess:
+        sess = tf_debug.LocalCLIDebugWrapperSession(sess, ui_type="readline")
+        sess.add_tensor_filter("has_inf_or_nan", tf_debug.has_inf_or_nan)
         writer = tf.summary.FileWriter("logs/", sess.graph)
         merged = tf.summary.merge_all()
         saver = tf.train.Saver()
         sess.run(tf.global_variables_initializer())
         iteration = 1 + int(train_num / batch_size)
         start_time = time.time()
-        for iter in range(iteration):
+        for iter in range(1):
             image_batches, label_batches = get_batches(train_image, train_label, 32, 32, batch_size, train_num)
             img_batches, lab_batches = sess.run([image_batches, label_batches])
             train_step.run(feed_dict={x: img_batches, y: lab_batches})

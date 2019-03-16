@@ -24,6 +24,19 @@ def prefix_image(image, resize_w, resize_h):
 
     return image
 
+def get_hashcode(image_path):
+    with tf.Session() as sess:
+        saver = tf.train.import_meta_graph(model_dir + 'model.meta')
+        saver.restore(sess, tf.train.latest_checkpoint(model_dir))
+        y_conv = dsh_dishNet.dsh_dish_net(x)
+        image = prefix_image(image_path, 32, 32)
+        ret = sess.run(y_conv, feed_dict={x: image})
+        ret1 = tf.reshape(ret, [k])
+        ret2 = sess.run(tf.sign(ret1))
+        ret_array = ret2.eval()
+    return ret_array
+
+
 def main():
     with tf.Session() as sess:
         saver = tf.train.import_meta_graph(model_dir+'model.meta')
@@ -39,7 +52,7 @@ def main():
                 ret_array = ret2.eval()
                 ret_string = ','.join(ret_array)
                 with open(output_dir+'train_output', 'a') as f1:
-                    f1.write("%s\t%s\n" % (image_path, ret_string))
+                    f1.write("%s\t%s\t%s\n" % (image_path, label, ret_string))
 
         for pic in os.listdir(test_dir):
             image_path = test_dir + pic
