@@ -51,7 +51,7 @@ def get_batches(image, label, resize_w, resize_h, batch_size, capacity):
     queue = tf.train.slice_input_producer([image, label], num_epochs=epoch_num)
     label = queue[1]
     image_c = tf.read_file(queue[0])
-    image = tf.image.decode_image(image_c, channels=3)
+    image = tf.image.decode_jpeg(image_c, channels=3)
 
     image = tf.image.resize_images(image, [resize_h, resize_w], method=0)
     image = tf.image.per_image_standardization(image)
