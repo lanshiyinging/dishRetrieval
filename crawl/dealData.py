@@ -44,8 +44,8 @@ while line:
         to_path = "%sTest_%04d.jpg" % (test_data_dir, rank3)
         shutil.copyfile(old_path + tfile, to_path)
 	
-        #with open('../data/val_list.txt', 'a') as vf:
-           # vf.write("Validate_%04d.jpg\t%s\n" %(rank2, dish_no))
+        with open('../data/test_list.txt', 'a') as ft:
+            ft.write("Test_%04d.jpg\t%s\n" %(rank3, dish_no))
         #rank2 += 1
 
         rank3 += 1
