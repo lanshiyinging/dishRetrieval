@@ -20,7 +20,9 @@ m = 2 * k
 alpha = 0.01
 
 
-x = tf.placeholder(tf.float32, shape=[None, 32, 32, 3])
+with tf.name_scope("input_image"):
+    x = tf.placeholder(tf.float32, shape=[None, 32, 32, 3])
+    tf.summary.image('input_image', x, 3)
 y = tf.placeholder(tf.float32, shape=[batch_size])
 #keep_prob = tf.placeholder(tf.float32)
 
@@ -63,6 +65,21 @@ def get_batches(image, label, resize_w, resize_h, batch_size, capacity):
     return images_batch, labels_batch
 
 
+def variable_summaries(var):
+    with tf.name_scope('summaries'):
+        mean = tf.reduce_mean(var)
+        tf.summary.scalar('mean', mean)
+
+    with tf.name_scope('stddev'):
+        stddev = tf.sqrt(tf.reduce_mean(tf.square(var - mean)))
+
+    tf.summary.scalar('stddev', stddev)
+    tf.summary.scalar('max', tf.reduce_max(var))
+    tf.summary.scalar('min', tf.reduce_min(var))
+
+    tf.summary.histogram('histogram', var)
+
+
 def weight_variable(name, shape):
     initializer = tf.contrib.layers.xavier_initializer()
     return tf.get_variable(name=name, shape=shape, initializer=initializer)
@@ -88,43 +105,69 @@ def average_pool_layer(inputs, kernal_size, pool_strides):
 def dsh_dish_net(inputs):
     inputs_shape = inputs.get_shape()
     inputs = tf.reshape(inputs, shape=[-1, inputs_shape[1].value, inputs_shape[2].value, inputs_shape[3].value])
+    with tf.name_scope("dsh_dish_net"):
+        with tf.name_scope("layer1"):
+            with tf.name_scope("weights"):
+                W_conv1 = weight_variable("W_conv1", [5, 5, 3, 32])
+                variable_summaries(W_conv1)
+            with tf.name_scope("biases"):
+                b_conv1 = bias_variable("b_conv1", [32])
+                variable_summaries(b_conv1)
+            conv_strides = [1, 1, 1, 1]
+            kernal_size = [1, 3, 3, 1]
+            pool_strides = [1, 2, 2, 1]
+            conv1 = conv_layer(inputs, W_conv1, conv_strides, 'SAME')
+            pool1 = max_pool_layer(conv1 + b_conv1, kernal_size, pool_strides)
+            relu1 = tf.nn.relu(pool1)
+            norm1 = tf.nn.lrn(relu1, 3, bias=1.0, alpha=5e-05, beta=0.75, name='norm1')
 
-    W_conv1 = weight_variable("W_conv1", [5, 5, 3, 32])
-    b_conv1 = bias_variable("b_conv1", [32])
-    conv_strides = [1, 1, 1, 1]
-    kernal_size = [1, 3, 3, 1]
-    pool_strides = [1, 2, 2, 1]
-    conv1 = conv_layer(inputs, W_conv1, conv_strides, 'SAME')
-    pool1 = max_pool_layer(conv1+b_conv1, kernal_size, pool_strides)
-    relu1 = tf.nn.relu(pool1)
-    norm1 = tf.nn.lrn(relu1, 3, bias=1.0, alpha=5e-05, beta=0.75, name='norm1')
+        with tf.name_scope("layer2"):
+            with tf.name_scope("weights"):
+                W_conv2 = weight_variable("W_conv2", [5, 5, 32, 32])
+                variable_summaries(W_conv2)
+            with tf.name_scope("biases"):
+                b_conv2 = bias_variable("b_conv2", [32])
+                variable_summaries(b_conv2)
+            conv2 = conv_layer(norm1, W_conv2, conv_strides, 'SAME')
+            pool2 = average_pool_layer(conv2 + b_conv2, kernal_size, pool_strides)
+            relu2 = tf.nn.relu(pool2)
+            norm2 = tf.nn.lrn(relu2, 3, bias=1.0, alpha=5e-05, beta=0.75, name='norm2')
 
-    W_conv2 = weight_variable("W_conv2", [5, 5, 32, 32])
-    b_conv2 = bias_variable("b_conv2", [32])
-    conv2 = conv_layer(norm1, W_conv2, conv_strides, 'SAME')
-    pool2 = average_pool_layer(conv2+b_conv2, kernal_size, pool_strides)
-    relu2 = tf.nn.relu(pool2)
-    norm2 = tf.nn.lrn(relu2, 3, bias=1.0, alpha=5e-05, beta=0.75, name='norm2')
+        with tf.name_scope("layer3"):
+            with tf.name_scope("weights"):
+                W_conv3 = weight_variable("W_conv3", [5, 5, 32, 64])
+                variable_summaries(W_conv3)
+            with tf.name_scope("biases"):
+                b_conv3 = bias_variable("b_conv3", [64])
+                variable_summaries(b_conv3)
+            conv3 = conv_layer(norm2, W_conv3, conv_strides, 'SAME')
+            relu3 = tf.nn.relu(conv3 + b_conv3)
+            pool3 = average_pool_layer(relu3, kernal_size, pool_strides)
 
-    W_conv3 = weight_variable("W_conv3", [5, 5, 32, 64])
-    b_conv3 = bias_variable("b_conv3", [64])
-    conv3 = conv_layer(norm2, W_conv3, conv_strides, 'SAME')
-    relu3 = tf.nn.relu(conv3+b_conv3)
-    pool3 = average_pool_layer(relu3, kernal_size, pool_strides)
+        shape = pool3.get_shape().as_list()
+        if len(shape) == 4:
+            size = shape[-1] * shape[-2] * shape[-3]
+        else:
+            size = shape[1]
 
-    shape = pool3.get_shape().as_list()
-    if len(shape) == 4:
-        size = shape[-1]*shape[-2]*shape[-3]
-    else:
-        size = shape[1]
-    W_fc1 = weight_variable("W_fc1", [size, 500])
-    b_fc1 = bias_variable("b_fc1", [500])
-    pool3_flat = tf.reshape(pool3, [-1, size])
-    fc1 = tf.nn.relu(tf.matmul(pool3_flat, W_fc1) + b_fc1)
+        with tf.name_scope("fc_layer1"):
+            with tf.name_scope("weights"):
+                W_fc1 = weight_variable("W_fc1", [size, 500])
+                variable_summaries(W_fc1)
+            with tf.name_scope("biases"):
+                b_fc1 = bias_variable("b_fc1", [500])
+                variable_summaries(b_fc1)
+            pool3_flat = tf.reshape(pool3, [-1, size])
+            fc1 = tf.nn.relu(tf.matmul(pool3_flat, W_fc1) + b_fc1)
 
-    W_fc2 = weight_variable("W_fc2", [500, k])
-    b_fc2 = bias_variable("b_fc2", [k])
-    y_conv = tf.matmul(fc1, W_fc2) + b_fc2
+        with tf.name_scope("fc_layer2"):
+            with tf.name_scope("weights"):
+                W_fc2 = weight_variable("W_fc2", [500, k])
+                variable_summaries(W_fc2)
+            with tf.name_scope("biases"):
+                b_fc2 = bias_variable("b_fc2", [k])
+                variable_summaries(b_fc2)
+            y_conv = tf.matmul(fc1, W_fc2) + b_fc2
 
     return y_conv
 
