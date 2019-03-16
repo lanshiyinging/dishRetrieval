@@ -1,7 +1,11 @@
 import os
 import random
 import shutil
+from PIL import Image
+from PIL import ImageFile
 
+# error--image file is truncated
+ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 map_file = 'dishname2.txt'
 data_dir = '../data/all_data/'
@@ -12,6 +16,15 @@ os.makedirs(test_data_dir)
 rank1 = 0
 #rank2 = 0
 rank3 = 0
+
+def is_jpg(filename):
+    try:
+        i = Image.open(filename)
+        return i.format == 'JPEG'
+    except IOError:
+        print("can't open file" + filename)
+        return False
+
 f = open(map_file, 'r')
 line = f.readline()
 while line:
@@ -42,8 +55,11 @@ while line:
         tfile = random.choice(file_list)
         file_list.remove(tfile)
         to_path = "%sTest_%04d.jpg" % (test_data_dir, rank3)
-        shutil.copyfile(old_path + tfile, to_path)
-	
+        if is_jpg(old_path + tfile):
+            shutil.copyfile(old_path + tfile, to_path)
+        else:
+            Image.open(old_path + tfile).convert('RGB').save(to_path)
+
         with open('../data/test_list.txt', 'a') as ft:
             ft.write("Test_%04d.jpg\t%s\n" %(rank3, dish_no))
         #rank2 += 1
@@ -52,7 +68,12 @@ while line:
 
     for file in file_list:
         to_path = "%s%s/Train_%04d.jpg" % (train_data_dir, dish_no, rank1)
-        shutil.copyfile(old_path + file, to_path)
+
+        if is_jpg(old_path + file):
+            shutil.copyfile(old_path + file, to_path)
+        else:
+            Image.open(old_path + file).convert('RGB').save(to_path)
+
         with open('../data/train_list.txt', 'a') as tf:
             tf.write("Train_%04d\t%s\n" % (rank1, dish_no))
         rank1 += 1
