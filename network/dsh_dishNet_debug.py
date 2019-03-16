@@ -181,17 +181,19 @@ def main():
         #iteration = 1 + int(train_num / batch_size)
         start_time = time.time()
         #for iter in range(1):
+        count = 0
         try:
             while not coord.should_stop():
                 batch_images, batch_labels = sess.run([train_image_batches, train_label_batches])
                 _, loss_record, result = sess.run([train_step, loss, merged], feed_dict={x: batch_images, y: batch_labels})
                 #result = sess.run(merged, feed_dict={x: batch_images, y: batch_labels})
-                writer.add_summary(result, iter)
+                writer.add_summary(result, count)
                 end_time = time.time()
                 duration = end_time - start_time
-                print("iteration:%d\tloss:%f\tduration:%s\n" % (iter, loss_record, duration))
+                print("iteration:%d\tloss:%f\tduration:%s\n" % (count, loss_record, duration))
                 start_time = end_time
-                print("------------iteration %d is finished---------" % iter)
+                print("------------iteration %d is finished---------" % count)
+                count += 1
         except tf.errors.OutOfRangeError:
             print("Done")
         finally:
