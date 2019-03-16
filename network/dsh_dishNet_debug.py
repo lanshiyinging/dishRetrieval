@@ -12,6 +12,7 @@ config = tf.ConfigProto(log_device_placement=True,
 
 k = 12
 batch_size = 10
+epoch_num = 1
 momentum = 0.9
 weight_decay = 0.004
 base_lr = 0.001
@@ -47,7 +48,7 @@ def get_files(filename):
 def get_batches(image, label, resize_w, resize_h, batch_size, capacity):
     image = tf.cast(image, tf.string)
     label = tf.cast(label, tf.int64)
-    queue = tf.train.slice_input_producer([image, label])
+    queue = tf.train.slice_input_producer([image, label], num_epochs=epoch_num)
     label = queue[1]
     image_c = tf.read_file(queue[0])
     image = tf.image.decode_jpeg(image_c, channels=3)
@@ -172,20 +173,29 @@ def main():
         merged = tf.summary.merge_all()
         saver = tf.train.Saver()
         sess.run(tf.global_variables_initializer())
+        sess.run(tf.local_variables_initializer())
         coord = tf.train.Coordinator()
-        thread = tf.train.start_queue_runners(sess, coord)
-        iteration = 1 + int(train_num / batch_size)
+        threads = tf.train.start_queue_runners(sess, coord)
+        #iteration = 1 + int(train_num / batch_size)
         start_time = time.time()
-        for iter in range(1):
-            batch_images, batch_labels = sess.run([train_image_batches, train_label_batches])
-            _, loss_record, result = sess.run([train_step, loss, merged], feed_dict={x: batch_images, y: batch_labels})
-            #result = sess.run(merged, feed_dict={x: batch_images, y: batch_labels})
-            writer.add_summary(result, iter)
-            end_time = time.time()
-            duration = end_time - start_time
-            print("iteration:%d\tloss:%f\tduration:%s\n" % (iter, loss_record, duration))
-            start_time = end_time
-            print("------------iteration %d is finished---------" % iter)
+        #for iter in range(1):
+        try:
+            while not coord.should_stop():
+                batch_images, batch_labels = sess.run([train_image_batches, train_label_batches])
+                _, loss_record, result = sess.run([train_step, loss, merged], feed_dict={x: batch_images, y: batch_labels})
+                #result = sess.run(merged, feed_dict={x: batch_images, y: batch_labels})
+                writer.add_summary(result, iter)
+                end_time = time.time()
+                duration = end_time - start_time
+                print("iteration:%d\tloss:%f\tduration:%s\n" % (iter, loss_record, duration))
+                start_time = end_time
+                print("------------iteration %d is finished---------" % iter)
+        except tf.errors.OutOfRangeError:
+            print("Done")
+        finally:
+            coord.request_stop()
+            print("All threads are asked to stop!")
+        coord.join(threads)
         if not os.path.exists("./model/"):
             os.makedirs("./model/")
         saver.save(sess, "./model/")
