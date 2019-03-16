@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a1a0b0a-c192-4904-8f1c-12ea314ca0f3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawl/dealData.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawl/dealData.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/detect_jpg_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/detect_jpg_image.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/network/dsh_dishNet.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/dsh_dishNet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/dsh_dishNet_debug.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/dsh_dishNet_debug.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +15,8 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/dishRetrieval$dsh_dishNet.coverage" NAME="dsh_dishNet Coverage Results" MODIFIED="1552531988126" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/network" />
     <SUITE FILE_PATH="coverage/dishRetrieval$get_hashcode.coverage" NAME="get_hashcode Coverage Results" MODIFIED="1552536970563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/network" />
-    <SUITE FILE_PATH="coverage/dishRetrieval$detect_jpg_image.coverage" NAME="detect_jpg_image Coverage Results" MODIFIED="1552734561484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/network" />
-    <SUITE FILE_PATH="coverage/dishRetrieval$dealData.coverage" NAME="dealData Coverage Results" MODIFIED="1552736405218" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crawl" />
+    <SUITE FILE_PATH="coverage/dishRetrieval$detect_jpg_image.coverage" NAME="detect_jpg_image Coverage Results" MODIFIED="1552742207652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/network" />
+    <SUITE FILE_PATH="coverage/dishRetrieval$dealData.coverage" NAME="dealData Coverage Results" MODIFIED="1552740384614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crawl" />
     <SUITE FILE_PATH="coverage/dishRetrieval$crawlDouguo_add.coverage" NAME="crawlDouguo_add Coverage Results" MODIFIED="1551585926828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crawl" />
   </component>
   <component name="FileEditorManager">
@@ -24,8 +24,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crawl/dealData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="-565">
+              <caret line="30" column="37" selection-start-line="19" selection-end-line="30" selection-end-column="37" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -36,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/network/dsh_dishNet.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-208">
-              <caret line="206" column="11" lean-forward="true" selection-start-line="206" selection-start-column="11" selection-end-line="206" selection-end-column="11" />
+            <state relative-caret-position="276">
+              <caret line="53" column="53" lean-forward="true" selection-start-line="53" selection-start-column="53" selection-end-line="53" selection-end-column="53" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
                 <element signature="e#3067#4757#0" />
@@ -47,9 +47,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/network/detect_jpg_image.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="497">
+              <caret line="71" column="14" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/train_list.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-75369" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_debug.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2163">
+            <state relative-caret-position="2496">
               <caret line="104" selection-start-line="104" selection-end-line="104" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
@@ -81,15 +100,16 @@
         <option value="$PROJECT_DIR$/network/get_hashcode.py" />
         <option value="$PROJECT_DIR$/network/retrieval.py" />
         <option value="$PROJECT_DIR$/network/hh.py" />
-        <option value="$PROJECT_DIR$/network/detect_jpg_image.py" />
-        <option value="$PROJECT_DIR$/crawl/dealData.py" />
-        <option value="$PROJECT_DIR$/network/dsh_dishNet.py" />
         <option value="$PROJECT_DIR$/network/dsh_dishNet_debug.py" />
+        <option value="$PROJECT_DIR$/network/dsh_dishNet.py" />
+        <option value="$PROJECT_DIR$/crawl/dealData.py" />
+        <option value="$PROJECT_DIR$/network/detect_jpg_image.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
+    <option name="x" value="796" />
+    <option name="width" value="644" />
     <option name="height" value="900" />
   </component>
   <component name="ProjectView">
@@ -103,6 +123,11 @@
             <path>
               <item name="dishRetrieval" type="b2602c69:ProjectViewProjectNode" />
               <item name="dishRetrieval" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dishRetrieval" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dishRetrieval" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dishRetrieval" type="b2602c69:ProjectViewProjectNode" />
@@ -141,7 +166,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.dealData">
+  <component name="RunManager" selected="Python.detect_jpg_image">
     <configuration name="crawlDouguo_add" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="dishRetrieval" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -254,8 +279,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.dealData" />
         <item itemvalue="Python.detect_jpg_image" />
+        <item itemvalue="Python.dealData" />
         <item itemvalue="Python.get_hashcode" />
         <item itemvalue="Python.dsh_dishNet" />
         <item itemvalue="Python.crawlDouguo_add" />
@@ -279,23 +304,23 @@
       <workItem from="1552264421834" duration="9485000" />
       <workItem from="1552437083687" duration="21310000" />
       <workItem from="1552609923449" duration="5994000" />
-      <workItem from="1552700525231" duration="11494000" />
+      <workItem from="1552700525231" duration="13558000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60516000" />
+    <option name="totallyTimeSpent" value="62580000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="599" y="0" width="841" height="900" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.27181688" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10300429" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2879518" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.28674698" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -418,28 +443,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawl/dealData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crawl/dishname.txt">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network/detect_jpg_image.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1128">
-          <caret line="47" column="32" lean-forward="true" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crawl/dishname2.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -450,7 +455,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_debug.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2163">
+        <state relative-caret-position="2496">
           <caret line="104" selection-start-line="104" selection-end-line="104" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
@@ -458,10 +463,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/crawl/dealData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-565">
+          <caret line="30" column="37" selection-start-line="19" selection-end-line="30" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/train_list.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-75369" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/detect_jpg_image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="71" column="14" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/network/dsh_dishNet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-208">
-          <caret line="206" column="11" lean-forward="true" selection-start-line="206" selection-start-column="11" selection-end-line="206" selection-end-column="11" />
+        <state relative-caret-position="276">
+          <caret line="53" column="53" lean-forward="true" selection-start-line="53" selection-start-column="53" selection-end-line="53" selection-end-column="53" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
             <element signature="e#3067#4757#0" />

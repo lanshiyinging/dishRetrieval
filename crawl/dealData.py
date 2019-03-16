@@ -17,6 +17,19 @@ rank1 = 0
 #rank2 = 0
 rank3 = 0
 
+def IsValidImage(filename):
+    isValid = True
+    try:
+        Image.open(filename).verify()
+    except:
+        isValid = False
+    return isValid
+
+def is_valid_jpg(filename):
+    with open(filename, 'rb') as f:
+        f.seek(-2, 2)
+        return f.read() == '\xff\xd9'
+
 def is_jpg(filename):
     try:
         i = Image.open(filename)
@@ -24,6 +37,7 @@ def is_jpg(filename):
     except IOError:
         print("can't open file" + filename)
         return False
+
 
 f = open(map_file, 'r')
 line = f.readline()

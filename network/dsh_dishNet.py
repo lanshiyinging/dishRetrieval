@@ -11,6 +11,7 @@ config = tf.ConfigProto(log_device_placement=True,
 
 k = 12
 batch_size = 100
+epoch_num = 1
 momentum = 0.9
 weight_decay = 0.004
 base_lr = 0.001
@@ -47,10 +48,10 @@ def get_files(filename):
 def get_batches(image, label, resize_w, resize_h, batch_size, capacity):
     image = tf.cast(image, tf.string)
     label = tf.cast(label, tf.int64)
-    queue = tf.train.slice_input_producer([image, label])
+    queue = tf.train.slice_input_producer([image, label], num_epochs=epoch_num)
     label = queue[1]
     image_c = tf.read_file(queue[0])
-    image = tf.image.decode_jpeg(image_c, channels=3)
+    image = tf.image.decode_image(image_c, channels=3)
 
     image = tf.image.resize_images(image, [resize_h, resize_w], method=0)
     image = tf.image.per_image_standardization(image)
