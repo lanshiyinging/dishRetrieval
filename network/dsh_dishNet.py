@@ -155,27 +155,34 @@ def main():
     #val_data_dir = "data/val_data/"
     #test_data_dir = "data/test_data/"
     train_image, train_label, train_num = get_files(train_data_dir)
+    train_image_batches, train_label_batches = get_batches(train_image, train_label, 32, 32, batch_size, train_num)
+
     y_conv = dsh_dish_net(x)
     with tf.name_scope('loss'):
         loss = loss_function(y_conv, y)
         tf.summary.scalar('loss', loss)
+
     global_step = tf.Variable(0, trainable=False)
     learning_rate = tf.train.exponential_decay(learning_rate=base_lr, global_step=global_step, decay_steps=10, decay_rate=0.4, staircase=True)
     train_step = tf.train.GradientDescentOptimizer(learning_rate).minimize(loss)
+
     with tf.Session(config=config) as sess:
         writer = tf.summary.FileWriter("logs/", sess.graph)
         merged = tf.summary.merge_all()
         saver = tf.train.Saver()
         sess.run(tf.global_variables_initializer())
+
+        coord = tf.train.Coordinator()
+        thread = tf.train.start_queue_runners(sess, coord)
+
         iteration = 1 + int(train_num / batch_size)
         start_time = time.time()
         for iter in range(iteration):
-            image_batches, label_batches = get_batches(train_image, train_label, 32, 32, batch_size, train_num)
-            img_batches, lab_batches = sess.run([image_batches, label_batches])
-            train_step.run(feed_dict={x: img_batches, y: lab_batches})
-            result = sess.run(merged, feed_dict={x: image_batches, y: label_batches})
+            batch_images, batch_labels = sess.run([train_image_batches, train_label_batches])
+            _, loss_record, result = sess.run([train_step, loss, merged], feed_dict={x: batch_images, y: batch_labels})
+            #result = sess.run(merged, feed_dict={x: image_batches, y: label_batches})
             writer.add_summary(result, iter)
-            loss_record = sess.run(loss, feed_dict={x: image_batches, y: label_batches})
+            #loss_record = sess.run(loss, feed_dict={x: image_batches, y: label_batches})
             end_time = time.time()
             duration = end_time - start_time
             print("iteration:%d\tloss:%f\tduration:%s\n" % (iter, loss_record, duration))
