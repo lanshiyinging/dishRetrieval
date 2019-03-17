@@ -43,7 +43,7 @@ def get_files(filename):
     image_list = list(temp[:, 0])
     label_list = list(temp[:, 1])
     label_list = [int(i) for i in label_list]
-
+    print(train_label)
     return image_list, label_list, num
 
 
@@ -53,18 +53,14 @@ def get_batches(image, label, resize_w, resize_h, batch_size, capacity):
     queue = tf.train.slice_input_producer([image, label], num_epochs=epoch_num)
     label = queue[1]
     image_c = tf.read_file(queue[0])
-    try:
-        image = tf.image.decode_jpeg(image_c, channels=3)
-    except:
-        print(image)
-
+    image = tf.image.decode_image(image_c, channels=3)
+    image.set_shape([None, None, 3])
+    #image = tf.cond(tf.image.is_jpeg(image_c), lambda: tf.image.decode_jpeg(image_c), lambda: tf.image.decode_png(image_c))
     image = tf.image.resize_images(image, [resize_h, resize_w], method=0)
     image = tf.image.per_image_standardization(image)
-
-    image_batch, label_batch = tf.train.batch([image, label], batch_size=batch_size, num_threads=1, capacity=capacity)
+    image_batch, label_batch = tf.train.batch([image, label], batch_size=batch_size, num_threads=1, capacity=batch_size, allow_smaller_final_batch=True)
     images_batch = tf.cast(image_batch, tf.float32)
     labels_batch = tf.reshape(label_batch, [batch_size])
-
     return images_batch, labels_batch
 
 
@@ -220,14 +216,14 @@ def main():
         writer = tf.summary.FileWriter("logs/", sess.graph)
         merged = tf.summary.merge_all()
         saver = tf.train.Saver()
-        sess.run(tf.global_variables_initializer())
-        sess.run(tf.local_variables_initializer())
         coord = tf.train.Coordinator()
         threads = tf.train.start_queue_runners(sess, coord)
         #iteration = 1 + int(train_num / batch_size)
         start_time = time.time()
-        #for iter in range(1):
         count = 0
+        sess.run(tf.global_variables_initializer())
+        sess.run(tf.local_variables_initializer())
+        #for iter in range(1):
         try:
             while not coord.should_stop():
                 batch_images, batch_labels = sess.run([train_image_batches, train_label_batches])
@@ -252,7 +248,46 @@ def main():
         print("Optimization Finished!")
 
 if __name__ == '__main__':
-    main()
-
+    #main()
+    train_data_dir = "../data/train_data/"
+    train_image, train_label, train_num = get_files(train_data_dir)
+    train_image_batches, train_label_batches = get_batches(train_image, train_label, 32, 32, batch_size, train_num)
+    sess = tf.Session()
+    sess.run(tf.global_variables_initializer())
+    sess.run(tf.local_variables_initializer())
+    coord = tf.train.Coordinator()
+    threads = tf.train.start_queue_runners(sess, coord)
+    try:
+        indi = 0
+        while not coord.should_stop():
+            data1, data2 = sess.run([train_image_batches, train_label_batches])
+            print(data2)
+            #print(indi)
+            indi += 1
+    except tf.errors.OutOfRangeError:
+        print("Done!")
+    finally:
+        coord.request_stop()
+    coord.join(threads)
+    sess.close()
+    '''
+            for i in range(1):
+            data1, data2 = sess.run([train_image_batches, train_label_batches])
+            print(data2)
+            #print(i)
+    try:
+        indi = 0
+        while not coord.should_stop():
+            data1, data2 = sess.run([train_image_batches, train_label_batches])
+            print(data2)
+            print(indi)
+            indi += 1
+    except Exception as e:
+        print(e)
+    finally:
+        coord.request_stop()
+    coord.join(threads)
+    '''
+    #sess.close()
 
 

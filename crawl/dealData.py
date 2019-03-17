@@ -72,7 +72,8 @@ while line:
         if is_jpg(old_path + tfile):
             shutil.copyfile(old_path + tfile, to_path)
         else:
-            Image.open(old_path + tfile).convert('RGB').save(to_path)
+            continue
+            #Image.open(old_path + tfile).convert('RGB').save(to_path)
 
         with open('../data/test_list.txt', 'a') as ft:
             ft.write("Test_%04d.jpg\t%s\n" %(rank3, dish_no))
@@ -86,7 +87,8 @@ while line:
         if is_jpg(old_path + file):
             shutil.copyfile(old_path + file, to_path)
         else:
-            Image.open(old_path + file).convert('RGB').save(to_path)
+            continue
+            #Image.open(old_path + file).convert('RGB').save(to_path)
 
         with open('../data/train_list.txt', 'a') as tf:
             tf.write("Train_%04d\t%s\n" % (rank1, dish_no))
