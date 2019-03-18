@@ -1,3 +1,5 @@
+import shutil
+
 import tensorflow as tf
 import numpy as np
 import os
@@ -6,7 +8,8 @@ from PIL import ImageFile
 import imghdr
 
 # error--image file is truncated
-ImageFile.LOAD_TRUNCATED_IMAGES = True
+#ImageFile.LOAD_TRUNCATED_IMAGES = True
+
 train_dir = "../data/train_data/"
 test_dir = "../data/test_data/"
 image_to_modify = []
@@ -105,8 +108,20 @@ for img in image_to_modify:
 
 if __name__ == '__main__':
     #check_jpg_pic(train_dir)
-    for label in os.listdir(train_dir):
-        for pic in os.listdir(train_dir + label):
-            file_path = train_dir + label + '/' + pic
-            print(is_valid_jpg(file_path))
+    all_dir = "../data/all_data/"
+    to_dir = "../data/unvlid_data/"
+    count = 0
+    for label in os.listdir(all_dir):
+        for pic in os.listdir(all_dir + label):
+            file_path = all_dir + label + '/' + pic
+            #i = Image.open(file_path)
+            if not is_valid_jpg(file_path):
+                print(file_path)
+                to_path = to_dir + label + '/' + pic
+                if not os.path.exists(to_dir + label):
+                    os.makedirs(to_dir + label)
+                shutil.move(file_path, to_path)
+                count += 1
+    print(count)
+
 
