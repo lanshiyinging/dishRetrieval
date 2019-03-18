@@ -216,13 +216,15 @@ def main():
         writer = tf.summary.FileWriter("logs/", sess.graph)
         merged = tf.summary.merge_all()
         saver = tf.train.Saver()
+        sess.run(tf.global_variables_initializer())
+        sess.run(tf.local_variables_initializer())
+
         coord = tf.train.Coordinator()
         threads = tf.train.start_queue_runners(sess, coord)
         #iteration = 1 + int(train_num / batch_size)
         start_time = time.time()
         count = 0
-        sess.run(tf.global_variables_initializer())
-        sess.run(tf.local_variables_initializer())
+
         #for iter in range(1):
         try:
             while not coord.should_stop():
