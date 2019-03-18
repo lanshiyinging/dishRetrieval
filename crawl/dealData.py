@@ -69,11 +69,14 @@ while line:
         tfile = random.choice(file_list)
         file_list.remove(tfile)
         to_path = "%sTest_%04d.jpg" % (test_data_dir, rank3)
+        shutil.copyfile(old_path + tfile, to_path)
+        '''
         if is_jpg(old_path + tfile):
             shutil.copyfile(old_path + tfile, to_path)
         else:
             continue
             #Image.open(old_path + tfile).convert('RGB').save(to_path)
+        '''
 
         with open('../data/test_list.txt', 'a') as ft:
             ft.write("Test_%04d.jpg\t%s\n" %(rank3, dish_no))
@@ -83,12 +86,14 @@ while line:
 
     for file in file_list:
         to_path = "%s%s/Train_%04d.jpg" % (train_data_dir, dish_no, rank1)
-
+        shutil.copyfile(old_path + file, to_path)
+        '''
         if is_jpg(old_path + file):
             shutil.copyfile(old_path + file, to_path)
         else:
             continue
             #Image.open(old_path + file).convert('RGB').save(to_path)
+        '''
 
         with open('../data/train_list.txt', 'a') as tf:
             tf.write("Train_%04d\t%s\n" % (rank1, dish_no))

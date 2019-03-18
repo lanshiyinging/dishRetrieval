@@ -115,12 +115,17 @@ if __name__ == '__main__':
         for pic in os.listdir(all_dir + label):
             file_path = all_dir + label + '/' + pic
             #i = Image.open(file_path)
+            '''
             if not is_valid_jpg(file_path):
                 print(file_path)
                 to_path = to_dir + label + '/' + pic
                 if not os.path.exists(to_dir + label):
                     os.makedirs(to_dir + label)
                 shutil.move(file_path, to_path)
+                count += 1
+            '''
+            if not IsValidImage(file_path):
+                print(file_path)
                 count += 1
     print(count)
 
