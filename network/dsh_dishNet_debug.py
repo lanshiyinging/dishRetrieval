@@ -58,7 +58,7 @@ def get_batches(image, label, resize_w, resize_h, batch_size, capacity):
     #image = tf.cond(tf.image.is_jpeg(image_c), lambda: tf.image.decode_jpeg(image_c), lambda: tf.image.decode_png(image_c))
     image = tf.image.resize_images(image, [resize_h, resize_w], method=0)
     image = tf.image.per_image_standardization(image)
-    image_batch, label_batch = tf.train.batch([image, label], batch_size=batch_size, num_threads=1, capacity=batch_size, allow_smaller_final_batch=True)
+    image_batch, label_batch = tf.train.batch([image, label], batch_size=batch_size, num_threads=1, capacity=batch_size, allow_smaller_final_batch=False)
     images_batch = tf.cast(image_batch, tf.float32)
     labels_batch = tf.reshape(label_batch, [batch_size])
     return images_batch, labels_batch
@@ -247,8 +247,10 @@ def main():
         saver.save(sess, "./model/")
         print("Optimization Finished!")
 
+
 if __name__ == '__main__':
-    #main()
+    main()
+    '''
     train_data_dir = "../data/train_data/"
     train_image, train_label, train_num = get_files(train_data_dir)
     train_image_batches, train_label_batches = get_batches(train_image, train_label, 32, 32, batch_size, train_num)
@@ -262,7 +264,7 @@ if __name__ == '__main__':
         while not coord.should_stop():
             data1, data2 = sess.run([train_image_batches, train_label_batches])
             print(data2)
-            #print(indi)
+            print(indi)
             indi += 1
     except tf.errors.OutOfRangeError:
         print("Done!")
@@ -271,23 +273,6 @@ if __name__ == '__main__':
     coord.join(threads)
     sess.close()
     '''
-            for i in range(1):
-            data1, data2 = sess.run([train_image_batches, train_label_batches])
-            print(data2)
-            #print(i)
-    try:
-        indi = 0
-        while not coord.should_stop():
-            data1, data2 = sess.run([train_image_batches, train_label_batches])
-            print(data2)
-            print(indi)
-            indi += 1
-    except Exception as e:
-        print(e)
-    finally:
-        coord.request_stop()
-    coord.join(threads)
-    '''
-    #sess.close()
+
 
 

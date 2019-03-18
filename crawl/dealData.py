@@ -41,6 +41,9 @@ def is_jpg(filename):
 
 f = open(map_file, 'r')
 line = f.readline()
+get_2_list = [12, 13]
+get_3_list = [14, 15, 16, 17, 20]
+get_4_list = [18, 19]
 while line:
     line = line.strip().strip('\n')
     dish_no = line.split('\t')[0]
@@ -56,8 +59,12 @@ while line:
     #os.makedirs(val_data_dir + dish_no + '/')
     file_list = os.listdir(old_path)
     total_num = len(file_list)
-    val_num = int(total_num * 0.2)
-    test_num = val_num
+    if total_num in get_2_list:
+        test_num = 2
+    elif total_num in get_3_list:
+        test_num = 3
+    else:
+        test_num = 4
     #for i, j in zip(range(val_num), range(test_num)):
     for i in range(test_num):
 	
