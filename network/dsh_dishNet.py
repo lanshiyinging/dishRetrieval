@@ -246,7 +246,7 @@ def main():
         coord.join(threads)
         if not os.path.exists("./model/"):
             os.makedirs("./model/")
-        saver.save(sess, "./model/")
+        saver.save(sess, "./model/model")
         print("Optimization Finished!")
 
 if __name__ == '__main__':
