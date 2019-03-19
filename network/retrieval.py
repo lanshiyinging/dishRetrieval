@@ -18,7 +18,9 @@ def load_train_data(train_output_path):
         train_line = train_output_file.readline()
     return train_hash_dataset, train_label_dataset
 
-def retrieval(quary_hashcode, train_hash_dataset):
+
+def retrieval(quary_hashcode):
+    train_hash_dataset, train_label_dataset = load_train_data(train_output_path)
     hm_dis_list = {}
     for k, v in train_hash_dataset:
         candi_pic_hashcode = v.split(',')

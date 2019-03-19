@@ -1,9 +1,79 @@
 <!DOCTYPE html>
+<meta charset="UTF-8">
+<!--适配IE -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 {% extends "base.html" %}
 {% import "bootstrap/wtf.html" as wtf %}
 {% block title %}IMAGE RETRIEVAL SYSTEM{% endblock %}
 {% block page_content %}
-<div class="page-header">
-    <h1>Hello, welcome to IMAGE RETRIEVAL SYSTEM!</h1>
-    <p>Pleased to meet you!</p>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<ul class="nav nav-tabs">
+				<li class="active">
+					 <a href="#">首页</a>
+				</li>
+			</ul>
+			<div class="jumbotron">
+				<h1>
+					图像检索系统
+				</h1>
+				<p>
+					该系统是基于神经网络的图像检索系统，目前支持中式菜肴的图像检索
+				</p>
+				<p>
+					输入：一张图片
+				</p>
+				<p>
+					输出：相似度排名Top5的
+				</p>
+				<p>
+					 <a class="btn btn-primary btn-large" href="#input">Learn more</a>
+				</p>
+			</div>
+			<div class="page-header">
+				<h1>
+					<span>输入图片</span>
+				</h1>
+			</div>
+			<form role="form" id="input">
+				<div class="form-group">
+					 <label for="exampleInputFile">File input</label><input type="file" id="exampleInputFile" />
+				</div>
+				<button type="submit" class="btn btn-default">Submit</button>
+			</form>
+            <div class="page-header">
+                <div class="col-md-4 column">
+					<img alt="140x140" src="{{ input_image_path }}" />
+				</div>
+            </div>
+			<div class="page-header">
+				<h1>
+					<span>结果</span>
+				</h1>
+			</div>
+			<div class="row clearfix">
+				<div class="col-md-4 column">
+					<img alt="140x140" src="{{ result.rank1 }}" />
+				</div>
+				<div class="col-md-4 column">
+					<img alt="140x140" src="{{ result.rank2 }}" />
+				</div>
+				<div class="col-md-4 column">
+					<img alt="140x140" src="{{ result.rank3 }}" />
+				</div>
+			</div>
+			<div class="row clearfix">
+				<div class="col-md-4 column">
+					<img alt="140x140" src="{{ result.rank4 }}" />
+				</div>
+				<div class="col-md-4 column">
+					<img alt="140x140" src="{{ result.rank5 }}" />
+				</div>
+				<div class="col-md-4 column">
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
+{% endblock %}

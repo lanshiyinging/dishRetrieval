@@ -24,6 +24,7 @@ def prefix_image(image, resize_w, resize_h):
 
     return image
 
+
 def get_hashcode(image_path):
     with tf.Session() as sess:
         saver = tf.train.import_meta_graph(model_dir + 'model.meta')
