@@ -181,6 +181,7 @@ def loss_function(y_conv, label_batches):
     y_conv = tf.transpose(y_conv)
     shape = label_batches.get_shape().as_list()
     print(shape)
+    count = 0
     for i in range(num):
         b1 = y_conv[:, i]
         for j in range(i+1, num):
@@ -189,7 +190,8 @@ def loss_function(y_conv, label_batches):
             norm = alpha * (tf.subtract(tf.abs(b1), 1.0) + tf.subtract(tf.abs(b2), 1.0))
             m = tf.cast(m, tf.float32)
             Lr = Lr + tf.where(tf.equal(label_batches[i], label_batches[j]), l2_dis/2.0, tf.maximum(tf.subtract(m, l2_dis), 0)/2.0) + norm
-    cost = tf.reduce_mean(Lr)
+            count += 1
+    cost = Lr / count
     return cost
 
 

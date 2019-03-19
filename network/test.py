@@ -14,7 +14,7 @@ for label in os.listdir(train_dir):
             print(filepath)
             #progressive_to_baseline(file_dir, file)
 '''
-
+'''
 dir = "../data/all_data/"
 total_num = 0
 dic = {10: 0, 11: 0, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 0, 18: 0, 19: 0, 20: 0}
@@ -24,3 +24,9 @@ for label in os.listdir(dir):
     dic[num] += 1
 print(dic)
 print(total_num)
+'''
+count = 0
+for i in range(5):
+    for j in range(i+1, 5):
+        count += 1
+print(count)
