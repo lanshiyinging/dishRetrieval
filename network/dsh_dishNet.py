@@ -11,7 +11,7 @@ config = tf.ConfigProto(log_device_placement=True,
 
 k = 12
 batch_size = 20
-epoch_num = 1
+epoch_num = 10
 momentum = 0.9
 weight_decay = 0.004
 base_lr = 0.001
@@ -20,7 +20,7 @@ alpha = 0.01
 
 with tf.name_scope("input_image"):
     x = tf.placeholder(tf.float32, shape=[None, 32, 32, 3])
-    tf.summary.image('input_image', x, 3)
+    tf.summary.image('input_image', x, 10)
 y = tf.placeholder(tf.float32, shape=[batch_size])
 
 
@@ -200,7 +200,7 @@ def main():
     #val_data_dir = "data/val_data/"
     #test_data_dir = "data/test_data/"
     train_image, train_label, train_num = get_files(train_data_dir)
-    train_image_batches, train_label_batches = get_batches(train_image, train_label, 32, 32, batch_size, train_num)
+    train_image_batches, train_label_batches = get_batches(train_image, train_label, 32, 32, batch_size, batch_size)
 
     y_conv = dsh_dish_net(x)
     with tf.name_scope('loss'):
@@ -208,7 +208,9 @@ def main():
         tf.summary.scalar('loss', loss)
 
     global_step = tf.Variable(0, trainable=False)
-    learning_rate = tf.train.exponential_decay(learning_rate=base_lr, global_step=global_step, decay_steps=10, decay_rate=0.4, staircase=True)
+    with tf.name_scope('lr'):
+        learning_rate = tf.train.exponential_decay(learning_rate=base_lr, global_step=global_step, decay_steps=10, decay_rate=0.4, staircase=True)
+        tf.summary.scalar('lr', learning_rate)
     train_step = tf.train.GradientDescentOptimizer(learning_rate).minimize(loss)
 
     with tf.Session(config=config) as sess:
