@@ -14,7 +14,7 @@ batch_size = 20
 epoch_num = 10
 momentum = 0.9
 weight_decay = 0.004
-base_lr = 0.0001
+base_lr = 0.001
 m = 2 * k
 alpha = 0.01
 
@@ -211,7 +211,8 @@ def main():
     with tf.name_scope('lr'):
         learning_rate = tf.train.exponential_decay(learning_rate=base_lr, global_step=global_step, decay_steps=200, decay_rate=0.4, staircase=True)
         tf.summary.scalar('lr', learning_rate)
-    train_step = tf.train.GradientDescentOptimizer(learning_rate).minimize(loss, global_step=global_step)
+    #train_step = tf.train.GradientDescentOptimizer(learning_rate).minimize(loss, global_step=global_step)
+    train_step = tf.train.MomentumOptimizer(learning_rate, momentum).minimize(loss, global_step=global_step)
 
     with tf.Session(config=config) as sess:
         writer = tf.summary.FileWriter("logs/", sess.graph)
