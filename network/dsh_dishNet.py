@@ -211,7 +211,7 @@ def main():
     with tf.name_scope('lr'):
         learning_rate = tf.train.exponential_decay(learning_rate=base_lr, global_step=global_step, decay_steps=10, decay_rate=0.4, staircase=True)
         tf.summary.scalar('lr', learning_rate)
-    train_step = tf.train.GradientDescentOptimizer(learning_rate).minimize(loss)
+    train_step = tf.train.GradientDescentOptimizer(learning_rate).minimize(loss, global_step=global_step)
 
     with tf.Session(config=config) as sess:
         writer = tf.summary.FileWriter("logs/", sess.graph)
