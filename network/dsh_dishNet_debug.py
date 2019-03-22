@@ -21,9 +21,9 @@ alpha = 0.01
 
 
 with tf.name_scope("input_image"):
-    x = tf.placeholder(tf.float32, shape=[None, 32, 32, 3])
+    x = tf.placeholder(tf.float32, shape=[None, 32, 32, 3], name="input_image")
     tf.summary.image('input_image', x, 3)
-y = tf.placeholder(tf.float32, shape=[batch_size])
+y = tf.placeholder(tf.float32, shape=[batch_size], name="label")
 #keep_prob = tf.placeholder(tf.float32)
 
 
@@ -167,6 +167,7 @@ def dsh_dish_net(inputs):
                 b_fc2 = bias_variable("b_fc2", [k])
                 variable_summaries(b_fc2)
             y_conv = tf.matmul(fc1, W_fc2) + b_fc2
+            tf.add_to_collection('y_conv', y_conv)
 
     return y_conv
 

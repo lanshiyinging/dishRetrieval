@@ -1,7 +1,7 @@
 import tensorflow as tf
 import numpy as np
 import os
-import dsh_dishNet
+#import dsh_dishNet
 
 train_dir = '../data/train_data/'
 test_dir = '../data/test_data/'
@@ -10,7 +10,7 @@ batch_size = 100
 output_dir = '../data/output/'
 
 
-x = tf.placeholder(tf.float32, shape=[None, 32, 32, 3])
+#x = tf.placeholder(tf.float32, shape=[None, 32, 32, 3])
 k = 12
 
 def prefix_image(image, resize_w, resize_h):
@@ -33,7 +33,10 @@ def get_hashcode(image_path):
     with tf.Session() as sess:
         saver = tf.train.import_meta_graph(model_dir + 'model.meta')
         saver.restore(sess, tf.train.latest_checkpoint(model_dir))
-        y_conv = dsh_dishNet.dsh_dish_net(x)
+        #y_conv = dsh_dishNet.dsh_dish_net(x)
+        y_conv = tf.get_collection('y_conv')[0]
+        graph = tf.get_default_graph()
+        x = graph.get_operation_by_name("input_image").outputs[0]
         image = prefix_image(image_path, 32, 32)
         ret = sess.run(y_conv, feed_dict={x: image})
         ret1 = tf.reshape(ret, [k])
@@ -46,7 +49,10 @@ def main():
     with tf.Session() as sess:
         saver = tf.train.import_meta_graph(model_dir+'model.meta')
         saver.restore(sess, tf.train.latest_checkpoint(model_dir))
-        y_conv = dsh_dishNet.dsh_dish_net(x)
+        #y_conv = dsh_dishNet.dsh_dish_net(x)
+        y_conv = tf.get_collection('y_conv')[0]
+        graph = tf.get_default_graph()
+        x = graph.get_operation_by_name("input_image").outputs[0]
         for label in os.listdir(train_dir):
             for pic in os.listdir(train_dir + label):
                 image_path = train_dir + label + '/' + pic
