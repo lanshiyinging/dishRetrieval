@@ -42,6 +42,8 @@ def get_hashcode(image_path):
         ret1 = tf.reshape(ret, [k])
         ret2 = sess.run(tf.sign(ret1))
         #ret_array = ret2.eval()
+        #ret_array = [str(i) for i in ret2]
+        #ret_string = ','.join(ret_array)
     return ret2
 
 
@@ -61,7 +63,9 @@ def main():
                 ret1 = tf.reshape(ret, [k])
                 ret2 = sess.run(tf.sign(ret1))
                 #ret_array = ret2.eval()
-                ret_string = ','.join(ret2)
+                #ret2 = ret2.astype('str')
+                ret_array = [str(i) for i in ret2]
+                ret_string = ','.join(ret_array)
                 with open(output_dir+'train_output', 'a') as f1:
                     f1.write("%s\t%s\t%s\n" % (image_path, label, ret_string))
 
@@ -72,7 +76,8 @@ def main():
             ret1 = tf.reshape(ret, [k])
             ret2 = sess.run(tf.sign(ret1))
             #ret_array = ret2.eval()
-            ret_string = ','.join(ret2)
+            ret_array = [str(i) for i in ret2]
+            ret_string = ','.join(ret_array)
             with open(output_dir+'test_output', 'a') as f1:
                 f1.write("%s\t%s\n" % (image_path, ret_string))
 
