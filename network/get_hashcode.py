@@ -36,7 +36,7 @@ def get_hashcode(image_path):
         #y_conv = dsh_dishNet.dsh_dish_net(x)
         y_conv = tf.get_collection('y_conv')[0]
         graph = tf.get_default_graph()
-        x = graph.get_operation_by_name("input_image").outputs[0]
+        x = graph.get_operation_by_name("input_image/input_image").outputs[0]
         image = prefix_image(image_path, 32, 32)
         ret = sess.run(y_conv, feed_dict={x: image})
         ret1 = tf.reshape(ret, [k])
@@ -52,7 +52,7 @@ def main():
         #y_conv = dsh_dishNet.dsh_dish_net(x)
         y_conv = tf.get_collection('y_conv')[0]
         graph = tf.get_default_graph()
-        x = graph.get_operation_by_name("input_image").outputs[0]
+        x = graph.get_operation_by_name("input_image/input_image").outputs[0]
         for label in os.listdir(train_dir):
             for pic in os.listdir(train_dir + label):
                 image_path = train_dir + label + '/' + pic
@@ -79,6 +79,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
 
