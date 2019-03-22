@@ -10,6 +10,7 @@ batch_size = 100
 output_dir = '../data/output/'
 
 
+
 #x = tf.placeholder(tf.float32, shape=[None, 32, 32, 3])
 k = 12
 
@@ -48,6 +49,8 @@ def get_hashcode(image_path):
 
 
 def main():
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
     with tf.Session() as sess:
         saver = tf.train.import_meta_graph(model_dir+'model.meta')
         saver.restore(sess, tf.train.latest_checkpoint(model_dir))
@@ -66,7 +69,7 @@ def main():
                 #ret2 = ret2.astype('str')
                 ret_array = [str(i) for i in ret2]
                 ret_string = ','.join(ret_array)
-                with open(output_dir+'train_output', 'a') as f1:
+                with open(output_dir+'train_output.txt', 'a') as f1:
                     f1.write("%s\t%s\t%s\n" % (image_path, label, ret_string))
 
         for pic in os.listdir(test_dir):
@@ -78,7 +81,7 @@ def main():
             #ret_array = ret2.eval()
             ret_array = [str(i) for i in ret2]
             ret_string = ','.join(ret_array)
-            with open(output_dir+'test_output', 'a') as f1:
+            with open(output_dir+'test_output.txt', 'a') as f1:
                 f1.write("%s\t%s\n" % (image_path, ret_string))
 
 
