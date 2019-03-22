@@ -1,6 +1,6 @@
 import tensorflow as tf
 import os
-from network import dsh_dishNet
+import dsh_dishNet
 
 train_dir = '../data/train_data/'
 test_dir = '../data/test_data/'
