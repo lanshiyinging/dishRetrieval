@@ -1,4 +1,5 @@
 import tensorflow as tf
+import numpy as np
 import os
 import dsh_dishNet
 
@@ -21,8 +22,11 @@ def prefix_image(image, resize_w, resize_h):
     image = tf.image.per_image_standardization(image)
 
     image = tf.cast(image, tf.float32)
+    with tf.Session() as sess:
+        image_numpy = image.eval()
+        image_batch = np.array([image_numpy])
 
-    return image
+    return image_batch
 
 
 def get_hashcode(image_path):
