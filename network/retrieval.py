@@ -15,8 +15,8 @@ def load_train_data(train_output_path):
     while train_line:
         train_line = train_line.strip().strip('\n')
         train_line_list = train_line.split('\t')
-        train_hash_dataset[train_line_list[0]] = train_line_list[1]
-        train_label_dataset[train_line_list[0]] = train_line_list[2]
+        train_label_dataset[train_line_list[0]] = train_line_list[1]
+        train_hash_dataset[train_line_list[0]] = train_line_list[2]
         train_line = train_output_file.readline()
     return train_hash_dataset, train_label_dataset
 
@@ -28,7 +28,7 @@ def retrieval(quary_hashcode):
         candi_pic_hashcode = v.split(',')
         temp_dis = 0
         for code1, code2 in zip(candi_pic_hashcode, quary_hashcode):
-            if int(code1) != code2:
+            if int(code1) != int(code2):
                 temp_dis += 1
         hm_dis_list[k] = temp_dis
     sort_hm_dis = sorted(hm_dis_list.items(), key=lambda x: x[1])
@@ -80,8 +80,8 @@ def main():
     while train_line:
         train_line = train_line.strip().strip('\n')
         train_line_list = train_line.split('\t')
-        train_hash_dataset[train_line_list[0]] = train_line_list[1]
-        train_label_dataset[train_line_list[0]] = train_line_list[2]
+        train_label_dataset[train_line_list[0]] = train_line_list[1]
+        train_hash_dataset[train_line_list[0]] = train_line_list[2]
         train_line = train_output_file.readline()
 
     test_line = test_output_file.readline()
@@ -98,7 +98,7 @@ def main():
             candi_pic_hashcode = v.split(',')
             temp_dis = 0
             for code1, code2 in zip(candi_pic_hashcode, test_pic_hashcode):
-                if int(code1) != code2:
+                if int(code1) != int(code2):
                     temp_dis += 1
             hm_dis_list[k] = temp_dis
         sort_hm_dis = sorted(hm_dis_list.items(), key=lambda x: x[1])
