@@ -45,7 +45,7 @@ def get_test_label(filename):
     while line:
         line = line.strip().strip('\n')
         line_list = line.split('\t')
-        lable_dict[line_list[0]] = line_list[1]
+        lable_dict['../data/test_data/'+line_list[0]] = line_list[1]
         line = f.readline()
     return lable_dict
 
