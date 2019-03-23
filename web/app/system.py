@@ -20,15 +20,15 @@ def service():
     }
     if request.method == 'POST':
         f = request.files['file']
-        upload_path = 'static/' + secure_filename(f.filename)
+        upload_path = '/root/lsy/dishRetrieval/web/app/static/' + secure_filename(f.filename)
         f.save(upload_path)
         query_hash_code = get_hashcode.get_hashcode(upload_path)
         result_ = retrieval.retrieval(query_hash_code)
-        result["rank1"] = result_[0][0]
-        result["rank2"] = result_[1][0]
-        result["rank3"] = result_[2][0]
-        result["rank4"] = result_[3][0]
-        result["rank5"] = result_[4][0]
+        result["rank1"] = result_[0][0].replace('..', '/root/lsy/dishRetrieval')
+        result["rank2"] = result_[1][0].replace('..', '/root/lsy/dishRetrieval')
+        result["rank3"] = result_[2][0].replace('..', '/root/lsy/dishRetrieval')
+        result["rank4"] = result_[3][0].replace('..', '/root/lsy/dishRetrieval')
+        result["rank5"] = result_[4][0].replace('..', '/root/lsy/dishRetrieval')
         return redirect(url_for('service'))
     return render_template('index.html', input_image_path=upload_path, result=result)
 

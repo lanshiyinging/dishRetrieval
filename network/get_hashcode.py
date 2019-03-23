@@ -8,6 +8,7 @@ test_dir = '../data/test_data/'
 model_dir = './model/'
 batch_size = 100
 output_dir = '../data/output/'
+model_dir_runtime = '/root/lsy/dishRetrieval/network/model/'
 
 
 
@@ -32,8 +33,8 @@ def prefix_image(image, resize_w, resize_h):
 
 def get_hashcode(image_path):
     with tf.Session() as sess:
-        saver = tf.train.import_meta_graph(model_dir + 'model.meta')
-        saver.restore(sess, tf.train.latest_checkpoint(model_dir))
+        saver = tf.train.import_meta_graph(model_dir_runtime + 'model.meta')
+        saver.restore(sess, tf.train.latest_checkpoint(model_dir_runtime))
         #y_conv = dsh_dishNet.dsh_dish_net(x)
         y_conv = tf.get_collection('y_conv')[0]
         graph = tf.get_default_graph()

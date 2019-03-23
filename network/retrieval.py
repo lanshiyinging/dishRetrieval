@@ -5,6 +5,8 @@ test_output_path = '../data/output/test_output.txt'
 test_label_path = '../data/test_list.txt'
 train_data_dir = '../data/train_data/'
 
+train_output_path_runtime = '/root/lsy/dishRetrieval/data/output/train_output.txt'
+
 def load_train_data(train_output_path):
     train_output_file = open(train_output_path, 'r')
     train_hash_dataset = {}
@@ -20,7 +22,7 @@ def load_train_data(train_output_path):
 
 
 def retrieval(quary_hashcode):
-    train_hash_dataset, train_label_dataset = load_train_data(train_output_path)
+    train_hash_dataset, train_label_dataset = load_train_data(train_output_path_runtime)
     hm_dis_list = {}
     for k, v in train_hash_dataset:
         candi_pic_hashcode = v.split(',')
