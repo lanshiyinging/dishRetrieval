@@ -9,7 +9,7 @@ config = tf.ConfigProto(log_device_placement=True,
                         allow_soft_placement=True)
 
 
-k = 12
+k = 24
 batch_size = 20
 epoch_num = 1
 momentum = 0.9
@@ -17,9 +17,10 @@ weight_decay = 0.004
 base_lr = 0.001
 m = 2 * k
 alpha = 0.01
+img_size = 227
 
 with tf.name_scope("input_image"):
-    x = tf.placeholder(tf.float32, shape=[None, 32, 32, 3], name="input_image")
+    x = tf.placeholder(tf.float32, shape=[None, img_size, img_size, 3], name="input_image")
     tf.summary.image('input_image', x, 10)
 y = tf.placeholder(tf.float32, shape=[batch_size], name="label")
 
@@ -200,7 +201,7 @@ def main():
     #val_data_dir = "data/val_data/"
     #test_data_dir = "data/test_data/"
     train_image, train_label, train_num = get_files(train_data_dir)
-    train_image_batches, train_label_batches = get_batches(train_image, train_label, 32, 32, batch_size, batch_size)
+    train_image_batches, train_label_batches = get_batches(train_image, train_label, img_size, img_size, batch_size, batch_size)
 
     y_conv = dsh_dish_net(x)
     with tf.name_scope('loss'):
