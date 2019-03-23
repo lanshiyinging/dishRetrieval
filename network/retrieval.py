@@ -107,9 +107,10 @@ def main():
         eval = evaluate(test_label_dataset[test_line_list[0]], result, train_label_dataset)
         MAP_5 += eval['AP_5']
         with open("../data/test_result.txt", 'a') as f:
-            f.write("%s\t[%s]\t%s\t%s\n" %(test_line_list[0], test_line_list[1], str(result), str(eval)))
+            f.write("%s\t%s\t[%s]\t%s\t%s\n" % (test_line_list[0], test_label_dataset[test_line_list[0]], test_line_list[1], str(result), str(eval)))
         test_num += 1
-        test_line = train_output_file.readline()
+        test_line = test_output_file.readline()
+
     MAP_5 = MAP_5/test_num
     print('The MAP@5 is :' + str(MAP_5))
 
