@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a1a0b0a-c192-4904-8f1c-12ea314ca0f3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/test_output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/output_pre/test_output.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/train_output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/output_pre/train_output.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test_result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/test_result_pre.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/dsh_dishNet.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/dsh_dishNet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/logs/events.out.tfevents.1553225068.instance-b1zm60ze" beforeDir="false" afterPath="$PROJECT_DIR$/network/logs_pre/events.out.tfevents.1553225068.instance-b1zm60ze" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/logs_pre/events.out.tfevents.1553092245.instance-b1zm60ze" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/model/checkpoint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/model/model.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/model/model.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/model/model.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/model_pre/model.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/network/model_pre/model.data-00000-of-00001" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/model_pre/model.index" beforeDir="false" afterPath="$PROJECT_DIR$/network/model_pre/model.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/model_pre/model.meta" beforeDir="false" afterPath="$PROJECT_DIR$/network/model_pre/model.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/get_hashcode.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/get_hashcode.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/network/dsh_dishNet.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-825">
-              <caret line="206" column="31" lean-forward="true" selection-start-line="206" selection-start-column="31" selection-end-line="206" selection-end-column="31" />
+            <state relative-caret-position="4944">
+              <caret line="206" column="31" selection-start-line="206" selection-start-column="31" selection-end-line="206" selection-end-column="31" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -47,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/network/get_hashcode.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="48" column="21" lean-forward="true" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
+            <state relative-caret-position="-1425">
+              <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -75,7 +61,7 @@
         <entry file="file://$PROJECT_DIR$/network/retrieval.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2309">
-              <caret line="114" column="40" lean-forward="true" selection-start-line="114" selection-start-column="40" selection-end-line="114" selection-end-column="40" />
+              <caret line="114" column="40" selection-start-line="114" selection-start-column="40" selection-end-line="114" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -123,9 +109,9 @@
         <option value="$PROJECT_DIR$/network/dsh_dishNet_debug.py" />
         <option value="$PROJECT_DIR$/web/app/system.py" />
         <option value="$PROJECT_DIR$/network/test.py" />
-        <option value="$PROJECT_DIR$/network/get_hashcode.py" />
         <option value="$PROJECT_DIR$/network/retrieval.py" />
         <option value="$PROJECT_DIR$/network/dsh_dishNet.py" />
+        <option value="$PROJECT_DIR$/network/get_hashcode.py" />
       </list>
     </option>
   </component>
@@ -347,12 +333,12 @@
       <workItem from="1553047161740" duration="3435000" />
       <workItem from="1553161855562" duration="493000" />
       <workItem from="1553219441126" duration="4527000" />
-      <workItem from="1553302128798" duration="4577000" />
+      <workItem from="1553302128798" duration="4900000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116234000" />
+    <option name="totallyTimeSpent" value="116557000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -566,16 +552,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/network/get_hashcode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="48" column="21" lean-forward="true" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/test_list.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -588,14 +564,24 @@
     <entry file="file://$PROJECT_DIR$/network/retrieval.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2309">
-          <caret line="114" column="40" lean-forward="true" selection-start-line="114" selection-start-column="40" selection-end-line="114" selection-end-column="40" />
+          <caret line="114" column="40" selection-start-line="114" selection-start-column="40" selection-end-line="114" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/network/dsh_dishNet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-825">
-          <caret line="206" column="31" lean-forward="true" selection-start-line="206" selection-start-column="31" selection-end-line="206" selection-end-column="31" />
+        <state relative-caret-position="4944">
+          <caret line="206" column="31" selection-start-line="206" selection-start-column="31" selection-end-line="206" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/get_hashcode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1425">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>

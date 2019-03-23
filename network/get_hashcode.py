@@ -9,11 +9,12 @@ model_dir = './model/'
 batch_size = 100
 output_dir = '../data/output/'
 model_dir_runtime = '/root/lsy/dishRetrieval/network/model/'
+img_size = 64
 
 
 
 #x = tf.placeholder(tf.float32, shape=[None, 32, 32, 3])
-k = 12
+k = 24
 
 def prefix_image(image, resize_w, resize_h):
     image = tf.cast(image, tf.string)
@@ -39,7 +40,7 @@ def get_hashcode(image_path):
         y_conv = tf.get_collection('y_conv')[0]
         graph = tf.get_default_graph()
         x = graph.get_operation_by_name("input_image/input_image").outputs[0]
-        image = prefix_image(image_path, 32, 32)
+        image = prefix_image(image_path, img_size, img_size)
         ret = sess.run(y_conv, feed_dict={x: image})
         ret1 = tf.reshape(ret, [k])
         ret2 = sess.run(tf.sign(ret1))
@@ -52,7 +53,7 @@ def get_hashcode(image_path):
 def main():
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
-    already_get = open(output_dir+'train_output.txt', 'r').read()
+    #already_get = open(output_dir+'train_output.txt', 'r').read()
     with tf.Session() as sess:
         saver = tf.train.import_meta_graph(model_dir+'model.meta')
         saver.restore(sess, tf.train.latest_checkpoint(model_dir))
@@ -63,9 +64,9 @@ def main():
         for label in os.listdir(train_dir):
             for pic in os.listdir(train_dir + label):
                 image_path = train_dir + label + '/' + pic
-                if image_path in already_get:
-                    continue
-                image = prefix_image(image_path, 32, 32)
+                #if image_path in already_get:
+                    #continue
+                image = prefix_image(image_path, img_size, img_size)
                 ret = sess.run(y_conv, feed_dict={x: image})
                 ret1 = tf.reshape(ret, [k])
                 ret2 = sess.run(tf.sign(ret1))
@@ -78,7 +79,7 @@ def main():
 
         for pic in os.listdir(test_dir):
             image_path = test_dir + pic
-            image = prefix_image(image_path, 32, 32)
+            image = prefix_image(image_path, img_size, img_size)
             ret = sess.run(y_conv, feed_dict={x: image})
             ret1 = tf.reshape(ret, [k])
             ret2 = sess.run(tf.sign(ret1))
