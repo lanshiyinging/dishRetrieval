@@ -45,8 +45,8 @@ def get_hashcode(image_path):
         ret2 = sess.run(tf.sign(ret1))
         #ret_array = ret2.eval()
         #ret_array = [str(i) for i in ret2]
-        #ret_string = ','.join(ret_array)
-    return ret2
+        ret_string = ','.join(ret2)
+    return ret_string
 
 
 def main():
