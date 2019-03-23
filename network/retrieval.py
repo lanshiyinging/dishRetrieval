@@ -24,7 +24,7 @@ def load_train_data(train_output_path):
 def retrieval(quary_hashcode):
     train_hash_dataset, train_label_dataset = load_train_data(train_output_path_runtime)
     hm_dis_list = {}
-    for k, v in train_hash_dataset:
+    for k, v in train_hash_dataset.items():
         candi_pic_hashcode = v.split(',')
         temp_dis = 0
         for code1, code2 in zip(candi_pic_hashcode, quary_hashcode):
@@ -48,6 +48,7 @@ def get_test_label(filename):
         lable_dict[line_list[0]] = line_list[1]
         line = f.readline()
     return lable_dict
+
 
 def evaluate(test_label, result, train_label_dataset):
     eval = {}
@@ -93,7 +94,7 @@ def main():
         test_line = test_line.strip().strip('\n')
         test_line_list = test_line.split('\t')
         test_pic_hashcode = test_line_list[1].split(',')
-        for k, v in train_hash_dataset:
+        for k, v in train_hash_dataset.items():
             candi_pic_hashcode = v.split(',')
             temp_dis = 0
             for code1, code2 in zip(candi_pic_hashcode, test_pic_hashcode):
