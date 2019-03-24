@@ -14,7 +14,7 @@ batch_size = 20
 epoch_num = 4
 momentum = 0.9
 weight_decay = 0.004
-base_lr = 0.00001
+base_lr = 0.0001
 m = 2 * k
 alpha = 0.01
 img_size = 32
@@ -142,21 +142,22 @@ def dsh_dish_net(inputs):
             conv3 = conv_layer(norm2, W_conv3, conv_strides, 'SAME')
             relu3 = tf.nn.relu(conv3+b_conv3)
             pool3 = average_pool_layer(relu3, kernal_size, pool_strides)
-
+        '''
         shape = pool3.get_shape().as_list()
         if len(shape) == 4:
             size = shape[-1]*shape[-2]*shape[-3]
         else:
             size = shape[1]
+        '''
 
         with tf.name_scope("fc_layer1"):
             with tf.name_scope("weights"):
-                W_fc1 = weight_variable("W_fc1", [size, 500])
+                W_fc1 = weight_variable("W_fc1", [4*4*64, 500])
                 variable_summaries(W_fc1)
             with tf.name_scope("biases"):
                 b_fc1 = bias_variable("b_fc1", [500])
                 variable_summaries(b_fc1)
-            pool3_flat = tf.reshape(pool3, [-1, size])
+            pool3_flat = tf.reshape(pool3, [-1, 4*4*64])
             fc1 = tf.nn.relu(tf.matmul(pool3_flat, W_fc1) + b_fc1)
 
         with tf.name_scope("fc_layer2"):
