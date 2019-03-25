@@ -2,6 +2,7 @@ import tensorflow as tf
 import numpy as np
 import os
 import time
+from tensorflow.python import debug as tf_debug
 
 config = tf.ConfigProto(log_device_placement=True,
                         inter_op_parallelism_threads=4,
@@ -217,6 +218,10 @@ def main():
     train_step = tf.train.MomentumOptimizer(learning_rate, momentum).minimize(loss, global_step=global_step)
 
     with tf.Session(config=config) as sess:
+
+        sess = tf_debug.LocalCLIDebugWrapperSession(sess, ui_type="readline", thread_name_filter="MainThread$")
+        sess.add_tensor_filter("has_inf_or_nan", tf_debug.has_inf_or_nan)
+
         writer = tf.summary.FileWriter("logs/", sess.graph)
         merged = tf.summary.merge_all()
         saver = tf.train.Saver()
