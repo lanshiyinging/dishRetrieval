@@ -12,7 +12,7 @@ config = tf.ConfigProto(log_device_placement=True,
 
 k = 12
 batch_size = 20
-epoch_num = 4
+epoch_num = 10
 momentum = 0.9
 weight_decay = 0.004
 base_lr = 0.0001
@@ -190,7 +190,7 @@ def loss_function(y_conv, label_batches):
         for j in range(i+1, num):
             b2 = y_conv[:, j]
             l2_dis = tf.sqrt(tf.reduce_sum(tf.square(b1-b2)))
-            norm = alpha * tf.reduce_sum(tf.subtract(tf.abs(b1), 1.0) + tf.subtract(tf.abs(b2), 1.0))
+            norm = alpha * tf.reduce_sum(tf.abs(tf.subtract(tf.abs(b1), 1.0)) + tf.abs(tf.subtract(tf.abs(b2), 1.0)))
             m = tf.cast(m, tf.float32)
             Lr = Lr + tf.where(tf.equal(label_batches[i], label_batches[j]), l2_dis/2.0, tf.maximum(tf.subtract(m, l2_dis), 0)/2.0) + norm
             count += 1

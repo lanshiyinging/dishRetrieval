@@ -9,12 +9,12 @@ model_dir = './model/'
 batch_size = 100
 output_dir = '../data/output/'
 model_dir_runtime = '/root/lsy/dishRetrieval/network/model/'
-img_size = 64
+img_size = 32
 
 
 
 #x = tf.placeholder(tf.float32, shape=[None, 32, 32, 3])
-k = 24
+k = 12
 
 def prefix_image(image, resize_w, resize_h):
     image = tf.cast(image, tf.string)
