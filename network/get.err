@@ -1,8 +1,8 @@
 nohup: ignoring input
-2019-03-26 15:54:17.619900: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
-2019-03-26 15:54:17.685166: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2394370000 Hz
-2019-03-26 15:54:17.689123: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x55e8fdb442d0 executing computations on platform Host. Devices:
-2019-03-26 15:54:17.689206: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2019-04-02 13:03:29.974323: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-04-02 13:03:29.981072: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2394370000 Hz
+2019-04-02 13:03:29.981234: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x563f0cd9e7c0 executing computations on platform Host. Devices:
+2019-04-02 13:03:29.981248: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
 WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/queue_runner_impl.py:391: QueueRunner.__init__ (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
 Instructions for updating:
 To construct input pipelines, use the `tf.data` module.

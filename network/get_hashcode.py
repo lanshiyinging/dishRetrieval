@@ -53,7 +53,7 @@ def get_hashcode(image_path):
 def main():
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
-    already_get = open(output_dir+'train_output.txt', 'r').read()
+    #already_get = open(output_dir+'train_output.txt', 'r').read()
     with tf.Session() as sess:
         saver = tf.train.import_meta_graph(model_dir+'model.meta')
         saver.restore(sess, tf.train.latest_checkpoint(model_dir))
@@ -64,8 +64,8 @@ def main():
         for label in os.listdir(train_dir):
             for pic in os.listdir(train_dir + label):
                 image_path = train_dir + label + '/' + pic
-                if image_path in already_get:
-                    continue
+                #if image_path in already_get:
+                    #continue
                 image = prefix_image(image_path, img_size, img_size)
                 ret = sess.run(y_conv, feed_dict={x: image})
                 ret1 = tf.reshape(ret, [k])
