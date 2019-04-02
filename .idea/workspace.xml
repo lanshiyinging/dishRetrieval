@@ -12,7 +12,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/dishRetrieval$dsh_dishNet.coverage" NAME="dsh_dishNet Coverage Results" MODIFIED="1552531988126" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/network" />
+    <SUITE FILE_PATH="coverage/dishRetrieval$dsh_dishNet.coverage" NAME="dsh_dishNet Coverage Results" MODIFIED="1553770173859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/network" />
     <SUITE FILE_PATH="coverage/dishRetrieval$get_hashcode.coverage" NAME="get_hashcode Coverage Results" MODIFIED="1553226697214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/network" />
     <SUITE FILE_PATH="coverage/dishRetrieval$dsh_dishNet_debug.coverage" NAME="dsh_dishNet_debug Coverage Results" MODIFIED="1552873454697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/network" />
     <SUITE FILE_PATH="coverage/dishRetrieval$test.coverage" NAME="test Coverage Results" MODIFIED="1553331543982" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/network" />
@@ -25,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/network/dsh_dishNet.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4942">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="4608">
+              <caret line="192" column="27" lean-forward="true" selection-start-line="192" selection-start-column="27" selection-end-line="192" selection-end-column="27" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -38,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_debug.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="96">
-              <caret line="4" column="47" lean-forward="true" selection-start-line="4" selection-end-line="4" selection-end-column="47" />
+              <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -124,6 +124,7 @@
         <option value="$PROJECT_DIR$/network/test.py" />
         <option value="$PROJECT_DIR$/network/retrieval.py" />
         <option value="$PROJECT_DIR$/network/get_hashcode.py" />
+        <option value="$PROJECT_DIR$/network/RegularGradBuilder.py" />
         <option value="$PROJECT_DIR$/network/dsh_dishNet.py" />
       </list>
     </option>
@@ -198,29 +199,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test">
-    <configuration name="dealData" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="dishRetrieval" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/crawl" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crawl/dealData.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.dsh_dishNet">
     <configuration name="detect_jpg_image" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="dishRetrieval" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -235,6 +214,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/network/detect_jpg_image.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="dsh_dishNet" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="dishRetrieval" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/network" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/network/dsh_dishNet.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -311,11 +312,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.dsh_dishNet" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.get_hashcode" />
         <item itemvalue="Python.dsh_dishNet_debug" />
         <item itemvalue="Python.detect_jpg_image" />
-        <item itemvalue="Python.dealData" />
       </list>
     </recent_temporary>
   </component>
@@ -348,23 +349,27 @@
       <workItem from="1553219441126" duration="4527000" />
       <workItem from="1553302128798" duration="4990000" />
       <workItem from="1553415253096" duration="1476000" />
-      <workItem from="1553478694939" duration="274000" />
+      <workItem from="1553478694939" duration="629000" />
+      <workItem from="1553562266988" duration="142000" />
+      <workItem from="1553651222491" duration="796000" />
+      <workItem from="1553735651259" duration="6083000" />
+      <workItem from="1554165490375" duration="889000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118397000" />
+    <option name="totallyTimeSpent" value="126662000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15736766" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12446352" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.20240964" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.15180723" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -551,6 +556,27 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/data/output/a" />
+    <entry file="file://$PROJECT_DIR$/network/RegularGradBuilder.py" />
+    <entry file="file://$PROJECT_DIR$/network/dsh_dishNet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4608">
+          <caret line="192" column="27" lean-forward="true" selection-start-line="192" selection-start-column="27" selection-end-line="192" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_debug.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/network/get_hashcode.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
@@ -580,26 +606,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/output_pre/test_output.txt">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_debug.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="47" lean-forward="true" selection-start-line="4" selection-end-line="4" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network/dsh_dishNet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4942">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
   </component>
 </project>
