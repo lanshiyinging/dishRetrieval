@@ -219,8 +219,8 @@ def main():
 
     with tf.Session(config=config) as sess:
 
-        sess = tf_debug.LocalCLIDebugWrapperSession(sess, ui_type="readline", thread_name_filter="MainThread$")
-        sess.add_tensor_filter("has_inf_or_nan", tf_debug.has_inf_or_nan)
+        #sess = tf_debug.LocalCLIDebugWrapperSession(sess, ui_type="readline", thread_name_filter="MainThread$")
+        #sess.add_tensor_filter("has_inf_or_nan", tf_debug.has_inf_or_nan)
 
         writer = tf.summary.FileWriter("logs/", sess.graph)
         merged = tf.summary.merge_all()
