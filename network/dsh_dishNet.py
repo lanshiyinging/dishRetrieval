@@ -25,7 +25,6 @@ with tf.name_scope("input_image"):
     x = tf.placeholder(tf.float32, shape=[None, img_size, img_size, 3], name="input_image")
     tf.summary.image('input_image', x, 10)
 y = tf.placeholder(tf.float32, shape=[batch_size], name="label")
-keep_prob = tf.placeholder(tf.float32)
 
 
 def get_files(filename):
@@ -103,7 +102,7 @@ def average_pool_layer(inputs, kernal_size, pool_strides):
     return tf.nn.avg_pool(inputs, ksize=kernal_size, strides=pool_strides, padding='SAME')
 
 
-def dsh_dish_net(inputs, keep_prob):
+def dsh_dish_net(inputs):
     inputs_shape = inputs.get_shape()
     inputs = tf.reshape(inputs, shape=[-1, inputs_shape[1].value, inputs_shape[2].value, inputs_shape[3].value])
     with tf.name_scope("dsh_dish_net"):
@@ -161,7 +160,7 @@ def dsh_dish_net(inputs, keep_prob):
                 variable_summaries(b_fc1)
             pool3_flat = tf.reshape(pool3, [-1, 4*4*64])
             fc1 = tf.nn.relu(tf.matmul(pool3_flat, W_fc1) + b_fc1)
-            fc1 = tf.nn.dropout(fc1, keep_prob)
+            fc1 = tf.nn.dropout(fc1, dropout)
 
         with tf.name_scope("fc_layer2"):
             with tf.name_scope("weights"):
@@ -240,7 +239,7 @@ def main():
         try:
             while not coord.should_stop():
                 batch_images, batch_labels = sess.run([train_image_batches, train_label_batches])
-                _, loss_record, result = sess.run([train_step, loss, merged], feed_dict={x: batch_images, y: batch_labels, keep_prob: dropout})
+                _, loss_record, result = sess.run([train_step, loss, merged], feed_dict={x: batch_images, y: batch_labels})
                 #result = sess.run(merged, feed_dict={x: image_batches, y: label_batches})
                 writer.add_summary(result, count)
                 #loss_record = sess.run(loss, feed_dict={x: image_batches, y: label_batches})
