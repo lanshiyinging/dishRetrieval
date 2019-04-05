@@ -209,7 +209,7 @@ def main():
     train_image, train_label, train_num = get_files(train_data_dir)
     train_image_batches, train_label_batches = get_batches(train_image, train_label, img_size, img_size, batch_size, batch_size)
 
-    y_conv = dsh_dish_net(x)
+    y_conv = dsh_dish_net(x, keep_prob)
     with tf.name_scope('loss'):
         loss = loss_function(y_conv, y)
         tf.summary.scalar('loss', loss)
