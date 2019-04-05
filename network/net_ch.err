@@ -1,0 +1,9 @@
+nohup: ignoring input
+Traceback (most recent call last):
+  File "dsh_dishNet_change_pre.py", line 267, in <module>
+    main()
+  File "dsh_dishNet_change_pre.py", line 209, in main
+    train_image, train_label, train_num = get_files(train_data_dir)
+  File "dsh_dishNet_change_pre.py", line 36, in get_files
+    for pic in os.listdir(filename + label):
+NotADirectoryError: [Errno 20] Not a directory: '../data/train_data/.DS_Store'

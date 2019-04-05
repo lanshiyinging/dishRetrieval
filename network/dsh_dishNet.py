@@ -12,10 +12,10 @@ config = tf.ConfigProto(log_device_placement=True,
 
 k = 12
 batch_size = 20
-epoch_num = 15
+epoch_num = 100
 momentum = 0.9
 weight_decay = 0.004
-base_lr = 0.000025
+base_lr = 0.00001
 m = 2 * k
 alpha = 0.01
 img_size = 32
