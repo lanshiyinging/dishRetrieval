@@ -19,12 +19,13 @@ base_lr = 0.00001
 m = 2 * k
 alpha = 0.01
 img_size = 32
+dropout = 0.5
 
 with tf.name_scope("input_image"):
     x = tf.placeholder(tf.float32, shape=[None, img_size, img_size, 3], name="input_image")
     tf.summary.image('input_image', x, 10)
 y = tf.placeholder(tf.float32, shape=[batch_size], name="label")
-
+keep_prob = tf.placeholder(tf.float32)
 
 
 def get_files(filename):
@@ -102,7 +103,7 @@ def average_pool_layer(inputs, kernal_size, pool_strides):
     return tf.nn.avg_pool(inputs, ksize=kernal_size, strides=pool_strides, padding='SAME')
 
 
-def dsh_dish_net(inputs):
+def dsh_dish_net(inputs, keep_prob):
     inputs_shape = inputs.get_shape()
     inputs = tf.reshape(inputs, shape=[-1, inputs_shape[1].value, inputs_shape[2].value, inputs_shape[3].value])
     with tf.name_scope("dsh_dish_net"):
@@ -160,6 +161,7 @@ def dsh_dish_net(inputs):
                 variable_summaries(b_fc1)
             pool3_flat = tf.reshape(pool3, [-1, 4*4*64])
             fc1 = tf.nn.relu(tf.matmul(pool3_flat, W_fc1) + b_fc1)
+            fc1 = tf.nn.dropout(fc1, keep_prob)
 
         with tf.name_scope("fc_layer2"):
             with tf.name_scope("weights"):
@@ -212,7 +214,7 @@ def main():
 
     global_step = tf.Variable(0, trainable=False)
     with tf.name_scope('lr'):
-        learning_rate = tf.train.exponential_decay(learning_rate=base_lr, global_step=global_step, decay_steps=500, decay_rate=0.4, staircase=True)
+        learning_rate = tf.train.exponential_decay(learning_rate=base_lr, global_step=global_step, decay_steps=2000, decay_rate=0.4, staircase=True)
         tf.summary.scalar('lr', learning_rate)
     #train_step = tf.train.GradientDescentOptimizer(learning_rate).minimize(loss, global_step=global_step)
     train_step = tf.train.MomentumOptimizer(learning_rate, momentum).minimize(loss, global_step=global_step)
@@ -238,7 +240,7 @@ def main():
         try:
             while not coord.should_stop():
                 batch_images, batch_labels = sess.run([train_image_batches, train_label_batches])
-                _, loss_record, result = sess.run([train_step, loss, merged], feed_dict={x: batch_images, y: batch_labels})
+                _, loss_record, result = sess.run([train_step, loss, merged], feed_dict={x: batch_images, y: batch_labels, keep_prob: dropout})
                 #result = sess.run(merged, feed_dict={x: image_batches, y: label_batches})
                 writer.add_summary(result, count)
                 #loss_record = sess.run(loss, feed_dict={x: image_batches, y: label_batches})
