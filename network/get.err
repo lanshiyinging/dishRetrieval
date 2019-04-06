@@ -1,0 +1,5 @@
+nohup: ignoring input
+  File "get_hashcode_mini.py", line 42
+    keep_prob = graph.get_tensor_by_name("Placeholder_1:0")
+                                                          ^
+TabError: inconsistent use of tabs and spaces in indentation

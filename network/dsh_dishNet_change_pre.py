@@ -19,7 +19,7 @@ base_lr = 0.00001
 m = 2 * k
 alpha = 0.01
 img_size = 32
-dropout = 0.5
+dropout = 1
 
 with tf.name_scope("input_image"):
     x = tf.placeholder(tf.float32, shape=[None, img_size, img_size, 3], name="input_image")
@@ -226,7 +226,7 @@ def main():
         #sess = tf_debug.LocalCLIDebugWrapperSession(sess, ui_type="readline", thread_name_filter="MainThread$")
         #sess.add_tensor_filter("has_inf_or_nan", tf_debug.has_inf_or_nan)
 
-        writer = tf.summary.FileWriter("logs/", sess.graph)
+        writer = tf.summary.FileWriter("logs_pre/", sess.graph)
         merged = tf.summary.merge_all()
         saver = tf.train.Saver()
         sess.run(tf.global_variables_initializer())
@@ -258,9 +258,9 @@ def main():
             coord.request_stop()
             print("All threads are asked to stop!")
         coord.join(threads)
-        if not os.path.exists("./model/"):
-            os.makedirs("./model/")
-        saver.save(sess, "./model/model")
+        if not os.path.exists("./model_pre/"):
+            os.makedirs("./model_pre/")
+        saver.save(sess, "./model_pre/model")
         print("Optimization Finished!")
 
 if __name__ == '__main__':

@@ -12,14 +12,14 @@ config = tf.ConfigProto(log_device_placement=True,
 
 k = 12
 batch_size = 20
-epoch_num = 100
+epoch_num = 20
 momentum = 0.9
 weight_decay = 0.004
 base_lr = 0.00001
 m = 2 * k
 alpha = 0.01
 img_size = 32
-dropout = 0.5
+dropout = 1
 
 with tf.name_scope("input_image"):
     x = tf.placeholder(tf.float32, shape=[None, img_size, img_size, 3], name="input_image")
