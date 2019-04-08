@@ -13,7 +13,7 @@ img_size = 32
 
 
 #x = tf.placeholder(tf.float32, shape=[None, 32, 32, 3])
-k = 12
+k = 8
 
 def prefix_image(image, resize_w, resize_h):
     image = tf.cast(image, tf.string)
@@ -61,7 +61,7 @@ def main():
         y_conv = tf.get_collection('y_conv')[0]
         graph = tf.get_default_graph()
         x = graph.get_operation_by_name("input_image/input_image").outputs[0]
-        keep_prob = graph.get_tensor_by_name("Placeholder_1:0")
+        keep_prob = graph.get_tensor_by_name("Placeholder:0")
         for label in os.listdir(train_dir):
             for pic in os.listdir(train_dir + label):
                 image_path = train_dir + label + '/' + pic

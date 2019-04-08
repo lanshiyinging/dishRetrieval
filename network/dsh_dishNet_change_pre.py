@@ -10,7 +10,7 @@ config = tf.ConfigProto(log_device_placement=True,
                         allow_soft_placement=True)
 
 
-k = 12
+k = 8
 batch_size = 20
 epoch_num = 100
 momentum = 0.9
@@ -226,7 +226,7 @@ def main():
         #sess = tf_debug.LocalCLIDebugWrapperSession(sess, ui_type="readline", thread_name_filter="MainThread$")
         #sess.add_tensor_filter("has_inf_or_nan", tf_debug.has_inf_or_nan)
 
-        writer = tf.summary.FileWriter("logs_pre/", sess.graph)
+        writer = tf.summary.FileWriter("logs/", sess.graph)
         merged = tf.summary.merge_all()
         saver = tf.train.Saver()
         sess.run(tf.global_variables_initializer())
@@ -258,9 +258,9 @@ def main():
             coord.request_stop()
             print("All threads are asked to stop!")
         coord.join(threads)
-        if not os.path.exists("./model_pre/"):
-            os.makedirs("./model_pre/")
-        saver.save(sess, "./model_pre/model")
+        if not os.path.exists("./model/"):
+            os.makedirs("./model/")
+        saver.save(sess, "./model/model")
         print("Optimization Finished!")
 
 if __name__ == '__main__':
