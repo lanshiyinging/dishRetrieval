@@ -5,9 +5,9 @@ import os
 
 train_dir = '../data/train_data_mmini/'
 test_dir = '../data/test_data_mmini/'
-model_dir = './model2/'
+model_dir = './model/'
 batch_size = 100
-output_dir = '../data/output_mmini2/'
+output_dir = '../data/output_mmini/'
 model_dir_runtime = '/root/lsy/dishRetrieval/network/model/'
 img_size = 32
 
