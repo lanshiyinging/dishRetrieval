@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="1a1a0b0a-c192-4904-8f1c-12ea314ca0f3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/get_hashcode_mini.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/get_hashcode_mini.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/retrieval.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/retrieval.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/retrieval_mini.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/retrieval_mini.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/retrieval_mini2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/retrieval_mmini.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/retrieval_mmini.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,43 +26,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/network/get_hashcode.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2064">
+              <caret line="88" column="46" selection-start-line="88" selection-start-column="46" selection-end-line="88" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crawl/dealData_mini.py">
+        <entry file="file://$PROJECT_DIR$/network/retrieval_mmini.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="576">
-              <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
-              <folding>
-                <element signature="e#431#547#0" />
-                <element signature="e#581#672#0" />
-                <element signature="e#700#856#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/network/detect_jpg_image.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/network/dsh_dishNet.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4920">
-              <caret line="209" column="39" selection-start-line="209" selection-start-column="39" selection-end-line="209" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/network/get_hashcode_mini.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
+              <caret line="70" column="28" lean-forward="true" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -67,7 +47,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_debug.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
+            <state relative-caret-position="4824">
               <caret line="205" column="27" selection-start-line="205" selection-start-column="27" selection-end-line="205" selection-end-column="27" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
@@ -118,8 +98,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/network/retrieval.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2736">
-              <caret line="114" column="40" selection-start-line="114" selection-start-column="40" selection-end-line="114" selection-end-column="40" />
+            <state relative-caret-position="282">
+              <caret line="67" selection-start-line="67" selection-end-line="70" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -161,16 +141,18 @@
         <option value="$PROJECT_DIR$/web/app/templates/index.html" />
         <option value="$PROJECT_DIR$/web/app/system.py" />
         <option value="$PROJECT_DIR$/network/test.py" />
-        <option value="$PROJECT_DIR$/network/retrieval.py" />
-        <option value="$PROJECT_DIR$/network/get_hashcode.py" />
         <option value="$PROJECT_DIR$/network/RegularGradBuilder.py" />
-        <option value="$PROJECT_DIR$/network/retrieval_mini.py" />
         <option value="$PROJECT_DIR$/crawl/dealData_mini.py" />
         <option value="$PROJECT_DIR$/network/preDealPic.py" />
         <option value="$PROJECT_DIR$/network/dsh_dishNet_debug.py" />
         <option value="$PROJECT_DIR$/network/dsh_dishNet.py" />
         <option value="$PROJECT_DIR$/network/dsh_dishNet_change_pre.py" />
         <option value="$PROJECT_DIR$/network/get_hashcode_mini.py" />
+        <option value="$PROJECT_DIR$/network/get_hashcode.py" />
+        <option value="$PROJECT_DIR$/network/retrieval.py" />
+        <option value="$PROJECT_DIR$/network/retrieval_mini.py" />
+        <option value="$PROJECT_DIR$/network/retrieval_mini2.py" />
+        <option value="$PROJECT_DIR$/network/retrieval_mmini.py" />
       </list>
     </option>
   </component>
@@ -386,18 +368,19 @@
       <workItem from="1554253538177" duration="1012000" />
       <workItem from="1554384564018" duration="1851000" />
       <workItem from="1554444065831" duration="5075000" />
-      <workItem from="1554513171726" duration="667000" />
+      <workItem from="1554513171726" duration="1089000" />
+      <workItem from="1554604753886" duration="1383000" />
+      <workItem from="1554684118768" duration="1392000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138142000" />
+    <option name="totallyTimeSpent" value="141339000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12660944" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1795422" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -547,13 +530,6 @@
     <entry file="file://$PROJECT_DIR$/data/output/a" />
     <entry file="file://$PROJECT_DIR$/network/RegularGradBuilder.py" />
     <entry file="file://$PROJECT_DIR$/data/output_pre/test_output.txt" />
-    <entry file="file://$PROJECT_DIR$/network/retrieval_mini.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1749">
-          <caret line="75" column="40" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crawl/dealData.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1488">
@@ -564,7 +540,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/network/get_hashcode.py" />
     <entry file="file://$PROJECT_DIR$/crawl/ddT.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -590,6 +565,44 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
           <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/dsh_dishNet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/get_hashcode_mini.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1680">
+          <caret line="72" column="46" selection-start-line="72" selection-start-column="46" selection-end-line="72" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/get_hashcode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2064">
+          <caret line="88" column="46" selection-start-line="88" selection-start-column="46" selection-end-line="88" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_debug.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4824">
+          <caret line="205" column="27" selection-start-line="205" selection-start-column="27" selection-end-line="205" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_change_pre.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -619,39 +632,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/network/retrieval.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2736">
-          <caret line="114" column="40" selection-start-line="114" selection-start-column="40" selection-end-line="114" selection-end-column="40" />
+        <state relative-caret-position="282">
+          <caret line="67" selection-start-line="67" selection-end-line="70" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_change_pre.py">
+    <entry file="file://$PROJECT_DIR$/network/retrieval_mmini.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+        <state relative-caret-position="576">
+          <caret line="70" column="28" lean-forward="true" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_debug.py">
+    <entry file="file://$PROJECT_DIR$/network/retrieval_mini2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="205" column="27" selection-start-line="205" selection-start-column="27" selection-end-line="205" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1680">
+          <caret line="70" column="28" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/network/dsh_dishNet.py">
+    <entry file="file://$PROJECT_DIR$/network/retrieval_mini.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4920">
-          <caret line="209" column="39" selection-start-line="209" selection-start-column="39" selection-end-line="209" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network/get_hashcode_mini.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
+        <state relative-caret-position="615">
+          <caret line="70" column="28" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="28" />
         </state>
       </provider>
     </entry>

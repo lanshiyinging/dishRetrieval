@@ -65,7 +65,10 @@ def evaluate(test_label, result, train_label_dataset):
             AP_5 = AP_5 + float(true_num)/(i+1)
     precision = float(true_num)/result_num
     recall = float(true_num)/total_num
-    AP_5 = AP_5/result_num
+    if true_num == 0:
+        AP_5 = 0
+    else:
+        AP_5 = AP_5/true_num
     eval['precision'] = precision
     eval['recall'] = recall
     eval['AP_5'] = AP_5

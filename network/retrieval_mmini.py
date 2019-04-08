@@ -65,7 +65,10 @@ def evaluate(test_label, result, train_label_dataset):
             AP_5 = AP_5 + float(true_num)/(i+1)
     precision = float(true_num)/result_num
     recall = float(true_num)/total_num
-    AP_5 = AP_5/result_num
+    if true_num == 0:
+        AP_5 = 0
+    else:
+        AP_5 = AP_5/true_num
     eval['precision'] = precision
     eval['recall'] = recall
     eval['AP_5'] = AP_5
@@ -102,7 +105,7 @@ def main():
                     temp_dis += 1
             hm_dis_list[k] = temp_dis
         sort_hm_dis = sorted(hm_dis_list.items(), key=lambda x: x[1])
-        for i in range(5):
+        for i in range(3):
             result.append(sort_hm_dis[i])
         eval = evaluate(test_label_dataset[test_line_list[0]], result, train_label_dataset)
         MAP_5 += eval['AP_5']
