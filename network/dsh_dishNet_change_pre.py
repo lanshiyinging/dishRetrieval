@@ -11,11 +11,11 @@ config = tf.ConfigProto(log_device_placement=True,
 
 
 k = 8
-batch_size = 25
-epoch_num = 10
+batch_size = 50
+epoch_num = 100
 momentum = 0.9
 weight_decay = 0.004
-base_lr = 0.00001
+base_lr = 0.001
 m = 2 * k
 alpha = 0.01
 img_size = 32
@@ -56,8 +56,8 @@ def get_batches(image, label, resize_w, resize_h, batch_size, capacity):
     image_c = tf.read_file(queue[0])
     image = tf.image.decode_jpeg(image_c, channels=3)
 
-    #image = tf.image.central_crop(image, 0.5)
-    #image = tf.image.resize_images(image, [resize_h, resize_w], method=0)
+    image = tf.image.central_crop(image, 0.5)
+    image = tf.image.resize_images(image, [resize_h, resize_w], method=0)
 
     image = tf.image.per_image_standardization(image)
 

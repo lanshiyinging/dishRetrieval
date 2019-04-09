@@ -56,8 +56,8 @@ def get_batches(image, label, resize_w, resize_h, batch_size, capacity):
     image_c = tf.read_file(queue[0])
     image = tf.image.decode_jpeg(image_c, channels=3)
 
-    #image = tf.image.central_crop(image, 0.5)
-    #image = tf.image.resize_images(image, [resize_h, resize_w], method=0)
+    image = tf.image.central_crop(image, 0.5)
+    image = tf.image.resize_images(image, [resize_h, resize_w], method=0)
 
     image = tf.image.per_image_standardization(image)
 
