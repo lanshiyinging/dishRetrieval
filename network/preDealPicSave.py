@@ -10,6 +10,8 @@ deal_data_dir = "../data/all_data_deal/"
 with tf.Session() as sess:
     for label in os.listdir(data_dir):
         for pic in os.listdir(data_dir + label):
+            if os.path.exists(deal_data_dir+label+'/'+pic):
+                continue
             img_path = data_dir + label + '/' + pic
             image_raw_data = tf.gfile.FastGFile(img_path, 'rb').read()
             img_data = tf.image.decode_jpeg(image_raw_data)
