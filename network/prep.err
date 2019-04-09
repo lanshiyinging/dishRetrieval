@@ -1,9 +1,9 @@
 nohup: ignoring input
-2019-04-08 21:12:23.801960: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
-2019-04-08 21:12:23.808704: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2394370000 Hz
-2019-04-08 21:12:23.808870: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x55f138923dd0 executing computations on platform Host. Devices:
-2019-04-08 21:12:23.808883: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
-WARNING:tensorflow:From preDealPicSave.py:14: FastGFile.__init__ (from tensorflow.python.platform.gfile) is deprecated and will be removed in a future version.
+2019-04-09 09:05:03.809451: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-04-09 09:05:03.867141: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2394370000 Hz
+2019-04-09 09:05:03.870140: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x5567f6b8bfb0 executing computations on platform Host. Devices:
+2019-04-09 09:05:03.870241: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From preDealPicSave.py:16: FastGFile.__init__ (from tensorflow.python.platform.gfile) is deprecated and will be removed in a future version.
 Instructions for updating:
 Use tf.gfile.GFile.
 WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/control_flow_ops.py:3632: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
