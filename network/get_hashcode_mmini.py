@@ -7,7 +7,7 @@ train_dir = '../data/train_data_mmini/'
 test_dir = '../data/test_data_mmini/'
 model_dir = './model1/'
 batch_size = 100
-output_dir = '../data/output_mmini1/'
+output_dir = '../data/output_mmini11/'
 model_dir_runtime = '/root/lsy/dishRetrieval/network/model/'
 img_size = 32
 

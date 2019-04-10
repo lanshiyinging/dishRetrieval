@@ -45,7 +45,7 @@ get_2_list = [12, 13]
 get_3_list = [14, 15, 16, 17, 20]
 get_4_list = [18, 19]
 #while line:
-for l in range(10):
+for l in range(20):
     line = line.strip().strip('\n')
     dish_no = line.split('\t')[0]
     dish_name = line.split('\t')[1]
