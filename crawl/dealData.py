@@ -8,7 +8,7 @@ from PIL import ImageFile
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 map_file = 'dishname2.txt'
-data_dir = '../data/all_data/'
+data_dir = '../data/all_data_cut/'
 train_data_dir = '../data/train_data/'
 #val_data_dir = '../data/val_data/'
 test_data_dir = '../data/test_data/'
@@ -59,12 +59,15 @@ while line:
     #os.makedirs(val_data_dir + dish_no + '/')
     file_list = os.listdir(old_path)
     total_num = len(file_list)
+    '''
     if total_num in get_2_list:
         test_num = 2
     elif total_num in get_3_list:
         test_num = 3
     else:
         test_num = 4
+    '''
+    test_num = 1
     #for i, j in zip(range(val_num), range(test_num)):
     for i in range(test_num):
 	

@@ -8,7 +8,7 @@ from PIL import ImageFile
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 map_file = 'dishname2.txt'
-data_dir = '../data/all_data/'
+data_dir = '../data/all_data_cut/'
 train_data_dir = '../data/train_data_mini/'
 #val_data_dir = '../data/val_data/'
 test_data_dir = '../data/test_data_mini/'
