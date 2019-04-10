@@ -1,9 +1,9 @@
 import os
 
-train_output_path = '../data/output_mmini1/train_output.txt'
-test_output_path = '../data/output_mmini1/test_output.txt'
-test_label_path = '../data/test_list_mmini.txt'
-train_data_dir = '../data/train_data_mmini/'
+train_output_path = '../data/output_mini1/train_output.txt'
+test_output_path = '../data/output_mini1/test_output.txt'
+test_label_path = '../data/test_list_mini.txt'
+train_data_dir = '../data/train_data_mini/'
 
 train_output_path_runtime = '/root/lsy/dishRetrieval/data/output/train_output.txt'
 
@@ -45,7 +45,7 @@ def get_test_label(filename):
     while line:
         line = line.strip().strip('\n')
         line_list = line.split('\t')
-        lable_dict['../data/test_data_mmini/'+line_list[0]] = line_list[1]
+        lable_dict['../data/test_data_mini/'+line_list[0]] = line_list[1]
         line = f.readline()
     return lable_dict
 
@@ -105,11 +105,11 @@ def main():
                     temp_dis += 1
             hm_dis_list[k] = temp_dis
         sort_hm_dis = sorted(hm_dis_list.items(), key=lambda x: x[1])
-        for i in range(3):
+        for i in range(20):
             result.append(sort_hm_dis[i])
         eval = evaluate(test_label_dataset[test_line_list[0]], result, train_label_dataset)
         MAP_5 += eval['AP_5']
-        with open("../data/test_result_mmini1.txt", 'a') as f:
+        with open("../data/test_result_mini1.txt", 'a') as f:
             f.write("%s\t%s\t[%s]\t%s\t%s\n" % (test_line_list[0], test_label_dataset[test_line_list[0]], test_line_list[1], str(result), str(eval)))
         test_num += 1
         test_line = test_output_file.readline()

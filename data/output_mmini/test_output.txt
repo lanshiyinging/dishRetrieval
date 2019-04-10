@@ -1,0 +1,10 @@
+../data/test_data_mmini/Test_0007.jpg	1.0,1.0,1.0,-1.0,-1.0,-1.0,1.0,1.0
+../data/test_data_mmini/Test_0008.jpg	1.0,1.0,1.0,-1.0,-1.0,-1.0,1.0,1.0
+../data/test_data_mmini/Test_0000.jpg	1.0,1.0,-1.0,1.0,-1.0,-1.0,-1.0,-1.0
+../data/test_data_mmini/Test_0006.jpg	1.0,1.0,1.0,1.0,-1.0,-1.0,-1.0,1.0
+../data/test_data_mmini/Test_0002.jpg	1.0,1.0,-1.0,-1.0,-1.0,1.0,1.0,-1.0
+../data/test_data_mmini/Test_0001.jpg	-1.0,1.0,1.0,-1.0,-1.0,1.0,-1.0,-1.0
+../data/test_data_mmini/Test_0004.jpg	1.0,-1.0,-1.0,1.0,-1.0,1.0,-1.0,1.0
+../data/test_data_mmini/Test_0003.jpg	1.0,1.0,1.0,-1.0,-1.0,1.0,1.0,1.0
+../data/test_data_mmini/Test_0009.jpg	1.0,1.0,1.0,-1.0,-1.0,1.0,1.0,-1.0
+../data/test_data_mmini/Test_0005.jpg	1.0,1.0,-1.0,1.0,-1.0,1.0,1.0,1.0

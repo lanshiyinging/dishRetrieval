@@ -3,11 +3,11 @@ import numpy as np
 import os
 #import dsh_dishNet
 
-train_dir = '../data/train_data_mmini/'
-test_dir = '../data/test_data_mmini/'
+train_dir = '../data/train_data_mini/'
+test_dir = '../data/test_data_mini/'
 model_dir = './model1/'
 batch_size = 100
-output_dir = '../data/output_mmini1/'
+output_dir = '../data/output_mini1/'
 model_dir_runtime = '/root/lsy/dishRetrieval/network/model/'
 img_size = 32
 
