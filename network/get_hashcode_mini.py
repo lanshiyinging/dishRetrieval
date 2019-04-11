@@ -20,6 +20,7 @@ def prefix_image(image, resize_w, resize_h):
     image_c = tf.read_file(image)
     image = tf.image.decode_jpeg(image_c, channels=3)
 
+    image = tf.image.central_crop(image, 0.5)
     image = tf.image.resize_images(image, [resize_h, resize_w], method=0)
     image = tf.image.per_image_standardization(image)
 
