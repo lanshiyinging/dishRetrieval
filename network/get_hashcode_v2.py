@@ -3,18 +3,18 @@ import numpy as np
 import os
 #import dsh_dishNet
 
-train_dir = '../data/train_data/'
-test_dir = '../data/test_data/'
-model_dir = './model/'
+train_dir = '../data/train_data_mmini/'
+test_dir = '../data/test_data_mmini/'
+model_dir = './model_web/'
 batch_size = 100
-output_dir = '../data/output/'
+output_dir = '../data/output_mmini_web/'
 model_dir_runtime = '/root/lsy/dishRetrieval/network/model/'
 img_size = 32
 
 
 
 #x = tf.placeholder(tf.float32, shape=[None, 32, 32, 3])
-k = 12
+k = 8
 
 def prefix_image(image, resize_w, resize_h):
     image = tf.cast(image, tf.string)
@@ -40,7 +40,7 @@ def get_hashcode(image_path):
         y_conv = tf.get_collection('y_conv')[0]
         graph = tf.get_default_graph()
         x = graph.get_operation_by_name("input_image/input_image").outputs[0]
-        keep_prob = graph.get_tensor_by_name("Placeholder_1:0")
+        keep_prob = graph.get_tensor_by_name("Placeholder:0")
         image = prefix_image(image_path, img_size, img_size)
         ret = sess.run(y_conv, feed_dict={x: image, keep_prob: 1.0})
         ret1 = tf.reshape(ret, [k])
@@ -62,7 +62,7 @@ def main():
         y_conv = tf.get_collection('y_conv')[0]
         graph = tf.get_default_graph()
         x = graph.get_operation_by_name("input_image/input_image").outputs[0]
-        keep_prob = graph.get_tensor_by_name("Placeholder_1:0")
+        keep_prob = graph.get_tensor_by_name("Placeholder:0")
         for label in os.listdir(train_dir):
             for pic in os.listdir(train_dir + label):
                 image_path = train_dir + label + '/' + pic

@@ -15,11 +15,11 @@ batch_size = 22
 epoch_num = 100
 momentum = 0.9
 weight_decay = 0.004
-base_lr = 0.01
+base_lr = 0.0001
 m = 2 * k
 alpha = 0.01
 img_size = 32
-dropout = 0.8
+dropout = 0.5
 
 with tf.name_scope("input_image"):
     x = tf.placeholder(tf.float32, shape=[None, img_size, img_size, 3], name="input_image")

@@ -15,10 +15,10 @@ batch_size = 22
 epoch_num = 100
 momentum = 0.9
 weight_decay = 0.004
-base_lr = 0.0001
+base_lr = 0.00001
 m = 2 * k
 alpha = 0.01
-img_size = 32
+img_size = 226
 dropout = 0.8
 
 with tf.name_scope("input_image"):
@@ -56,7 +56,7 @@ def get_batches(image, label, resize_w, resize_h, batch_size, capacity):
     image_c = tf.read_file(queue[0])
     image = tf.image.decode_jpeg(image_c, channels=3)
 
-    image = tf.image.central_crop(image, 0.5)
+    #image = tf.image.central_crop(image, 0.5)
     image = tf.image.resize_images(image, [resize_h, resize_w], method=0)
 
     image = tf.image.per_image_standardization(image)
@@ -146,22 +146,21 @@ def dsh_dish_net(inputs, keep_prob):
             conv3 = conv_layer(norm2, W_conv3, conv_strides, 'SAME')
             relu3 = tf.nn.relu(conv3+b_conv3)
             pool3 = average_pool_layer(relu3, kernal_size, pool_strides)
-        '''
+        
         shape = pool3.get_shape().as_list()
         if len(shape) == 4:
             size = shape[-1]*shape[-2]*shape[-3]
         else:
             size = shape[1]
-        '''
 
         with tf.name_scope("fc_layer1"):
             with tf.name_scope("weights"):
-                W_fc1 = weight_variable("W_fc1", [4*4*64, 500])
+                W_fc1 = weight_variable("W_fc1", [size, 500])
                 variable_summaries(W_fc1)
             with tf.name_scope("biases"):
                 b_fc1 = bias_variable("b_fc1", [500])
                 variable_summaries(b_fc1)
-            pool3_flat = tf.reshape(pool3, [-1, 4*4*64])
+            pool3_flat = tf.reshape(pool3, [-1, size])
             fc1 = tf.nn.relu(tf.matmul(pool3_flat, W_fc1) + b_fc1)
             fc1 = tf.nn.dropout(fc1, keep_prob)
 
@@ -218,8 +217,8 @@ def main():
     with tf.name_scope('lr'):
         learning_rate = tf.train.exponential_decay(learning_rate=base_lr, global_step=global_step, decay_steps=2000, decay_rate=0.4, staircase=True)
         tf.summary.scalar('lr', learning_rate)
-    train_step = tf.train.GradientDescentOptimizer(learning_rate).minimize(loss, global_step=global_step)
-    #train_step = tf.train.MomentumOptimizer(learning_rate, momentum).minimize(loss, global_step=global_step)
+    #train_step = tf.train.GradientDescentOptimizer(learning_rate).minimize(loss, global_step=global_step)
+    train_step = tf.train.MomentumOptimizer(learning_rate, momentum).minimize(loss, global_step=global_step)
 
     with tf.Session(config=config) as sess:
 
