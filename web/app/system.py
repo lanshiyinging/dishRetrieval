@@ -5,11 +5,14 @@ import tensorflow as tf
 import os
 import sys
 from werkzeug.utils import secure_filename
+from flask_bootstrap import Bootstrap
 
-app = Flask(__name__)
 sys.path.append('/root/lsy/dishRetrieval/network')
 import get_hashcode_v2
 import retrieval_v2
+
+app = Flask(__name__)
+bootstrap = Bootstrap(app)
 
 @app.route('/service', methods=['GET', 'POST'])
 def service():
