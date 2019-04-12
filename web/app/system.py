@@ -1,12 +1,15 @@
 from flask import *
 import tensorflow as tf
-from network import get_hashcode
-from network import retrieval
+#from network import get_hashcode_v2
+#from network import retrieval_v2
 import os
+import sys
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
-
+sys.path.append('/root/lsy/dishRetrieval/network')
+import get_hashcode_v2
+import retrieval_v2
 
 @app.route('/service', methods=['GET', 'POST'])
 def service():
@@ -22,8 +25,8 @@ def service():
         f = request.files['file']
         upload_path = '/root/lsy/dishRetrieval/web/app/static/' + secure_filename(f.filename)
         f.save(upload_path)
-        query_hash_code = get_hashcode.get_hashcode(upload_path)
-        result_ = retrieval.retrieval(query_hash_code)
+        query_hash_code = get_hashcode_v2.get_hashcode(upload_path)
+        result_ = retrieval_v2.retrieval(query_hash_code)
         result["rank1"] = result_[0][0].replace('..', '/root/lsy/dishRetrieval')
         result["rank2"] = result_[1][0].replace('..', '/root/lsy/dishRetrieval')
         result["rank3"] = result_[2][0].replace('..', '/root/lsy/dishRetrieval')
@@ -33,6 +36,6 @@ def service():
     return render_template('index.html', input_image_path=upload_path, result=result)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
 
 

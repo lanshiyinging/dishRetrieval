@@ -8,7 +8,7 @@ test_dir = '../data/test_data_mmini/'
 model_dir = './model_web/'
 batch_size = 100
 output_dir = '../data/output_mmini_web/'
-model_dir_runtime = '/root/lsy/dishRetrieval/network/model/'
+model_dir_runtime = '/root/lsy/dishRetrieval/network/model_web/'
 img_size = 32
 
 
@@ -45,8 +45,8 @@ def get_hashcode(image_path):
         image = prefix_image(image_path, img_size, img_size)
         ret = sess.run(y_conv, feed_dict={x: image, keep_prob: 1.0})
         ret1 = tf.reshape(ret, [k])
-        ret2 = sess.run(tf.sign(ret1))
-        #ret_array = ret2.eval()
+        #ret2 = sess.run(tf.sign(ret1))
+        ret2 = ret1.eval()
         #ret_array = [str(i) for i in ret2]
         ret_string = ','.join(ret2)
     return ret_string
