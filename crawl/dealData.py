@@ -7,7 +7,7 @@ from PIL import ImageFile
 # error--image file is truncated
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 
-map_file = 'dishname2.txt'
+map_file = 'dishname_cut.txt'
 data_dir = '../data/all_data_cut/'
 train_data_dir = '../data/train_data/'
 #val_data_dir = '../data/val_data/'
@@ -67,7 +67,7 @@ while line:
     else:
         test_num = 4
     '''
-    test_num = 1
+    test_num = 2
     #for i, j in zip(range(val_num), range(test_num)):
     for i in range(test_num):
 	
