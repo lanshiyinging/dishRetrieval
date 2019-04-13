@@ -14,6 +14,10 @@ import retrieval_v2
 app = Flask(__name__)
 bootstrap = Bootstrap(app)
 
+@app.route('/index')
+def index():
+    return render_template('index.html')
+
 @app.route('/service', methods=['GET', 'POST'])
 def service():
     upload_path = ''
@@ -35,8 +39,9 @@ def service():
         result["rank3"] = result_[2][0].replace('..', '/root/lsy/dishRetrieval')
         result["rank4"] = result_[3][0].replace('..', '/root/lsy/dishRetrieval')
         result["rank5"] = result_[4][0].replace('..', '/root/lsy/dishRetrieval')
-        return redirect(url_for('service'))
-    return render_template('index.html', input_image_path=upload_path, result=result)
+        #return redirect(url_for('service'))
+    #return render_template('index.html', input_image_path=upload_path, result=result)
+    return upload_path, result
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
