@@ -5,7 +5,8 @@ test_output_path = '../data/output_mmini2/test_output.txt'
 test_label_path = '../data/test_list_mmini.txt'
 train_data_dir = '../data/train_data_mmini/'
 
-train_output_path_runtime = '/root/lsy/dishRetrieval/data/output_mmini_web/train_output.txt'
+#train_output_path_runtime = '/root/lsy/dishRetrieval/data/output_mmini_web/train_output.txt'
+train_output_path_runtime = '/Users/lansy/Desktop/graduateDesign/dishRetrieval/data/output_mmini_web/train_output.txt'
 
 
 def load_train_data(train_output_path):
@@ -25,10 +26,11 @@ def load_train_data(train_output_path):
 def retrieval(quary_hashcode):
     train_hash_dataset, train_label_dataset = load_train_data(train_output_path_runtime)
     hm_dis_list = {}
+    quary_hashcodes = quary_hashcode.split(',')
     for k, v in train_hash_dataset.items():
         candi_pic_hashcode = v.split(',')
         temp_dis = 0
-        for code1, code2 in zip(candi_pic_hashcode, quary_hashcode):
+        for code1, code2 in zip(candi_pic_hashcode, quary_hashcodes):
             temp_dis += abs(float(code1)-float(code2))
         hm_dis_list[k] = temp_dis
     sort_hm_dis = sorted(hm_dis_list.items(), key=lambda x: x[1])
