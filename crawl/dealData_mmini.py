@@ -7,7 +7,7 @@ from PIL import ImageFile
 # error--image file is truncated
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 
-map_file = 'dishname2.txt'
+map_file = 'dishname_cut.txt'
 data_dir = '../data/all_data_cut/'
 train_data_dir = '../data/train_data_mmini/'
 #val_data_dir = '../data/val_data/'

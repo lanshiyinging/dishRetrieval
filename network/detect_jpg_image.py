@@ -12,6 +12,7 @@ import imghdr
 
 train_dir = "../data/train_data/"
 test_dir = "../data/test_data/"
+data_dir = "../data/all_data_cut"
 image_to_modify = []
 
 def IsValidImage(filename):
