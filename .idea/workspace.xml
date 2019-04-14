@@ -2,123 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a1a0b0a-c192-4904-8f1c-12ea314ca0f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/network/dsh_dishNet_dp1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/network/dsh_dishNet_dp2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/network/dsh_dishNet_dp3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/network/dsh_dishNet_lr1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/network/dsh_dishNet_lr2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/network/dsh_dishNet_lr3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output_mmini1/test_output.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output_mmini1/train_output.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output_mmini2/test_output.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output_mmini2/train_output.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output_mmini3/test_output.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output_mmini3/train_output.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0000.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0001.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0002.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0003.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0004.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0005.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0006.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0007.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0008.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0009.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0010.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0011.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0012.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0013.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0014.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0015.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0016.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0017.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0018.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0019.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test_list_mmini.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test_result_mmini1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test_result_mmini2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test_result_mmini3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/1/Train_0000.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/1/Train_0001.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/1/Train_0002.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/10/Train_0027.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/10/Train_0028.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/10/Train_0029.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/11/Train_0030.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/11/Train_0031.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/11/Train_0032.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/12/Train_0033.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/12/Train_0034.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/12/Train_0035.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/13/Train_0036.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/13/Train_0037.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/13/Train_0038.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/14/Train_0039.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/14/Train_0040.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/14/Train_0041.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/15/Train_0042.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/15/Train_0043.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/15/Train_0044.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/16/Train_0045.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/16/Train_0046.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/16/Train_0047.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/17/Train_0048.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/17/Train_0049.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/17/Train_0050.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/18/Train_0051.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/18/Train_0052.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/18/Train_0053.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/19/Train_0054.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/19/Train_0055.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/19/Train_0056.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/2/Train_0003.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/2/Train_0004.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/2/Train_0005.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/20/Train_0057.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/20/Train_0058.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/20/Train_0059.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/3/Train_0006.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/3/Train_0007.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/3/Train_0008.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/4/Train_0009.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/4/Train_0010.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/4/Train_0011.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/5/Train_0012.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/5/Train_0013.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/5/Train_0014.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/6/Train_0015.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/6/Train_0016.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/6/Train_0017.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/7/Train_0018.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/7/Train_0019.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/7/Train_0020.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/8/Train_0021.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/8/Train_0022.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/8/Train_0023.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/9/Train_0024.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/9/Train_0025.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/9/Train_0026.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/train_list_mmini.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/dsh_dishNet.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/dsh_dishNet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/dsh_dishNet_change_pre.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/dsh_dishNet_change_pre.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/dsh_dishNet_change_pre1.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/dsh_dishNet_op_gdo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/dsh_dishNet_change_pre2.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/dsh_dishNet_op_mom.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/dsh_dishNet_change_pre3.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/dsh_dishNet_op_adam.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/get_hashcode_v2ep.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/get_hashcode_v2ep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/get_mini.err" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/get_mini.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/net.err" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/net.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/net1.err" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/net1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/net2.err" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/net2.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/net3.err" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/net3.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/r.err" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/r.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/retrieval_v2ep.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/retrieval_v2ep.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/network/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/network/run.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -140,34 +23,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_lr1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_dp1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/network/run.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="657">
-              <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+            <state relative-caret-position="576">
+              <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/network/retrieval_v2ep.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2712">
@@ -175,6 +40,27 @@
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/crawl/dealData_mmini.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/network/dsh_dishNet.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="633">
+              <caret line="261" column="39" lean-forward="true" selection-start-line="261" selection-start-column="39" selection-end-line="261" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -283,7 +169,6 @@
         <option value="$PROJECT_DIR$/network/preDealPicSave.py" />
         <option value="$PROJECT_DIR$/crawl/dealData.py" />
         <option value="$PROJECT_DIR$/crawl/dealData_mini.py" />
-        <option value="$PROJECT_DIR$/crawl/dealData_mmini.py" />
         <option value="$PROJECT_DIR$/network/dsh_dishNet_change_pre1.py" />
         <option value="$PROJECT_DIR$/network/dsh_dishNet_change_pre2.py" />
         <option value="$PROJECT_DIR$/network/dsh_dishNet_change_pre3.py" />
@@ -308,6 +193,7 @@
         <option value="$PROJECT_DIR$/network/dsh_dishNet_dp2.py" />
         <option value="$PROJECT_DIR$/network/dsh_dishNet_dp3.py" />
         <option value="$PROJECT_DIR$/network/retrieval_v2ep.py" />
+        <option value="$PROJECT_DIR$/crawl/dealData_mmini.py" />
         <option value="$PROJECT_DIR$/network/run.sh" />
       </list>
     </option>
@@ -328,11 +214,6 @@
             <path>
               <item name="dishRetrieval" type="b2602c69:ProjectViewProjectNode" />
               <item name="dishRetrieval" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dishRetrieval" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dishRetrieval" type="462c0819:PsiDirectoryNode" />
-              <item name="crawl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dishRetrieval" type="b2602c69:ProjectViewProjectNode" />
@@ -540,15 +421,16 @@
       <workItem from="1554994629900" duration="236000" />
       <workItem from="1555117331658" duration="9633000" />
       <workItem from="1555204393361" duration="2589000" />
-      <workItem from="1555216309322" duration="542000" />
+      <workItem from="1555216309322" duration="1772000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="167892000" />
+    <option name="totallyTimeSpent" value="169122000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21316166" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -619,16 +501,6 @@
             <element signature="e#431#547#0" />
             <element signature="e#581#672#0" />
             <element signature="e#700#856#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawl/dealData_mmini.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1881">
-          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -787,13 +659,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/network/dsh_dishNet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5088">
-          <caret line="216" column="114" selection-start-line="216" selection-start-column="114" selection-end-line="216" selection-end-column="114" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_change_pre.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5112">
@@ -874,13 +739,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/network/run.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="657">
-          <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/network/get_hashcode_v2ep.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -898,6 +756,30 @@
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawl/dealData_mmini.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/dsh_dishNet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="633">
+          <caret line="261" column="39" lean-forward="true" selection-start-line="261" selection-start-column="39" selection-end-line="261" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/run.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
         </state>
       </provider>
     </entry>
