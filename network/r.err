@@ -1,0 +1,276 @@
+nohup: ignoring input
++ python dsh_dishNet.py
++ python dsh_dishNet_change_pre.py
++ python dsh_dishNet_op_adam.py
++ python dsh_dishNet_op_gdo.py
++ python dsh_dishNet_op_mom.py
++ python dsh_dishNet_lr1.py
++ python dsh_dishNet_lr2.py
++ python dsh_dishNet_lr3.py
++ python dsh_dishNet_dp1.py
++ python dsh_dishNet_dp2.py
++ python dsh_dishNet_dp3.py
++ python get_hashcode_v2ep.py 0
+2019-04-14 13:51:49.185862: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-04-14 13:51:49.195812: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2394370000 Hz
+2019-04-14 13:51:49.196016: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x55f80e296950 executing computations on platform Host. Devices:
+2019-04-14 13:51:49.196039: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+Traceback (most recent call last):
+  File "get_hashcode_v2ep.py", line 101, in <module>
+    main()
+  File "get_hashcode_v2ep.py", line 62, in main
+    saver = tf.train.import_meta_graph(model_dir+'model.meta')
+  File "/root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/saver.py", line 1435, in import_meta_graph
+    meta_graph_or_file, clear_devices, import_scope, **kwargs)[0]
+  File "/root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/saver.py", line 1447, in _import_meta_graph_with_return_elements
+    meta_graph_def = meta_graph.read_meta_graph_file(meta_graph_or_file)
+  File "/root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/framework/meta_graph.py", line 633, in read_meta_graph_file
+    raise IOError("File %s does not exist." % filename)
+OSError: File ./model0/model.meta does not exist.
++ python get_hashcode_v2ep.py 1
+2019-04-14 13:51:50.957805: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-04-14 13:51:50.967309: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2394370000 Hz
+2019-04-14 13:51:50.967534: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x55cb4f2aa3c0 executing computations on platform Host. Devices:
+2019-04-14 13:51:50.967558: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/queue_runner_impl.py:391: QueueRunner.__init__ (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/control_flow_ops.py:3632: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:618: to_double (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:619: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:1241: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
++ python get_hashcode_v2ep.py 2
+2019-04-14 14:01:36.061397: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-04-14 14:01:36.067857: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2394370000 Hz
+2019-04-14 14:01:36.068047: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x55aa9c3281c0 executing computations on platform Host. Devices:
+2019-04-14 14:01:36.068063: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/queue_runner_impl.py:391: QueueRunner.__init__ (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/control_flow_ops.py:3632: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:618: to_double (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:619: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:1241: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
++ python get_hashcode_v2ep.py 3
+2019-04-14 14:11:43.832149: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-04-14 14:11:43.840737: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2394370000 Hz
+2019-04-14 14:11:43.840949: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x559a5011f270 executing computations on platform Host. Devices:
+2019-04-14 14:11:43.840975: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/queue_runner_impl.py:391: QueueRunner.__init__ (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/control_flow_ops.py:3632: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:618: to_double (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:619: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:1241: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
++ python get_hashcode_v2ep.py 4
+2019-04-14 14:21:59.074835: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-04-14 14:21:59.083524: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2394370000 Hz
+2019-04-14 14:21:59.083733: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x5616bdc6d4c0 executing computations on platform Host. Devices:
+2019-04-14 14:21:59.083765: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+Traceback (most recent call last):
+  File "get_hashcode_v2ep.py", line 101, in <module>
+    main()
+  File "get_hashcode_v2ep.py", line 62, in main
+    saver = tf.train.import_meta_graph(model_dir+'model.meta')
+  File "/root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/saver.py", line 1435, in import_meta_graph
+    meta_graph_or_file, clear_devices, import_scope, **kwargs)[0]
+  File "/root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/saver.py", line 1447, in _import_meta_graph_with_return_elements
+    meta_graph_def = meta_graph.read_meta_graph_file(meta_graph_or_file)
+  File "/root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/framework/meta_graph.py", line 633, in read_meta_graph_file
+    raise IOError("File %s does not exist." % filename)
+OSError: File ./model4/model.meta does not exist.
++ python get_hashcode_v2ep.py 5
+2019-04-14 14:22:00.932902: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-04-14 14:22:00.941424: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2394370000 Hz
+2019-04-14 14:22:00.941649: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x55ba2daa3050 executing computations on platform Host. Devices:
+2019-04-14 14:22:00.941676: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+Traceback (most recent call last):
+  File "get_hashcode_v2ep.py", line 101, in <module>
+    main()
+  File "get_hashcode_v2ep.py", line 62, in main
+    saver = tf.train.import_meta_graph(model_dir+'model.meta')
+  File "/root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/saver.py", line 1435, in import_meta_graph
+    meta_graph_or_file, clear_devices, import_scope, **kwargs)[0]
+  File "/root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/saver.py", line 1447, in _import_meta_graph_with_return_elements
+    meta_graph_def = meta_graph.read_meta_graph_file(meta_graph_or_file)
+  File "/root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/framework/meta_graph.py", line 633, in read_meta_graph_file
+    raise IOError("File %s does not exist." % filename)
+OSError: File ./model5/model.meta does not exist.
++ python get_hashcode_v2ep.py 6
+2019-04-14 14:22:03.057316: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-04-14 14:22:03.066027: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2394370000 Hz
+2019-04-14 14:22:03.066275: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x559fe9963080 executing computations on platform Host. Devices:
+2019-04-14 14:22:03.066307: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+Traceback (most recent call last):
+  File "get_hashcode_v2ep.py", line 101, in <module>
+    main()
+  File "get_hashcode_v2ep.py", line 62, in main
+    saver = tf.train.import_meta_graph(model_dir+'model.meta')
+  File "/root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/saver.py", line 1435, in import_meta_graph
+    meta_graph_or_file, clear_devices, import_scope, **kwargs)[0]
+  File "/root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/saver.py", line 1447, in _import_meta_graph_with_return_elements
+    meta_graph_def = meta_graph.read_meta_graph_file(meta_graph_or_file)
+  File "/root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/framework/meta_graph.py", line 633, in read_meta_graph_file
+    raise IOError("File %s does not exist." % filename)
+OSError: File ./model6/model.meta does not exist.
++ python get_hashcode_v2ep.py 7
+2019-04-14 14:22:05.189562: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-04-14 14:22:05.197207: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2394370000 Hz
+2019-04-14 14:22:05.197456: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x55f9348fb530 executing computations on platform Host. Devices:
+2019-04-14 14:22:05.197481: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+Traceback (most recent call last):
+  File "get_hashcode_v2ep.py", line 101, in <module>
+    main()
+  File "get_hashcode_v2ep.py", line 62, in main
+    saver = tf.train.import_meta_graph(model_dir+'model.meta')
+  File "/root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/saver.py", line 1435, in import_meta_graph
+    meta_graph_or_file, clear_devices, import_scope, **kwargs)[0]
+  File "/root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/saver.py", line 1447, in _import_meta_graph_with_return_elements
+    meta_graph_def = meta_graph.read_meta_graph_file(meta_graph_or_file)
+  File "/root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/framework/meta_graph.py", line 633, in read_meta_graph_file
+    raise IOError("File %s does not exist." % filename)
+OSError: File ./model7/model.meta does not exist.
++ python get_hashcode_v2ep.py 8
+2019-04-14 14:22:07.320818: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-04-14 14:22:07.329412: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2394370000 Hz
+2019-04-14 14:22:07.329643: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x55b07787bb00 executing computations on platform Host. Devices:
+2019-04-14 14:22:07.329679: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+Traceback (most recent call last):
+  File "get_hashcode_v2ep.py", line 101, in <module>
+    main()
+  File "get_hashcode_v2ep.py", line 62, in main
+    saver = tf.train.import_meta_graph(model_dir+'model.meta')
+  File "/root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/saver.py", line 1435, in import_meta_graph
+    meta_graph_or_file, clear_devices, import_scope, **kwargs)[0]
+  File "/root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/saver.py", line 1447, in _import_meta_graph_with_return_elements
+    meta_graph_def = meta_graph.read_meta_graph_file(meta_graph_or_file)
+  File "/root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/framework/meta_graph.py", line 633, in read_meta_graph_file
+    raise IOError("File %s does not exist." % filename)
+OSError: File ./model8/model.meta does not exist.
++ python get_hashcode_v2ep.py 9
+2019-04-14 14:22:09.230436: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-04-14 14:22:09.238746: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2394370000 Hz
+2019-04-14 14:22:09.238968: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x55a37ff34c70 executing computations on platform Host. Devices:
+2019-04-14 14:22:09.238999: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+Traceback (most recent call last):
+  File "get_hashcode_v2ep.py", line 101, in <module>
+    main()
+  File "get_hashcode_v2ep.py", line 62, in main
+    saver = tf.train.import_meta_graph(model_dir+'model.meta')
+  File "/root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/saver.py", line 1435, in import_meta_graph
+    meta_graph_or_file, clear_devices, import_scope, **kwargs)[0]
+  File "/root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/saver.py", line 1447, in _import_meta_graph_with_return_elements
+    meta_graph_def = meta_graph.read_meta_graph_file(meta_graph_or_file)
+  File "/root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/framework/meta_graph.py", line 633, in read_meta_graph_file
+    raise IOError("File %s does not exist." % filename)
+OSError: File ./model9/model.meta does not exist.
++ python get_hashcode_v2ep.py 10
+2019-04-14 14:22:11.400904: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-04-14 14:22:11.409388: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2394370000 Hz
+2019-04-14 14:22:11.409597: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x559bbe727ae0 executing computations on platform Host. Devices:
+2019-04-14 14:22:11.409624: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+Traceback (most recent call last):
+  File "get_hashcode_v2ep.py", line 101, in <module>
+    main()
+  File "get_hashcode_v2ep.py", line 62, in main
+    saver = tf.train.import_meta_graph(model_dir+'model.meta')
+  File "/root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/saver.py", line 1435, in import_meta_graph
+    meta_graph_or_file, clear_devices, import_scope, **kwargs)[0]
+  File "/root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/saver.py", line 1447, in _import_meta_graph_with_return_elements
+    meta_graph_def = meta_graph.read_meta_graph_file(meta_graph_or_file)
+  File "/root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/framework/meta_graph.py", line 633, in read_meta_graph_file
+    raise IOError("File %s does not exist." % filename)
+OSError: File ./model10/model.meta does not exist.
++ python retrieval_v2ep.py 0
+Traceback (most recent call last):
+  File "retrieval_v2ep.py", line 124, in <module>
+    main()
+  File "retrieval_v2ep.py", line 81, in main
+    train_output_file = open(train_output_path, 'r')
+FileNotFoundError: [Errno 2] No such file or directory: '../data/output_mmini0/train_output.txt'
++ python retrieval_v2ep.py 1
++ python retrieval_v2ep.py 2
++ python retrieval_v2ep.py 3
++ python retrieval_v2ep.py 4
+Traceback (most recent call last):
+  File "retrieval_v2ep.py", line 124, in <module>
+    main()
+  File "retrieval_v2ep.py", line 81, in main
+    train_output_file = open(train_output_path, 'r')
+FileNotFoundError: [Errno 2] No such file or directory: '../data/output_mmini4/train_output.txt'
++ python retrieval_v2ep.py 5
+Traceback (most recent call last):
+  File "retrieval_v2ep.py", line 124, in <module>
+    main()
+  File "retrieval_v2ep.py", line 81, in main
+    train_output_file = open(train_output_path, 'r')
+FileNotFoundError: [Errno 2] No such file or directory: '../data/output_mmini5/train_output.txt'
++ python retrieval_v2ep.py 6
+Traceback (most recent call last):
+  File "retrieval_v2ep.py", line 124, in <module>
+    main()
+  File "retrieval_v2ep.py", line 81, in main
+    train_output_file = open(train_output_path, 'r')
+FileNotFoundError: [Errno 2] No such file or directory: '../data/output_mmini6/train_output.txt'
++ python retrieval_v2ep.py 7
+Traceback (most recent call last):
+  File "retrieval_v2ep.py", line 124, in <module>
+    main()
+  File "retrieval_v2ep.py", line 81, in main
+    train_output_file = open(train_output_path, 'r')
+FileNotFoundError: [Errno 2] No such file or directory: '../data/output_mmini7/train_output.txt'
++ python retrieval_v2ep.py 8
+Traceback (most recent call last):
+  File "retrieval_v2ep.py", line 124, in <module>
+    main()
+  File "retrieval_v2ep.py", line 81, in main
+    train_output_file = open(train_output_path, 'r')
+FileNotFoundError: [Errno 2] No such file or directory: '../data/output_mmini8/train_output.txt'
++ python retrieval_v2ep.py 9
+Traceback (most recent call last):
+  File "retrieval_v2ep.py", line 124, in <module>
+    main()
+  File "retrieval_v2ep.py", line 81, in main
+    train_output_file = open(train_output_path, 'r')
+FileNotFoundError: [Errno 2] No such file or directory: '../data/output_mmini9/train_output.txt'
++ python retrieval_v2ep.py 10
+Traceback (most recent call last):
+  File "retrieval_v2ep.py", line 124, in <module>
+    main()
+  File "retrieval_v2ep.py", line 81, in main
+    train_output_file = open(train_output_path, 'r')
+FileNotFoundError: [Errno 2] No such file or directory: '../data/output_mmini10/train_output.txt'
