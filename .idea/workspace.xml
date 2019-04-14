@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1a1a0b0a-c192-4904-8f1c-12ea314ca0f3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/dsh_dishNet.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/dsh_dishNet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/dsh_dishNet_change_pre.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/dsh_dishNet_change_pre.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/dsh_dishNet_dp1.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/dsh_dishNet_dp1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/dsh_dishNet_dp2.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/dsh_dishNet_dp2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/dsh_dishNet_dp3.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/dsh_dishNet_dp3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/dsh_dishNet_lr1.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/dsh_dishNet_lr1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/dsh_dishNet_lr2.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/dsh_dishNet_lr2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/dsh_dishNet_lr3.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/dsh_dishNet_lr3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/dsh_dishNet_op_adam.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/dsh_dishNet_op_adam.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/dsh_dishNet_op_gdo.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/dsh_dishNet_op_gdo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/dsh_dishNet_op_mom.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/dsh_dishNet_op_mom.py" afterDir="false" />
-    </list>
+    <list default="true" id="1a1a0b0a-c192-4904-8f1c-12ea314ca0f3" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +63,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/network/run.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="576">
@@ -94,13 +81,18 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_dp3.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="447">
               <caret line="262" column="35" selection-start-line="262" selection-start-column="35" selection-end-line="262" selection-end-column="35" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/network/r.sh">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -117,18 +109,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="447">
               <caret line="262" column="34" selection-start-line="262" selection-start-column="34" selection-end-line="262" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_op_adam.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="229" column="45" selection-start-line="229" selection-start-column="45" selection-end-line="229" selection-end-column="45" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -429,12 +409,12 @@
       <workItem from="1554994629900" duration="236000" />
       <workItem from="1555117331658" duration="9633000" />
       <workItem from="1555204393361" duration="2589000" />
-      <workItem from="1555216309322" duration="2469000" />
+      <workItem from="1555216309322" duration="2611000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169819000" />
+    <option name="totallyTimeSpent" value="169961000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -468,13 +448,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/crawl/dishname3.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="569">
-          <caret line="207" column="8" selection-start-line="207" selection-start-column="8" selection-end-line="207" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/train_list.txt" />
     <entry file="file://$PROJECT_DIR$/web/app/imageRetrivel.py" />
     <entry file="file://$PROJECT_DIR$/network/test.py">
@@ -712,13 +685,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/network/run.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_op_adam.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="326">
@@ -788,6 +754,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="447">
           <caret line="262" column="35" selection-start-line="262" selection-start-column="35" selection-end-line="262" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/r.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/run.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
         </state>
       </provider>
     </entry>
