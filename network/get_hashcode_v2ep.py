@@ -1,13 +1,14 @@
 import tensorflow as tf
 import numpy as np
 import os
+import sys
 #import dsh_dishNet
 
 train_dir = '../data/train_data_mmini/'
 test_dir = '../data/test_data_mmini/'
-model_dir = './model3/'
+model_dir = './model%s/' % (sys.argv[1])
 batch_size = 100
-output_dir = '../data/output_mmini3/'
+output_dir = '../data/output_mmini%s/' % (sys.argv[1])
 #model_dir_runtime = '/root/lsy/dishRetrieval/network/model_web/'
 model_dir_runtime = '/Users/lansy/Desktop/graduateDesign/dishRetrieval/network/model_web/'
 img_size = 32

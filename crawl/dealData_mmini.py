@@ -45,7 +45,7 @@ get_2_list = [12, 13]
 get_3_list = [14, 15, 16, 17, 20]
 get_4_list = [18, 19]
 #while line:
-for l in range(20):
+for l in range(10):
     line = line.strip().strip('\n')
     dish_no = line.split('\t')[0]
     dish_name = line.split('\t')[1]
@@ -96,7 +96,7 @@ for l in range(20):
         rank3 += 1
 
     #for file in file_list:
-    for j in range(3):
+    for j in range(5):
         file = random.choice(file_list)
         file_list.remove(file)
         to_path = "%s%s/Train_%04d.jpg" % (train_data_dir, dish_no, rank1)

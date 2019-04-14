@@ -1,7 +1,8 @@
 import os
+import sys
 
-train_output_path = '../data/output_mmini3/train_output.txt'
-test_output_path = '../data/output_mmini3/test_output.txt'
+train_output_path = '../data/output_mmini%s/train_output.txt' % (sys.argv[1])
+test_output_path = '../data/output_mmini%s/test_output.txt' % (sys.argv[1])
 test_label_path = '../data/test_list_mmini.txt'
 train_data_dir = '../data/train_data_mmini/'
 
@@ -110,7 +111,7 @@ def main():
             result.append(sort_hm_dis[i])
         eval = evaluate(test_label_dataset[test_line_list[0]], result, train_label_dataset)
         MAP_5 += eval['AP_5']
-        with open("../data/test_result_mmini3.txt", 'a') as f:
+        with open("../data/test_result_mmini" + sys.argv[1], 'a') as f:
             f.write("%s\t%s\t[%s]\t%s\t%s\n" % (test_line_list[0], test_label_dataset[test_line_list[0]], test_line_list[1], str(result), str(eval)))
         test_num += 1
         test_line = test_output_file.readline()

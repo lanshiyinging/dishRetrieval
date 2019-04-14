@@ -2,9 +2,124 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a1a0b0a-c192-4904-8f1c-12ea314ca0f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/network/0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/network/dsh_dishNet_dp1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/network/dsh_dishNet_dp2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/network/dsh_dishNet_dp3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/network/dsh_dishNet_lr1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/network/dsh_dishNet_lr2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/network/dsh_dishNet_lr3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/preDealPic.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/preDealPic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/output_mmini1/test_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/output_mmini1/train_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/output_mmini2/test_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/output_mmini2/train_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/output_mmini3/test_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/output_mmini3/train_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0000.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0001.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0002.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0003.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0004.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0005.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0006.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0007.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0008.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0009.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0010.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0011.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0012.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0013.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0014.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0015.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0016.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0017.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0018.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test_data_mmini/Test_0019.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test_list_mmini.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test_result_mmini1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test_result_mmini2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test_result_mmini3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/1/Train_0000.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/1/Train_0001.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/1/Train_0002.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/10/Train_0027.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/10/Train_0028.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/10/Train_0029.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/11/Train_0030.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/11/Train_0031.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/11/Train_0032.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/12/Train_0033.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/12/Train_0034.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/12/Train_0035.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/13/Train_0036.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/13/Train_0037.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/13/Train_0038.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/14/Train_0039.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/14/Train_0040.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/14/Train_0041.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/15/Train_0042.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/15/Train_0043.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/15/Train_0044.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/16/Train_0045.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/16/Train_0046.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/16/Train_0047.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/17/Train_0048.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/17/Train_0049.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/17/Train_0050.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/18/Train_0051.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/18/Train_0052.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/18/Train_0053.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/19/Train_0054.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/19/Train_0055.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/19/Train_0056.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/2/Train_0003.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/2/Train_0004.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/2/Train_0005.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/20/Train_0057.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/20/Train_0058.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/20/Train_0059.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/3/Train_0006.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/3/Train_0007.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/3/Train_0008.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/4/Train_0009.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/4/Train_0010.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/4/Train_0011.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/5/Train_0012.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/5/Train_0013.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/5/Train_0014.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/6/Train_0015.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/6/Train_0016.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/6/Train_0017.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/7/Train_0018.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/7/Train_0019.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/7/Train_0020.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/8/Train_0021.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/8/Train_0022.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/8/Train_0023.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/9/Train_0024.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/9/Train_0025.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_mmini/9/Train_0026.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train_list_mmini.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/dsh_dishNet.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/dsh_dishNet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/dsh_dishNet_change_pre.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/dsh_dishNet_change_pre.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/dsh_dishNet_change_pre1.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/dsh_dishNet_op_gdo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/dsh_dishNet_change_pre2.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/dsh_dishNet_op_mom.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/dsh_dishNet_change_pre3.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/dsh_dishNet_op_adam.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/get_hashcode_v2ep.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/get_hashcode_v2ep.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/get_mini.err" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/get_mini.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/net.err" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/net.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/net1.err" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/net1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/net2.err" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/net2.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/net3.err" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/net3.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/r.err" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/r.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/retrieval_v2ep.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/retrieval_v2ep.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/network/run.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,64 +141,49 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/app/system.py">
+        <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_lr1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="888">
-              <caret line="44" column="70" selection-start-line="44" selection-start-column="70" selection-end-line="44" selection-end-column="70" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="240">
+              <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/app/templates/temp.html">
+        <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_dp1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="4" column="10" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="10" />
-              <folding>
-                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-              </folding>
+            <state relative-caret-position="432">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/app/templates/index.html">
+        <entry file="file://$PROJECT_DIR$/network/run.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2592">
-              <caret line="108" column="18" selection-start-line="108" selection-start-column="18" selection-end-line="108" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/network/preDealPic.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_change_pre1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1296">
-              <caret line="54" column="20" lean-forward="true" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="657">
+              <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_change_pre2.py">
+        <entry file="file://$PROJECT_DIR$/network/retrieval_v2ep.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+            <state relative-caret-position="2712">
+              <caret line="113" column="46" selection-start-line="113" selection-start-column="46" selection-end-line="113" selection-end-column="46" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/network/get_hashcode_v2ep.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -92,43 +192,49 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_change_pre3.py">
+        <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_dp2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_dp3.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_lr2.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="312">
-              <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+              <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_lr3.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_op_adam.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5136">
+              <caret line="218" column="114" selection-start-line="218" selection-start-column="114" selection-end-line="218" selection-end-column="114" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/app/templates/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
-              <folding>
-                <element signature="e#807#814#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/network/get_hashcode_v2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1176">
-              <caret line="51" column="39" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/network/retrieval_v2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -178,11 +284,9 @@
         <option value="$PROJECT_DIR$/crawl/dealData.py" />
         <option value="$PROJECT_DIR$/crawl/dealData_mini.py" />
         <option value="$PROJECT_DIR$/crawl/dealData_mmini.py" />
-        <option value="$PROJECT_DIR$/network/dsh_dishNet_change_pre.py" />
         <option value="$PROJECT_DIR$/network/dsh_dishNet_change_pre1.py" />
         <option value="$PROJECT_DIR$/network/dsh_dishNet_change_pre2.py" />
         <option value="$PROJECT_DIR$/network/dsh_dishNet_change_pre3.py" />
-        <option value="$PROJECT_DIR$/network/dsh_dishNet.py" />
         <option value="$PROJECT_DIR$/network/get_hashcode.py" />
         <option value="$PROJECT_DIR$/network/get_hashcode_mini.py" />
         <option value="$PROJECT_DIR$/network/get_hashcode_mmini.py" />
@@ -191,6 +295,20 @@
         <option value="$PROJECT_DIR$/web/app/system.py" />
         <option value="$PROJECT_DIR$/web/app/templates/index.html" />
         <option value="$PROJECT_DIR$/network/preDealPic.py" />
+        <option value="$PROJECT_DIR$/network/get_hashcode_v2ep.py" />
+        <option value="$PROJECT_DIR$/network/dsh_dishNet_op_adam.py" />
+        <option value="$PROJECT_DIR$/network/dsh_dishNet_op_gdo.py" />
+        <option value="$PROJECT_DIR$/network/dsh_dishNet_change_pre.py" />
+        <option value="$PROJECT_DIR$/network/dsh_dishNet.py" />
+        <option value="$PROJECT_DIR$/network/dsh_dishNet_op_mom.py" />
+        <option value="$PROJECT_DIR$/network/dsh_dishNet_lr1.py" />
+        <option value="$PROJECT_DIR$/network/dsh_dishNet_lr2.py" />
+        <option value="$PROJECT_DIR$/network/dsh_dishNet_lr3.py" />
+        <option value="$PROJECT_DIR$/network/dsh_dishNet_dp1.py" />
+        <option value="$PROJECT_DIR$/network/dsh_dishNet_dp2.py" />
+        <option value="$PROJECT_DIR$/network/dsh_dishNet_dp3.py" />
+        <option value="$PROJECT_DIR$/network/retrieval_v2ep.py" />
+        <option value="$PROJECT_DIR$/network/run.sh" />
       </list>
     </option>
   </component>
@@ -214,6 +332,11 @@
             <path>
               <item name="dishRetrieval" type="b2602c69:ProjectViewProjectNode" />
               <item name="dishRetrieval" type="462c0819:PsiDirectoryNode" />
+              <item name="crawl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dishRetrieval" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dishRetrieval" type="462c0819:PsiDirectoryNode" />
               <item name="network" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -233,6 +356,7 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/network" />
+      <recent name="$PROJECT_DIR$/network/model_web" />
       <recent name="$PROJECT_DIR$/crawl" />
     </key>
   </component>
@@ -415,17 +539,18 @@
       <workItem from="1554863653677" duration="4743000" />
       <workItem from="1554994629900" duration="236000" />
       <workItem from="1555117331658" duration="9633000" />
-      <workItem from="1555204393361" duration="777000" />
+      <workItem from="1555204393361" duration="2589000" />
+      <workItem from="1555216309322" duration="542000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="165538000" />
+    <option name="totallyTimeSpent" value="167892000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21030043" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21316166" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -453,59 +578,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/crawl/train_list.txt" />
-    <entry file="file://$PROJECT_DIR$/crawl/crawldzdp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3408">
-          <caret line="146" column="62" selection-start-line="146" selection-start-column="62" selection-end-line="146" selection-end-column="62" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawl/crawlDouguo_add.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1296">
-          <caret line="60" column="18" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawl/d.err">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network/hh.py" />
-    <entry file="file://$PROJECT_DIR$/crawl/crawlDouguo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1680">
-          <caret line="70" column="37" selection-start-line="70" selection-start-column="37" selection-end-line="70" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="1021" selection-start-line="1021" selection-end-line="1021" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawl/dishname2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawl/dishname.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/train_list_1.0.txt" />
     <entry file="file://$PROJECT_DIR$/crawl/dishname3.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="569">
@@ -561,13 +633,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/network/dsh_dishNet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crawl/dealData.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
@@ -620,13 +685,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1368">
           <caret line="57" selection-start-line="57" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_change_pre.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-708">
-          <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -729,32 +787,116 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_change_pre1.py">
+    <entry file="file://$PROJECT_DIR$/network/dsh_dishNet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1296">
-          <caret line="54" column="20" lean-forward="true" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
+        <state relative-caret-position="5088">
+          <caret line="216" column="114" selection-start-line="216" selection-start-column="114" selection-end-line="216" selection-end-column="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_change_pre.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5112">
+          <caret line="217" column="114" selection-start-line="217" selection-start-column="114" selection-end-line="217" selection-end-column="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/model_web/dsh_dishNet_lr3.py" />
+    <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_op_gdo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5136">
+          <caret line="218" column="114" selection-start-line="218" selection-start-column="114" selection-end-line="218" selection-end-column="114" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_change_pre3.py">
+    <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_op_mom.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+        <state relative-caret-position="240">
+          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_change_pre2.py">
+    <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_lr1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_dp1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_dp2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_dp3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_lr2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
-          <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_lr3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_op_adam.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5136">
+          <caret line="218" column="114" selection-start-line="218" selection-start-column="114" selection-end-line="218" selection-end-column="114" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/run.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="657">
+          <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/get_hashcode_v2ep.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/retrieval_v2ep.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2712">
+          <caret line="113" column="46" selection-start-line="113" selection-start-column="46" selection-end-line="113" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>

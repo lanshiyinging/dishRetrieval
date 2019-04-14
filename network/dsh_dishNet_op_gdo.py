@@ -146,21 +146,22 @@ def dsh_dish_net(inputs, keep_prob):
             conv3 = conv_layer(norm2, W_conv3, conv_strides, 'SAME')
             relu3 = tf.nn.relu(conv3+b_conv3)
             pool3 = average_pool_layer(relu3, kernal_size, pool_strides)
-        
+        '''
         shape = pool3.get_shape().as_list()
         if len(shape) == 4:
             size = shape[-1]*shape[-2]*shape[-3]
         else:
             size = shape[1]
+        '''
 
         with tf.name_scope("fc_layer1"):
             with tf.name_scope("weights"):
-                W_fc1 = weight_variable("W_fc1", [size, 500])
+                W_fc1 = weight_variable("W_fc1", [4*4*64, 500])
                 variable_summaries(W_fc1)
             with tf.name_scope("biases"):
                 b_fc1 = bias_variable("b_fc1", [500])
                 variable_summaries(b_fc1)
-            pool3_flat = tf.reshape(pool3, [-1, size])
+            pool3_flat = tf.reshape(pool3, [-1, 4*4*64])
             fc1 = tf.nn.relu(tf.matmul(pool3_flat, W_fc1) + b_fc1)
             fc1 = tf.nn.dropout(fc1, keep_prob)
 
@@ -219,13 +220,14 @@ def main():
         tf.summary.scalar('lr', learning_rate)
     #train_step = tf.train.GradientDescentOptimizer(learning_rate).minimize(loss, global_step=global_step)
     train_step = tf.train.MomentumOptimizer(learning_rate, momentum).minimize(loss, global_step=global_step)
+    #train_step = tf.train.AdamOptimizer(learning_rate).minimize(loss, global_step=global_step)
 
     with tf.Session(config=config) as sess:
 
         #sess = tf_debug.LocalCLIDebugWrapperSession(sess, ui_type="readline", thread_name_filter="MainThread$")
         #sess.add_tensor_filter("has_inf_or_nan", tf_debug.has_inf_or_nan)
 
-        writer = tf.summary.FileWriter("logs/", sess.graph)
+        writer = tf.summary.FileWriter("logs1/", sess.graph)
         merged = tf.summary.merge_all()
         saver = tf.train.Saver()
         sess.run(tf.global_variables_initializer())
@@ -257,9 +259,9 @@ def main():
             coord.request_stop()
             print("All threads are asked to stop!")
         coord.join(threads)
-        if not os.path.exists("./model/"):
-            os.makedirs("./model/")
-        saver.save(sess, "./model/model")
+        if not os.path.exists("./model1/"):
+            os.makedirs("./model1/")
+        saver.save(sess, "./model1/model")
         print("Optimization Finished!")
 
 if __name__ == '__main__':
