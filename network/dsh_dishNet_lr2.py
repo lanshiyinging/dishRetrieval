@@ -226,7 +226,7 @@ def main():
         #sess = tf_debug.LocalCLIDebugWrapperSession(sess, ui_type="readline", thread_name_filter="MainThread$")
         #sess.add_tensor_filter("has_inf_or_nan", tf_debug.has_inf_or_nan)
 
-        writer = tf.summary.FileWriter("logs2/", sess.graph)
+        writer = tf.summary.FileWriter("logs6/", sess.graph)
         merged = tf.summary.merge_all()
         saver = tf.train.Saver()
         sess.run(tf.global_variables_initializer())
@@ -258,9 +258,9 @@ def main():
             coord.request_stop()
             print("All threads are asked to stop!")
         coord.join(threads)
-        if not os.path.exists("./model2/"):
-            os.makedirs("./model2/")
-        saver.save(sess, "./model2/model")
+        if not os.path.exists("./model6/"):
+            os.makedirs("./model6/")
+        saver.save(sess, "./model6/model")
         print("Optimization Finished!")
 
 if __name__ == '__main__':
