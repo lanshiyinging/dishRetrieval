@@ -109,7 +109,7 @@ for img in image_to_modify:
 
 if __name__ == '__main__':
     #check_jpg_pic(train_dir)
-    all_dir = "../data/all_data_cut/"
+    all_dir = "../data/train_data/"
     to_dir = "../data/unvlid_data_cut/"
     count = 0
     for label in os.listdir(all_dir):
