@@ -5,8 +5,8 @@ test_output_path = '../data/output_mmini2/test_output.txt'
 test_label_path = '../data/test_list_mmini.txt'
 train_data_dir = '../data/train_data_mmini/'
 
-#train_output_path_runtime = '/root/lsy/dishRetrieval/data/output_mmini_web/train_output.txt'
-train_output_path_runtime = '/Users/lansy/Desktop/graduateDesign/dishRetrieval/data/output_mmini_web/train_output.txt'
+train_output_path_runtime = '/root/lsy/dishRetrieval/data/output_mmini_web/train_output.txt'
+#train_output_path_runtime = '/Users/lansy/Desktop/graduateDesign/dishRetrieval/data/output_mmini_web/train_output.txt'
 
 
 def load_train_data(train_output_path):

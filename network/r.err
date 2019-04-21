@@ -21,3 +21,322 @@ run.sh: 8: run.sh: out6: not found
 + out7 =
 run.sh: 9: run.sh: out7: not found
 + python dsh_dishNet_lr3.py
++ out8 =
+run.sh: 10: run.sh: out8: not found
++ python dsh_dishNet_dp1.py
++ out9 =
+run.sh: 11: run.sh: out9: not found
++ python dsh_dishNet_dp2.py
++ out10 =
+run.sh: 12: run.sh: out10: not found
++ python dsh_dishNet_dp3.py
++ out11 =
+run.sh: 13: run.sh: out11: not found
++ python get_hashcode_v2ep.py 0
+2019-04-14 22:59:34.571851: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-04-14 22:59:34.578292: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2394370000 Hz
+2019-04-14 22:59:34.578478: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x55b540517ee0 executing computations on platform Host. Devices:
+2019-04-14 22:59:34.578493: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/queue_runner_impl.py:391: QueueRunner.__init__ (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/control_flow_ops.py:3632: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:618: to_double (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:619: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:1241: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
++ out12 =
+run.sh: 14: run.sh: out12: not found
++ python get_hashcode_v2ep.py 1
+2019-04-14 23:08:47.557403: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-04-14 23:08:47.563942: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2394370000 Hz
+2019-04-14 23:08:47.564087: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x55c33125b570 executing computations on platform Host. Devices:
+2019-04-14 23:08:47.564109: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/queue_runner_impl.py:391: QueueRunner.__init__ (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/control_flow_ops.py:3632: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:618: to_double (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:619: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:1241: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
++ out13 =
+run.sh: 15: run.sh: out13: not found
++ python get_hashcode_v2ep.py 2
+2019-04-14 23:18:17.649967: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-04-14 23:18:17.655988: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2394370000 Hz
+2019-04-14 23:18:17.656151: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x5591feee9130 executing computations on platform Host. Devices:
+2019-04-14 23:18:17.656163: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/queue_runner_impl.py:391: QueueRunner.__init__ (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/control_flow_ops.py:3632: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:618: to_double (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:619: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:1241: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
++ out14 =
+run.sh: 16: run.sh: out14: not found
++ python get_hashcode_v2ep.py 3
+2019-04-14 23:27:39.866809: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-04-14 23:27:39.875618: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2394370000 Hz
+2019-04-14 23:27:39.875828: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x5577ab024950 executing computations on platform Host. Devices:
+2019-04-14 23:27:39.875851: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/queue_runner_impl.py:391: QueueRunner.__init__ (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/control_flow_ops.py:3632: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:618: to_double (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:619: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:1241: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
++ out15 =
+run.sh: 17: run.sh: out15: not found
++ python get_hashcode_v2ep.py 4
+2019-04-14 23:36:55.819517: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-04-14 23:36:55.826540: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2394370000 Hz
+2019-04-14 23:36:55.826698: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x555f4fe1e090 executing computations on platform Host. Devices:
+2019-04-14 23:36:55.826712: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/queue_runner_impl.py:391: QueueRunner.__init__ (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/control_flow_ops.py:3632: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:618: to_double (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:619: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:1241: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
++ out16 =
+run.sh: 18: run.sh: out16: not found
++ python get_hashcode_v2ep.py 5
+2019-04-14 23:46:07.053840: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-04-14 23:46:07.061837: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2394370000 Hz
+2019-04-14 23:46:07.062023: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x56298828f6d0 executing computations on platform Host. Devices:
+2019-04-14 23:46:07.062042: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/queue_runner_impl.py:391: QueueRunner.__init__ (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/control_flow_ops.py:3632: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:618: to_double (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:619: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:1241: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
++ out17 =
+run.sh: 19: run.sh: out17: not found
++ python get_hashcode_v2ep.py 6
+2019-04-14 23:55:13.697356: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-04-14 23:55:13.704468: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2394370000 Hz
+2019-04-14 23:55:13.704671: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x562703874210 executing computations on platform Host. Devices:
+2019-04-14 23:55:13.704703: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/queue_runner_impl.py:391: QueueRunner.__init__ (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/control_flow_ops.py:3632: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:618: to_double (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:619: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:1241: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
++ out18 =
+run.sh: 20: run.sh: out18: not found
++ python get_hashcode_v2ep.py 7
+2019-04-15 00:04:12.443486: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-04-15 00:04:12.450843: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2394370000 Hz
+2019-04-15 00:04:12.451044: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x55fb4bffd5a0 executing computations on platform Host. Devices:
+2019-04-15 00:04:12.451068: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/queue_runner_impl.py:391: QueueRunner.__init__ (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/control_flow_ops.py:3632: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:618: to_double (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:619: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:1241: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
++ out19 =
+run.sh: 21: run.sh: out19: not found
++ python get_hashcode_v2ep.py 8
+2019-04-15 00:14:14.561155: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-04-15 00:14:14.568289: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2394370000 Hz
+2019-04-15 00:14:14.568462: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x5634c7ef1b10 executing computations on platform Host. Devices:
+2019-04-15 00:14:14.568477: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/queue_runner_impl.py:391: QueueRunner.__init__ (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/control_flow_ops.py:3632: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:618: to_double (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:619: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:1241: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
++ out20 =
+run.sh: 22: run.sh: out20: not found
++ python get_hashcode_v2ep.py 9
+2019-04-15 00:23:58.653761: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-04-15 00:23:58.660455: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2394370000 Hz
+2019-04-15 00:23:58.660632: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x559219da37b0 executing computations on platform Host. Devices:
+2019-04-15 00:23:58.660646: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/queue_runner_impl.py:391: QueueRunner.__init__ (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/control_flow_ops.py:3632: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:618: to_double (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:619: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:1241: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
++ out21 =
+run.sh: 23: run.sh: out21: not found
++ python get_hashcode_v2ep.py 10
+2019-04-15 00:33:43.776085: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-04-15 00:33:43.783059: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2394370000 Hz
+2019-04-15 00:33:43.783265: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x559545074c10 executing computations on platform Host. Devices:
+2019-04-15 00:33:43.783288: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/queue_runner_impl.py:391: QueueRunner.__init__ (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/control_flow_ops.py:3632: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:618: to_double (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:619: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /root/anaconda3/envs/tensorflow/lib/python3.5/site-packages/tensorflow/python/ops/image_ops_impl.py:1241: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
++ out22 =
+run.sh: 24: run.sh: out22: not found
++ python retrieval_v2ep.py 0
++ out23 =
+run.sh: 25: run.sh: out23: not found
++ python retrieval_v2ep.py 1
++ out24 =
+run.sh: 26: run.sh: out24: not found
++ python retrieval_v2ep.py 2
++ out25 =
+run.sh: 27: run.sh: out25: not found
++ python retrieval_v2ep.py 3
++ out26 =
+run.sh: 28: run.sh: out26: not found
++ python retrieval_v2ep.py 4
++ out27 =
+run.sh: 29: run.sh: out27: not found
++ python retrieval_v2ep.py 5
++ out28 =
+run.sh: 30: run.sh: out28: not found
++ python retrieval_v2ep.py 6
++ out29 =
+run.sh: 31: run.sh: out29: not found
++ python retrieval_v2ep.py 7
++ out30 =
+run.sh: 32: run.sh: out30: not found
++ python retrieval_v2ep.py 8
++ out31 =
+run.sh: 33: run.sh: out31: not found
++ python retrieval_v2ep.py 9
++ out32 =
+run.sh: 34: run.sh: out32: not found
++ python retrieval_v2ep.py 10
++ out33 =
+run.sh: 35: run.sh: out33: not found
