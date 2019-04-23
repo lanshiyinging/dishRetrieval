@@ -11,7 +11,7 @@ config = tf.ConfigProto(log_device_placement=True,
 
 
 k = 8
-batch_size = 22
+batch_size = 80
 epoch_num = 20
 momentum = 0.9
 weight_decay = 0.004
@@ -199,6 +199,25 @@ def loss_function(y_conv, label_batches):
     cost = Lr / count
     return cost
 
+def prefix_image(resize_w, resize_h):
+    num = 0
+    train_image = []
+    train_label = []
+    for pic in os.listdir("../data/train_data/0/"):
+        train_image.append("../data/train_data/0/"+ pic)
+        train_label.append("0")
+        num += 1
+    temp = np.array([train_image, train_label])
+    temp = temp.transpose()
+    np.random.shuffle(temp)
+
+    image_list = list(temp[:, 0])
+    label_list = list(temp[:, 1])
+    label_list = [int(i) for i in label_list]
+
+    img_batch, label_batch = get_batches(image_list, label_list, resize_w, resize_h, num, num)
+
+    return img_batch, num
 
 def main():
     train_data_dir = "../data/train_data/"
@@ -206,6 +225,7 @@ def main():
     #test_data_dir = "data/test_data/"
     train_image, train_label, train_num = get_files(train_data_dir)
     train_image_batches, train_label_batches = get_batches(train_image, train_label, img_size, img_size, batch_size, batch_size)
+    test_image_batches, test_num = prefix_image(img_size,img_size)
 
     y_conv = dsh_dish_net(x, keep_prob)
     with tf.name_scope('loss'):
@@ -250,6 +270,27 @@ def main():
                 start_time = end_time
                 print("------------iteration %d is finished---------" % count)
                 count += 1
+                if count % 50 == 0:
+                    test_batch_img, test_batch_num = sess.run([test_image_batches, test_num])
+                    ret = sess.run(y_conv, feed_dict={x: test_batch_img, keep_prob: 1.0})
+                    ret1 = sess.run(tf.sign(ret))
+                    acc = 0
+                    for i in range(test_batch_num):
+                        minus = 0
+                        passive = 0
+                        for j in range(test_batch_num):
+                            if ret1[j, i] == -1:
+                                minus += 1
+                            else:
+                                passive += 1
+                        if minus > passive:
+                            temp = minus/test_batch_num
+                        else:
+                            temp = passive / test_batch_num
+                        acc += temp
+                    acc = acc/test_batch_num
+                    print("------------iteration %d accuracy %s---------" % (count, str(acc)))
+
         except tf.errors.OutOfRangeError:
             print("Done!")
         finally:
