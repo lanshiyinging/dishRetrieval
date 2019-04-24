@@ -11,7 +11,7 @@ config = tf.ConfigProto(log_device_placement=True,
 
 
 k = 8
-batch_size = 80
+batch_size = 20
 epoch_num = 20
 momentum = 0.9
 weight_decay = 0.004
@@ -215,7 +215,7 @@ def prefix_image(resize_w, resize_h):
     label_list = list(temp[:, 1])
     label_list = [int(i) for i in label_list]
 
-    img_batch, label_batch = get_batches(image_list, label_list, resize_w, resize_h, num, num)
+    img_batch, label_batch = get_batches(image_list, label_list, resize_w, resize_h, str(num), str(num))
 
     return img_batch, num
 
@@ -304,6 +304,16 @@ def main():
 
 if __name__ == '__main__':
     main()
+    try:
+        while not coord.should_stop():
+            batch_images, batch_labels = sess.run([train_image_batches, train_label_batches])
+            print(batch_labels)
+    except tf.errors.OutOfRangeError:
+        print("Done!")
+    finally:
+        coord.request_stop()
+        print("All threads are asked to stop!")
+    coord.join(threads)
 
 
 
