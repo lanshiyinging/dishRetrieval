@@ -203,9 +203,9 @@ def prefix_image(resize_w, resize_h):
     num = 0
     train_image = []
     train_label = []
-    for pic in os.listdir("../data/train_data/0/"):
-        train_image.append("../data/train_data/0/"+ pic)
-        train_label.append("0")
+    for pic in os.listdir("../data/train_data/1/"):
+        train_image.append("../data/train_data/1/"+ pic)
+        train_label.append("1")
         num += 1
     temp = np.array([train_image, train_label])
     temp = temp.transpose()
