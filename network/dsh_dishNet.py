@@ -215,7 +215,7 @@ def prefix_image(resize_w, resize_h):
     label_list = list(temp[:, 1])
     label_list = [int(i) for i in label_list]
 
-    img_batch, label_batch = get_batches(image_list, label_list, resize_w, resize_h, str(num), str(num))
+    img_batch, label_batch = get_batches(image_list, label_list, resize_w, resize_h, str(num), num)
 
     return img_batch, num
 
