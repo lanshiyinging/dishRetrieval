@@ -275,7 +275,7 @@ def main():
                     ret = sess.run(y_conv, feed_dict={x: test_batch_img, keep_prob: 1.0})
                     ret1 = sess.run(tf.sign(ret))
                     acc = 0
-                    for i in range(test_num):
+                    for i in range(8):
                         minus = 0
                         passive = 0
                         for j in range(test_num):
