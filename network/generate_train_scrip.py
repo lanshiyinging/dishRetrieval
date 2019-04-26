@@ -15,8 +15,8 @@ for k in k_list:
                 for optimize in optimize_list:
                     for alpha in alpha_list:
                         for m in m_list:
-                            comm = "out%d = python dsh_dishNet_param.py %d %s %f %f %s %f %d %d" % (num, k, lr_method, base_lr, dropout, optimize, alpha, m, num)
-                            comm = comm + " > net%d.log" % (num)
+                            comm = "out%d = `python dsh_dishNet_param.py %d %s %f %f %s %f %d %d" % (num, k, lr_method, base_lr, dropout, optimize, alpha, m, num)
+                            comm = comm + " > net%d.log`" % (num)
                             with open("run_v3.sh", "a") as f:
                                 f.write(comm+'\n')
                             num += 1
