@@ -271,24 +271,24 @@ def main():
                 print("------------iteration %d is finished---------" % count)
                 count += 1
                 if count % 50 == 0:
-                    test_batch_img, test_batch_num = sess.run([test_image_batches, test_num])
+                    test_batch_img = sess.run(test_image_batches)
                     ret = sess.run(y_conv, feed_dict={x: test_batch_img, keep_prob: 1.0})
                     ret1 = sess.run(tf.sign(ret))
                     acc = 0
-                    for i in range(test_batch_num):
+                    for i in range(test_num):
                         minus = 0
                         passive = 0
-                        for j in range(test_batch_num):
+                        for j in range(test_num):
                             if ret1[j, i] == -1:
                                 minus += 1
                             else:
                                 passive += 1
                         if minus > passive:
-                            temp = minus/test_batch_num
+                            temp = minus/test_num
                         else:
-                            temp = passive / test_batch_num
+                            temp = passive / test_num
                         acc += temp
-                    acc = acc/test_batch_num
+                    acc = acc/test_num
                     print("------------iteration %d accuracy %s---------" % (count, str(acc)))
 
         except tf.errors.OutOfRangeError:
@@ -304,6 +304,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+    '''
     try:
         while not coord.should_stop():
             batch_images, batch_labels = sess.run([train_image_batches, train_label_batches])
@@ -314,6 +315,7 @@ if __name__ == '__main__':
         coord.request_stop()
         print("All threads are asked to stop!")
     coord.join(threads)
+    '''
 
 
 
