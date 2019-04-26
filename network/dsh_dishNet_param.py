@@ -2,6 +2,7 @@ import tensorflow as tf
 import numpy as np
 import os
 import time
+import sys
 from tensorflow.python import debug as tf_debug
 
 config = tf.ConfigProto(log_device_placement=True,
@@ -10,16 +11,18 @@ config = tf.ConfigProto(log_device_placement=True,
                         allow_soft_placement=True)
 
 
-k = 8
+k = int(sys.argv[1])
 batch_size = 20
 epoch_num = 20
 momentum = 0.9
 weight_decay = 0.004
-base_lr = 0.001
-m = 2 * k
-alpha = 0.01
+base_lr = float(sys.argv[3])
+m = int(sys.argv[7]) * k
+alpha = float(sys.argv[6])
 img_size = 32
-dropout = 0.8
+dropout = float(sys.argv[4])
+log_path = "logs%s/" % (sys.argv[8])
+model_path = "model%s/" % (sys.argv[8])
 
 with tf.name_scope("input_image"):
     x = tf.placeholder(tf.float32, shape=[None, img_size, img_size, 3], name="input_image")
@@ -234,17 +237,22 @@ def main():
 
     global_step = tf.Variable(0, trainable=False)
     with tf.name_scope('lr'):
-        learning_rate = tf.train.exponential_decay(learning_rate=base_lr, global_step=global_step, decay_steps=200, decay_rate=0.4, staircase=True)
+        if sys.argv[2] == "decay":
+            learning_rate = tf.train.exponential_decay(learning_rate=base_lr, global_step=global_step, decay_steps=200, decay_rate=0.4, staircase=True)
+        else:
+            learning_rate = base_lr
         tf.summary.scalar('lr', learning_rate)
-    #train_step = tf.train.GradientDescentOptimizer(learning_rate).minimize(loss, global_step=global_step)
-    train_step = tf.train.MomentumOptimizer(learning_rate, momentum).minimize(loss, global_step=global_step)
+    if sys.argv[5] == "adam":
+        train_step = tf.train.AdamOptimizer(learning_rate).minimize(loss, global_step=global_step)
+    else:
+        train_step = tf.train.MomentumOptimizer(learning_rate, momentum).minimize(loss, global_step=global_step)
 
     with tf.Session(config=config) as sess:
 
         #sess = tf_debug.LocalCLIDebugWrapperSession(sess, ui_type="readline", thread_name_filter="MainThread$")
         #sess.add_tensor_filter("has_inf_or_nan", tf_debug.has_inf_or_nan)
 
-        writer = tf.summary.FileWriter("logs0/", sess.graph)
+        writer = tf.summary.FileWriter(log_path, sess.graph)
         merged = tf.summary.merge_all()
         saver = tf.train.Saver()
         sess.run(tf.global_variables_initializer())
@@ -290,16 +298,18 @@ def main():
                         acc += temp
                     acc = acc/k
                     print("------------iteration %d accuracy %s---------" % (count, str(acc)))
-
+                    if not os.path.exists(model_path):
+                        os.makedirs(model_path)
+                    saver.save(sess, model_path + "model-" + str(count))
         except tf.errors.OutOfRangeError:
             print("Done!")
         finally:
             coord.request_stop()
             print("All threads are asked to stop!")
         coord.join(threads)
-        if not os.path.exists("./model0/"):
-            os.makedirs("./model0/")
-        saver.save(sess, "./model0/model")
+        if not os.path.exists(model_path):
+            os.makedirs(model_path)
+        saver.save(sess, model_path + "model-final")
         print("Optimization Finished!")
 
 if __name__ == '__main__':
