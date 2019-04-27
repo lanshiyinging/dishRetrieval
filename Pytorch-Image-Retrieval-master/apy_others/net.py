@@ -11,7 +11,7 @@ class AlexNetPlusLatent(nn.Module):
         self.remain = nn.Sequential(*list(alexnet_model.classifier.children())[:-1])
         self.Linear1 = nn.Linear(4096, self.bits)
         self.sigmoid = nn.Sigmoid()
-        self.Linear2 = nn.Linear(self.bits, 32)
+        self.Linear2 = nn.Linear(self.bits, 99)
     def forward(self, x):
         x = self.features(x)
         x = x.view(x.size(0), 256 * 6 * 6)

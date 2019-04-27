@@ -14,17 +14,17 @@ import torch.utils.data as data
 from PIL import Image
 
 parser = argparse.ArgumentParser(description='Deep Hashing')
-parser.add_argument('--lr', type=float, default=0.02, metavar='LR',
+parser.add_argument('--lr', type=float, default=0.001, metavar='LR',
                     help='learning rate (default: 0.01)')
 parser.add_argument('--momentum', type=float, default=0.9, metavar='M',
                     help='SGD momentum (default: 0.9)')
-parser.add_argument('--epoch', type=int, default=100, metavar='epoch',
+parser.add_argument('--epoch', type=int, default=20, metavar='epoch',
                     help='epoch')
 parser.add_argument('--pretrained', type=int, default=0, metavar='pretrained_model',
                     help='loading pretrained model(default = None)')
-parser.add_argument('--bits', type=int, default=48, metavar='bts',
+parser.add_argument('--bits', type=int, default=24, metavar='bts',
                     help='binary bits')
-parser.add_argument('--path', type=str, default='model_new', metavar='P',
+parser.add_argument('--path', type=str, default='model', metavar='P',
                     help='path directory')
 args = parser.parse_args()
 
@@ -49,7 +49,7 @@ class MyDataset(data.Dataset):
         fw = open(file, 'r')
         lines = fw.readlines()
         for line in lines:
-            words = line.strip().split()
+            words = line.strip().strip('\n').split('\t')
             imgs.append((words[0], words[1]))
         self.imgs = imgs
         self.dir_path = dir_path
@@ -57,7 +57,33 @@ class MyDataset(data.Dataset):
 
     def __getitem__(self, index):
         path, label = self.imgs[index]
-        path = os.path.join(self.dir_path, path)
+        path = self.dir_path + label + '/' + path
+        #path = os.path.join(self.dir_path, path)
+        img = Image.open(path).convert('RGB')
+        label = int(label) - 1
+        if self.transform is not None:
+            img = self.transform(img)
+        return img, label
+
+    def __len__(self):
+        return len(self.imgs)
+
+class MyTestDataset(data.Dataset):
+    def __init__(self, file, dir_path, transform=None):
+        imgs = []
+        fw = open(file, 'r')
+        lines = fw.readlines()
+        for line in lines:
+            words = line.strip().strip('\n').split('\t')
+            imgs.append((words[0], words[1]))
+        self.imgs = imgs
+        self.dir_path = dir_path
+        self.transform = transform
+
+    def __getitem__(self, index):
+        path, label = self.imgs[index]
+        path = self.dir_path + path
+        #path = os.path.join(self.dir_path, path)
         img = Image.open(path).convert('RGB')
         label = int(label) - 1
         if self.transform is not None:
@@ -68,15 +94,15 @@ class MyDataset(data.Dataset):
         return len(self.imgs)
     
 
-train_data = MyDataset('/disks/sdb/images.txt', '/disks/sdb/',transform_train)
+train_data = MyDataset('../data/train_list.txt', '../data/train_data/', transform_train)
 
-trainloader = torch.utils.data.DataLoader(train_data, batch_size=512,
+trainloader = torch.utils.data.DataLoader(train_data, batch_size=10,
                                           shuffle=True, num_workers=4)
 
-testset = datasets.CIFAR10(root='data', train=False, download=False,
-                           transform=transform_test)
-testloader = torch.utils.data.DataLoader(testset, batch_size=100,
-                                         shuffle=True, num_workers=2)
+test_data = MyDataset('../data/test_list.txt', '../data/test_data/', transform_train)
+
+testloader = torch.utils.data.DataLoader(train_data, batch_size=10,
+                                          shuffle=True, num_workers=4)
 
 net = AlexNetPlusLatent(args.bits)
 
@@ -85,7 +111,8 @@ use_cuda = torch.cuda.is_available()
 if use_cuda:
     net.cuda()
 
-softmaxloss = nn.CrossEntropyLoss().cuda()
+#softmaxloss = nn.CrossEntropyLoss().cuda()
+softmaxloss = nn.CrossEntropyLoss()
 
 optimizer4nn = torch.optim.SGD(net.parameters(), lr=args.lr, momentum=args.momentum, weight_decay=0.0005)
 
