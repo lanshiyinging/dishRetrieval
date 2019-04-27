@@ -1,11 +1,11 @@
 
 k_list = [8, 12, 24]
 lr_method_list = ["decay", "smooth"]
-base_lr_list = [0.001, 0.0001, 0.00005, 0.000025, 0.00001]
-dropout_list = [0.8, 0.7, 0.6, 0.5]
+base_lr_list = [0.001, 0.0001, 0.00001]
+dropout_list = [0.8, 0.5]
 optimize_list = ["adam", "mome"]
-alpha_list = [0, 0.001, 0.01, 0.1]
-m_list = [6, 3, 2, 1]
+alpha_list = [0.001, 0.01]
+m_list = [6, 3, 2]
 
 num = 0
 for k in k_list:
