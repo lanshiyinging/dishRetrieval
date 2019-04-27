@@ -9,7 +9,7 @@ from net import AlexNetPlusLatent
 
 from torchvision import datasets, models, transforms
 from torch.autograd import Variable
-import torch.optim.lr_scheduler
+from torch.optim import lr_scheduler
 import torch.utils.data as data
 from PIL import Image
 
@@ -99,7 +99,7 @@ train_data = MyDataset('../../data/train_list.txt', '../../data/train_data/', tr
 trainloader = torch.utils.data.DataLoader(train_data, batch_size=10,
                                           shuffle=True, num_workers=4)
 
-test_data = MyDataset('../../data/test_list.txt', '../../data/test_data/', transform_train)
+test_data = MyTestDataset('../../data/test_list.txt', '../../data/test_data/', transform_train)
 
 testloader = torch.utils.data.DataLoader(train_data, batch_size=10,
                                           shuffle=True, num_workers=4)
