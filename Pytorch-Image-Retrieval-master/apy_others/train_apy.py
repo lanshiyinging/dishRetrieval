@@ -94,12 +94,12 @@ class MyTestDataset(data.Dataset):
         return len(self.imgs)
     
 
-train_data = MyDataset('../data/train_list.txt', '../data/train_data/', transform_train)
+train_data = MyDataset('../../data/train_list.txt', '../../data/train_data/', transform_train)
 
 trainloader = torch.utils.data.DataLoader(train_data, batch_size=10,
                                           shuffle=True, num_workers=4)
 
-test_data = MyDataset('../data/test_list.txt', '../data/test_data/', transform_train)
+test_data = MyDataset('../../data/test_list.txt', '../../data/test_data/', transform_train)
 
 testloader = torch.utils.data.DataLoader(train_data, batch_size=10,
                                           shuffle=True, num_workers=4)
