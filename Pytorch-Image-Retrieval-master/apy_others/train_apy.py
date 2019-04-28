@@ -9,7 +9,7 @@ from net import AlexNetPlusLatent
 
 from torchvision import datasets, models, transforms
 from torch.autograd import Variable
-#from torch.optim import lr_scheduler
+from torch.optim import lr_scheduler
 import torch.utils.data as data
 from PIL import Image
 
