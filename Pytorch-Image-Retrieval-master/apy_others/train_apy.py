@@ -57,7 +57,7 @@ class MyDataset(data.Dataset):
 
     def __getitem__(self, index):
         path, label = self.imgs[index]
-        path = self.dir_path + label + '/' + path
+        path = self.dir_path + label + '/' + path + '.jpg'
         #path = os.path.join(self.dir_path, path)
         img = Image.open(path).convert('RGB')
         label = int(label) - 1
