@@ -14,6 +14,16 @@ import torch.utils.data as data
 from PIL import Image
 
 
+transform_train = transforms.Compose(
+        [transforms.Resize(227),
+         transforms.ToTensor(),
+         transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010))])
+transform_test = transforms.Compose(
+        [transforms.Resize(227),
+         transforms.ToTensor(),
+         transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010))])
+
+
 class MyDataset(data.Dataset):
     def __init__(self, file, dir_path, transform=None):
         imgs = []
@@ -66,14 +76,6 @@ class MyTestDataset(data.Dataset):
 
 
 def load_data():
-    transform_train = transforms.Compose(
-        [transforms.Resize(227),
-         transforms.ToTensor(),
-         transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010))])
-    transform_test = transforms.Compose(
-        [transforms.Resize(227),
-         transforms.ToTensor(),
-         transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010))])
     train_data = MyDataset('../../data/train_list.txt', '../../data/train_data/', transform_train)
 
     trainloader = torch.utils.data.DataLoader(train_data, batch_size=10,
