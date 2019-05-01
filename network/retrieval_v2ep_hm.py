@@ -87,7 +87,7 @@ def main():
         train_line = train_line.strip().strip('\n')
         train_line_list = train_line.split('\t')
         train_label_dataset[train_line_list[0]] = train_line_list[1]
-        train_hash_dataset[train_line_list[0]] = train_line_list[3]
+        train_hash_dataset[train_line_list[0]] = train_line_list[2]
         train_line = train_output_file.readline()
 
     test_line = test_output_file.readline()
@@ -99,7 +99,7 @@ def main():
         result = []
         test_line = test_line.strip().strip('\n')
         test_line_list = test_line.split('\t')
-        test_pic_hashcode = test_line_list[2].split(',')
+        test_pic_hashcode = test_line_list[1].split(',')
         for k, v in train_hash_dataset.items():
             candi_pic_hashcode = v.split(',')
             temp_dis = 0
@@ -112,7 +112,7 @@ def main():
         eval = evaluate(test_label_dataset[test_line_list[0]], result, train_label_dataset)
         MAP_5 += eval['AP_5']
         with open("../data/test_result_mmini" + sys.argv[1], 'a') as f:
-            f.write("%s\t%s\t[%s]\t%s\t%s\n" % (test_line_list[0], test_label_dataset[test_line_list[0]], test_line_list[2], str(result), str(eval)))
+            f.write("%s\t%s\t[%s]\t%s\t%s\n" % (test_line_list[0], test_label_dataset[test_line_list[0]], test_line_list[1], str(result), str(eval)))
         test_num += 1
         test_line = test_output_file.readline()
 
