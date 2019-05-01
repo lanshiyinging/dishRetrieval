@@ -18,7 +18,7 @@ parser.add_argument('--lr', type=float, default=0.001, metavar='LR',
                     help='learning rate (default: 0.01)')
 parser.add_argument('--momentum', type=float, default=0.9, metavar='M',
                     help='SGD momentum (default: 0.9)')
-parser.add_argument('--epoch', type=int, default=20, metavar='epoch',
+parser.add_argument('--epoch', type=int, default=100, metavar='epoch',
                     help='epoch')
 parser.add_argument('--pretrained', type=int, default=0, metavar='pretrained_model',
                     help='loading pretrained model(default = None)')
@@ -97,12 +97,12 @@ class MyTestDataset(data.Dataset):
 train_data = MyDataset('../../data/train_list.txt', '../../data/train_data/', transform_train)
 
 trainloader = torch.utils.data.DataLoader(train_data, batch_size=10,
-                                          shuffle=True, num_workers=4)
+                                          shuffle=True, num_workers=1)
 
 test_data = MyTestDataset('../../data/test_list.txt', '../../data/test_data/', transform_train)
 
 testloader = torch.utils.data.DataLoader(train_data, batch_size=10,
-                                          shuffle=True, num_workers=4)
+                                          shuffle=True, num_workers=1)
 
 net = AlexNetPlusLatent(args.bits)
 
