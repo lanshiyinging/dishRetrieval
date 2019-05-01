@@ -1,12 +1,13 @@
 import os
+import sys
 
-train_output_path = '../data/output8/train_output.txt'
-test_output_path = '../data/output8/test_output.txt'
-test_label_path = '../data/test_list.txt'
-train_data_dir = '../data/train_data/'
+train_output_path = '../data/output_mmini%s/train_output.txt' % (sys.argv[1])
+test_output_path = '../data/output_mmini%s/test_output.txt' % (sys.argv[1])
+test_label_path = '../data/test_list_mmini.txt'
+train_data_dir = '../data/train_data_mmini/'
 
-train_output_path_runtime = '/root/lsy/dishRetrieval/data/output8/train_output.txt'
-#train_output_path_runtime = '/Users/lansy/Desktop/graduateDesign/dishRetrieval/data/output8/train_output.txt'
+#train_output_path_runtime = '/root/lsy/dishRetrieval/data/output_mmini_web/train_output.txt'
+train_output_path_runtime = '/Users/lansy/Desktop/graduateDesign/dishRetrieval/data/output_mmini_web/train_output.txt'
 
 
 def load_train_data(train_output_path):
@@ -18,7 +19,7 @@ def load_train_data(train_output_path):
         train_line = train_line.strip().strip('\n')
         train_line_list = train_line.split('\t')
         train_label_dataset[train_line_list[0]] = train_line_list[1]
-        train_hash_dataset[train_line_list[0]] = train_line_list[3]
+        train_hash_dataset[train_line_list[0]] = train_line_list[2]
         train_line = train_output_file.readline()
     return train_hash_dataset, train_label_dataset
 
@@ -47,7 +48,7 @@ def get_test_label(filename):
     while line:
         line = line.strip().strip('\n')
         line_list = line.split('\t')
-        lable_dict['../data/test_data/'+line_list[0]] = line_list[1]
+        lable_dict['../data/test_data_mmini/'+line_list[0]] = line_list[1]
         line = f.readline()
     return lable_dict
 
@@ -110,13 +111,13 @@ def main():
             result.append(sort_hm_dis[i])
         eval = evaluate(test_label_dataset[test_line_list[0]], result, train_label_dataset)
         MAP_5 += eval['AP_5']
-        with open("../data/test_result8p.txt", 'a') as f:
+        with open("../data/test_result_mmini" + sys.argv[1], 'a') as f:
             f.write("%s\t%s\t[%s]\t%s\t%s\n" % (test_line_list[0], test_label_dataset[test_line_list[0]], test_line_list[1], str(result), str(eval)))
         test_num += 1
         test_line = test_output_file.readline()
 
     MAP_5 = MAP_5/test_num
-    print('The MAP@5 is :' + str(MAP_5))
+    print('Train ' + sys.argv[1] + ' : The hm_MAP@5 is :' + str(MAP_5))
 
 
 if __name__ == '__main__':

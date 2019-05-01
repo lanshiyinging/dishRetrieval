@@ -1,21 +1,22 @@
 import tensorflow as tf
 import numpy as np
 import os
+import sys
 #import dsh_dishNet
 
 train_dir = '../data/train_data_mmini/'
 test_dir = '../data/test_data_mmini/'
-model_dir = './model_web/'
+model_dir = './model%s/' % (sys.argv[1])
 batch_size = 100
-output_dir = '../data/output_mmini_web/'
-model_dir_runtime = '/root/lsy/dishRetrieval/network/model8/'
-#model_dir_runtime = '/Users/lansy/Desktop/graduateDesign/dishRetrieval/network/model_web/'
+output_dir = '../data/output_mmini%s/' % (sys.argv[1])
+#model_dir_runtime = '/root/lsy/dishRetrieval/network/model_web/'
+model_dir_runtime = '/Users/lansy/Desktop/graduateDesign/dishRetrieval/network/model_web/'
 img_size = 32
 
 
 
 #x = tf.placeholder(tf.float32, shape=[None, 32, 32, 3])
-k = 8
+k = int(sys.argv[2])
 
 def prefix_image(image, resize_w, resize_h):
     image = tf.cast(image, tf.string)
@@ -58,7 +59,7 @@ def main():
         os.makedirs(output_dir)
     #already_get = open(output_dir+'train_output.txt', 'r').read()
     with tf.Session() as sess:
-        saver = tf.train.import_meta_graph(model_dir+'model.meta')
+        saver = tf.train.import_meta_graph(model_dir+'model-final.meta')
         saver.restore(sess, tf.train.latest_checkpoint(model_dir))
         #y_conv = dsh_dishNet.dsh_dish_net(x)
         y_conv = tf.get_collection('y_conv')[0]
@@ -73,27 +74,27 @@ def main():
                 image = prefix_image(image_path, img_size, img_size)
                 ret = sess.run(y_conv, feed_dict={x: image, keep_prob: 1.0})
                 ret1 = tf.reshape(ret, [k])
-                #ret2 = sess.run(tf.sign(ret1))
-                #ret_array = ret2.eval()
-                #ret2 = ret2.astype('str')
-                ret2 = ret1.eval()
-                ret_array = [str(i) for i in ret2]
-                ret_string = ','.join(ret_array)
+                ret2 = sess.run(tf.sign(ret1))
+                ret_array1 = [str(i) for i in ret2]
+                ret_string1 = ','.join(ret_array1)
+                ret3 = ret1.eval()
+                ret_array2 = [str(i) for i in ret3]
+                ret_string2 = ','.join(ret_array2)
                 with open(output_dir+'train_output.txt', 'a') as f1:
-                    f1.write("%s\t%s\t%s\n" % (image_path, label, ret_string))
+                    f1.write("%s\t%s\t%s\t%s\n" % (image_path, label, ret_string1, ret_string2))
 
         for pic in os.listdir(test_dir):
             image_path = test_dir + pic
             image = prefix_image(image_path, img_size, img_size)
             ret = sess.run(y_conv, feed_dict={x: image, keep_prob: 1.0})
             ret1 = tf.reshape(ret, [k])
-            #ret2 = sess.run(tf.sign(ret1))
-            #ret_array = ret2.eval()
-            ret2 = ret1.eval()
-            ret_array = [str(i) for i in ret2]
-            ret_string = ','.join(ret_array)
+            ret2 = sess.run(tf.sign(ret1))
+            ret_array1 = [str(i) for i in ret2]
+            ret3 = ret1.eval()
+            ret_array2 = [str(i) for i in ret3]
+            ret_string2 = ','.join(ret_array2)
             with open(output_dir+'test_output.txt', 'a') as f1:
-                f1.write("%s\t%s\n" % (image_path, ret_string))
+                f1.write("%s\t%s\t%s\n" % (image_path, ','.join(ret_array1), ret_string2))
 
 
 if __name__ == '__main__':
