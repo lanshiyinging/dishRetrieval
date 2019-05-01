@@ -16,7 +16,7 @@ img_size = 32
 
 
 #x = tf.placeholder(tf.float32, shape=[None, 32, 32, 3])
-k = 8
+k = int(sys.argv[2])
 
 def prefix_image(image, resize_w, resize_h):
     image = tf.cast(image, tf.string)

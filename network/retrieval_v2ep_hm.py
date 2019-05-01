@@ -117,7 +117,7 @@ def main():
         test_line = test_output_file.readline()
 
     MAP_5 = MAP_5/test_num
-    print('The MAP@5 is :' + str(MAP_5))
+    print('Train ' + sys.argv[1] + ' : The hm_MAP@5 is :' + str(MAP_5))
 
 
 if __name__ == '__main__':
