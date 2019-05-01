@@ -50,9 +50,9 @@ def precision(train_binary, train_label, test_binary, test_label):
     test_binary = test_binary.cpu().numpy()
     test_binary = np.asarray(test_binary, np.int32)
     test_label = test_label.cpu().numpy()
-    classes = np.max(test_label)
-    for i in range(1, classes+1):
-        if i == 1:
+    classes = np.max(test_label) + 1
+    for i in range(classes):
+        if i == 0:
             test_sample_binary = test_binary[np.random.RandomState(seed=i).permutation(np.where(test_label==i)[0])[:2]]
             test_sample_label = np.array([i]).repeat(2)
             continue

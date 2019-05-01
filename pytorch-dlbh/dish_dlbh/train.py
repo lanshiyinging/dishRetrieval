@@ -64,7 +64,7 @@ def train(epoch):
         optimizer4nn.step()
 
         train_loss += softmaxloss(outputs, targets).item()
-        _, predicted = torch.max(outputs.data, 1) + 1
+        _, predicted = torch.max(outputs.data, 1)
         total += targets.size(0)
         correct += predicted.eq(targets.data).cpu().sum()
 
@@ -84,7 +84,7 @@ def test():
         _, outputs = net(inputs)
         loss = softmaxloss(outputs, targets)
         test_loss += loss.item()
-        _, predicted = torch.max(outputs.data, 1) + 1
+        _, predicted = torch.max(outputs.data, 1)
         total += targets.size(0)
         correct += predicted.eq(targets.data).cpu().sum()
 
