@@ -94,7 +94,7 @@ def test():
     print('Saving')
     if not os.path.isdir('{}'.format(args.path)):
         os.mkdir('{}'.format(args.path))
-    torch.save(net.state_dict(), './{}/{}'.format(args.path, acc))
+    torch.save(net.state_dict(), './{}/{}.model'.format(args.path, acc))
 
 
 def main():
