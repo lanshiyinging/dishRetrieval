@@ -95,6 +95,8 @@ def test():
     if not os.path.isdir('{}'.format(args.path)):
         os.mkdir('{}'.format(args.path))
     torch.save(net.state_dict(), './{}/{}.model'.format(args.path, acc))
+    if acc > 80:
+        shutil.copyfile('./{}/{}.model'.format(args.path, acc), './model_high/{}.model'.format(acc))
 
 
 def main():
@@ -102,8 +104,8 @@ def main():
         net.load_state_dict(torch.load('./{}/{}'.format(args.path, args.pretrained)))
         test()
     else:
-        #if os.path.isdir('{}'.format(args.path)):
-            #shutil.rmtree('{}'.format(args.path))
+        if os.path.isdir('{}'.format(args.path)):
+            shutil.rmtree('{}'.format(args.path))
         for epoch in range(start_epoch, start_epoch+args.epoch):
             train(epoch)
             test()
@@ -111,7 +113,10 @@ def main():
 
 
 if __name__ == '__main__':
-    try:
-        main()
-    except:
-        main()
+    flag = True
+    while flag:
+        try:
+            main()
+            flag = False
+        except:
+            flag = True
