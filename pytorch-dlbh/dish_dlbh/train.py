@@ -115,6 +115,5 @@ def main():
 if __name__ == '__main__':
     try:
         main()
-        flag = False
     except:
-        flag = True
+        exit(1)
