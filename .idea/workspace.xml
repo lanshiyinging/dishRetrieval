@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a1a0b0a-c192-4904-8f1c-12ea314ca0f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pytorch-dlbh/dish_dlbh/run.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytorch-dlbh/dish_dlbh/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytorch-dlbh/dish_dlbh/train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytorch-dlbh/dish_dlbh/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/pytorch-dlbh/dish_dlbh/run.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +26,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pytorch-dlbh/dish_dlbh/train.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="346">
@@ -41,6 +39,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/network/run_v4.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-22581">
+              <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/network/run_v3.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="131">
+              <caret line="289" column="6" selection-start-line="289" selection-start-column="6" selection-end-line="289" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pytorch-dlbh/dish_dlbh/run.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="168">
@@ -143,8 +159,8 @@
         <option value="$PROJECT_DIR$/network/dsh_dishNet_param.py" />
         <option value="$PROJECT_DIR$/pytorch-dlbh/dish_dlbh/evaluation.py" />
         <option value="$PROJECT_DIR$/pytorch-dlbh/dish_dlbh/loadData.py" />
-        <option value="$PROJECT_DIR$/pytorch-dlbh/dish_dlbh/run.sh" />
         <option value="$PROJECT_DIR$/pytorch-dlbh/dish_dlbh/train.py" />
+        <option value="$PROJECT_DIR$/pytorch-dlbh/dish_dlbh/run.sh" />
       </list>
     </option>
   </component>
@@ -169,18 +185,6 @@
               <item name="dishRetrieval" type="b2602c69:ProjectViewProjectNode" />
               <item name="dishRetrieval" type="462c0819:PsiDirectoryNode" />
               <item name="pytorch-dlbh" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dishRetrieval" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dishRetrieval" type="462c0819:PsiDirectoryNode" />
-              <item name="pytorch-dlbh" type="462c0819:PsiDirectoryNode" />
-              <item name="apy_others" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dishRetrieval" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dishRetrieval" type="462c0819:PsiDirectoryNode" />
-              <item name="pytorch-dlbh" type="462c0819:PsiDirectoryNode" />
-              <item name="cifar10" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dishRetrieval" type="b2602c69:ProjectViewProjectNode" />
@@ -406,12 +410,12 @@
       <workItem from="1556687271466" duration="1722000" />
       <workItem from="1556715641555" duration="813000" />
       <workItem from="1556757755402" duration="2834000" />
-      <workItem from="1556846696892" duration="1424000" />
+      <workItem from="1556846696892" duration="1731000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="201628000" />
+    <option name="totallyTimeSpent" value="201935000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -681,13 +685,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/network/run_v4.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pytorch-dlbh/cifar10/train.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="363">
@@ -727,13 +724,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/network/run_v3.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="26" column="60" lean-forward="true" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crawl/dealData.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -746,10 +736,17 @@
     <entry file="file://$PROJECT_DIR$/pytorch-dlbh/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pytorch-dlbh/dish_dlbh/run.sh">
+    <entry file="file://$PROJECT_DIR$/network/run_v4.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        <state relative-caret-position="-22581">
+          <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/run_v3.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="289" column="6" selection-start-line="289" selection-start-column="6" selection-end-line="289" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -760,6 +757,13 @@
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pytorch-dlbh/dish_dlbh/run.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
         </state>
       </provider>
     </entry>

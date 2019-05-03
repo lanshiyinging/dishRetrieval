@@ -2,7 +2,7 @@
 
 python train.py > train.log
 var = $?
-while [ $var -nq 0 ]; do
+while [ $var -ne 0 ]; do
     python train.py > train.log
     var = $?
 done
