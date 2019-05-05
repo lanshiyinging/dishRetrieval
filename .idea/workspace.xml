@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a1a0b0a-c192-4904-8f1c-12ea314ca0f3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/pytorch-dlbh/dish_dlbh/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/pytorch-dlbh/dish_dlbh/run.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytorch-dlbh/dish_dlbh/loadData.py" beforeDir="false" afterPath="$PROJECT_DIR$/pytorch-dlbh/dish_dlbh/loadData.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pytorch-dlbh/dish_dlbh/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="96" column="72" selection-start-line="96" selection-start-column="72" selection-end-line="96" selection-end-column="72" />
+            <state relative-caret-position="2066">
+              <caret line="104" column="13" selection-start-line="104" selection-start-column="13" selection-end-line="104" selection-end-column="13" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -52,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pytorch-dlbh/dish_dlbh/loadData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="19" column="36" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="36" />
+            <state relative-caret-position="590">
+              <caret line="87" column="68" selection-start-line="87" selection-start-column="68" selection-end-line="87" selection-end-column="68" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -73,7 +73,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pytorch-dlbh/dish_dlbh/run.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="168">
@@ -203,9 +203,9 @@
         <option value="$PROJECT_DIR$/network/run_v4.sh" />
         <option value="$PROJECT_DIR$/network/dsh_dishNet_param.py" />
         <option value="$PROJECT_DIR$/pytorch-dlbh/dish_dlbh/evaluation.py" />
-        <option value="$PROJECT_DIR$/pytorch-dlbh/dish_dlbh/loadData.py" />
-        <option value="$PROJECT_DIR$/pytorch-dlbh/dish_dlbh/train.py" />
         <option value="$PROJECT_DIR$/pytorch-dlbh/dish_dlbh/run.sh" />
+        <option value="$PROJECT_DIR$/pytorch-dlbh/dish_dlbh/train.py" />
+        <option value="$PROJECT_DIR$/pytorch-dlbh/dish_dlbh/loadData.py" />
       </list>
     </option>
   </component>
@@ -457,12 +457,12 @@
       <workItem from="1556757755402" duration="2834000" />
       <workItem from="1556846696892" duration="6432000" />
       <workItem from="1556929821714" duration="647000" />
-      <workItem from="1557069676440" duration="128000" />
+      <workItem from="1557069676440" duration="348000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="207411000" />
+    <option name="totallyTimeSpent" value="207631000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -743,16 +743,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pytorch-dlbh/dish_dlbh/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="96" column="72" selection-start-line="96" selection-start-column="72" selection-end-line="96" selection-end-column="72" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pytorch-dlbh/apy_others/train_apy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2352">
@@ -761,16 +751,6 @@
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#1605#2374#0" />
             <element signature="e#2415#3161#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pytorch-dlbh/dish_dlbh/loadData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="19" column="36" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -820,6 +800,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pytorch-dlbh/dish_dlbh/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2066">
+          <caret line="104" column="13" selection-start-line="104" selection-start-column="13" selection-end-line="104" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pytorch-dlbh/dish_dlbh/loadData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="590">
+          <caret line="87" column="68" selection-start-line="87" selection-start-column="68" selection-end-line="87" selection-end-column="68" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
