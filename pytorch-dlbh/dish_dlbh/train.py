@@ -101,8 +101,8 @@ def main():
         net.load_state_dict(torch.load('./{}/{}'.format(args.path, args.pretrained)))
         test()
     else:
-        if os.path.isdir('{}'.format(args.path)):
-            shutil.rmtree('{}'.format(args.path))
+        #if os.path.isdir('{}'.format(args.path)):
+            #shutil.rmtree('{}'.format(args.path))
         for epoch in range(start_epoch, start_epoch+args.epoch):
             train(epoch)
             test()
