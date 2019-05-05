@@ -2,85 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a1a0b0a-c192-4904-8f1c-12ea314ca0f3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/network/get_hashcode_v2ep_double_mini.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/network/retrieval_v2ep_hm_mini.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/network/retrieval_v2ep_mini.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dishname.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/dishname.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/get_hashcode_v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/get_hashcode_v2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/retrieval_v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/retrieval_v2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/1/Train_0000.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/1/Train_0001.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/1/Train_0002.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/10/Train_0045.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/10/Train_0046.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/10/Train_0047.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/10/Train_0048.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/10/Train_0049.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/2/Train_0005.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/2/Train_0006.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/2/Train_0007.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/2/Train_0008.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/2/Train_0009.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/3/Train_0010.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/3/Train_0011.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/3/Train_0012.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/3/Train_0013.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/3/Train_0014.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/4/Train_0015.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/4/Train_0016.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/4/Train_0017.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/4/Train_0018.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/4/Train_0019.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/5/Train_0020.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/5/Train_0021.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/5/Train_0022.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/5/Train_0023.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/5/Train_0024.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/6/Train_0025.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/6/Train_0026.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/6/Train_0027.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/6/Train_0028.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/6/Train_0029.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/7/Train_0030.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/7/Train_0031.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/7/Train_0032.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/7/Train_0033.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/7/Train_0034.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/8/Train_0035.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/8/Train_0036.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/8/Train_0037.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/8/Train_0038.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/8/Train_0039.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/9/Train_0040.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/9/Train_0041.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/9/Train_0042.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/9/Train_0043.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini/9/Train_0044.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini_mid/0/Train_0000.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/static/train_data_mmini/0/Train_0000.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini_mid/0/Train_0001.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/static/train_data_mmini/0/Train_0001.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini_mid/0/Train_0002.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/static/train_data_mmini/0/Train_0002.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini_mid/1/Train_0003.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/static/train_data_mmini/1/Train_0003.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini_mid/1/Train_0004.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/static/train_data_mmini/1/Train_0004.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini_mid/1/Train_0005.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/static/train_data_mmini/1/Train_0005.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini_mid/10/Train_0012.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/static/train_data_mmini/10/Train_0012.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini_mid/10/Train_0013.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/static/train_data_mmini/10/Train_0013.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini_mid/10/Train_0014.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/static/train_data_mmini/10/Train_0014.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini_mid/13/Train_0015.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/static/train_data_mmini/13/Train_0015.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini_mid/13/Train_0016.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/static/train_data_mmini/13/Train_0016.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini_mid/13/Train_0017.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/static/train_data_mmini/13/Train_0017.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini_mid/15/Train_0018.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/static/train_data_mmini/15/Train_0018.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini_mid/15/Train_0019.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/static/train_data_mmini/15/Train_0019.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini_mid/15/Train_0020.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/static/train_data_mmini/15/Train_0020.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini_mid/17/Train_0021.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/static/train_data_mmini/17/Train_0021.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini_mid/17/Train_0022.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/static/train_data_mmini/17/Train_0022.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini_mid/17/Train_0023.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/static/train_data_mmini/17/Train_0023.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini_mid/18/Train_0024.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/static/train_data_mmini/18/Train_0024.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini_mid/18/Train_0025.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/static/train_data_mmini/18/Train_0025.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini_mid/18/Train_0026.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/static/train_data_mmini/18/Train_0026.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini_mid/5/Train_0006.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/static/train_data_mmini/5/Train_0006.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini_mid/5/Train_0007.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/static/train_data_mmini/5/Train_0007.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini_mid/5/Train_0008.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/static/train_data_mmini/5/Train_0008.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini_mid/9/Train_0009.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/static/train_data_mmini/9/Train_0009.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini_mid/9/Train_0010.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/static/train_data_mmini/9/Train_0010.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/static/train_data_mmini_mid/9/Train_0011.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/static/train_data_mmini/9/Train_0011.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/generate_evaluate_scrip.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/generate_evaluate_scrip.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -98,58 +24,12 @@
     <SUITE FILE_PATH="coverage/dishRetrieval$detect_jpg_image.coverage" NAME="detect_jpg_image Coverage Results" MODIFIED="1552873419774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/network" />
     <SUITE FILE_PATH="coverage/dishRetrieval$get_hashcode_v2.coverage" NAME="get_hashcode_v2 Coverage Results" MODIFIED="1555348079863" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/network" />
     <SUITE FILE_PATH="coverage/dishRetrieval$dealData.coverage" NAME="dealData Coverage Results" MODIFIED="1552837694424" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crawl" />
-    <SUITE FILE_PATH="coverage/dishRetrieval$generate_evaluate_scrip.coverage" NAME="generate_evaluate_scrip Coverage Results" MODIFIED="1556688863389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/network" />
+    <SUITE FILE_PATH="coverage/dishRetrieval$generate_evaluate_scrip.coverage" NAME="generate_evaluate_scrip Coverage Results" MODIFIED="1557069434135" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/network" />
     <SUITE FILE_PATH="coverage/dishRetrieval$preDealPicSave.coverage" NAME="preDealPicSave Coverage Results" MODIFIED="1554725931570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/network" />
     <SUITE FILE_PATH="coverage/dishRetrieval$crawlDouguo_add.coverage" NAME="crawlDouguo_add Coverage Results" MODIFIED="1551585926828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crawl" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/network/retrieval_v2ep_hm.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2832">
-              <caret line="119" column="71" selection-start-line="119" selection-start-column="71" selection-end-line="119" selection-end-column="71" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/network/get_hashcode_v2_web.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/network/get_hashcode_v2ep_double.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/network/get_hashcode_v2ep.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/network/get_hashcode_v2ep_all.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -162,46 +42,87 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/network/retrieval_v2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/app/system_mid.py">
+        <entry file="file://$PROJECT_DIR$/network/get_hashcode_mini.py">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#0#23#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/app/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/network/get_hashcode_v2ep_double_mini.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1569">
+              <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/network/retrieval_v2ep.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2856">
+              <caret line="119" column="68" selection-start-line="119" selection-start-column="4" selection-end-line="119" selection-end-column="68" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/network/retrieval_v2ep_mini.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1151">
+              <caret line="50" column="38" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/network/retrieval_v2ep_hm_mini.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2688">
+              <caret line="113" column="39" selection-start-line="113" selection-start-column="39" selection-end-line="113" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/network/run_v4.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/network/run_v3.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="706">
+              <caret line="243" column="81" lean-forward="true" selection-start-line="243" selection-start-column="10" selection-end-line="243" selection-end-column="81" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/network/generate_evaluate_scrip.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="624">
+              <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/app/system.py">
+        <entry file="file://$PROJECT_DIR$/network/run_v5.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/network/get_hashcode_v2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="312">
+              <caret line="13" column="57" lean-forward="true" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -235,11 +156,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/network/test.py" />
-        <option value="$PROJECT_DIR$/network/RegularGradBuilder.py" />
-        <option value="$PROJECT_DIR$/network/dsh_dishNet_debug.py" />
-        <option value="$PROJECT_DIR$/network/retrieval.py" />
-        <option value="$PROJECT_DIR$/network/retrieval_mini.py" />
         <option value="$PROJECT_DIR$/network/retrieval_mini2.py" />
         <option value="$PROJECT_DIR$/network/retrieval_mmini.py" />
         <option value="$PROJECT_DIR$/network/preDealPicSave.py" />
@@ -281,11 +197,16 @@
         <option value="$PROJECT_DIR$/network/get_hashcode_v2ep_double.py" />
         <option value="$PROJECT_DIR$/network/retrieval_v2ep.py" />
         <option value="$PROJECT_DIR$/network/retrieval_v2ep_hm.py" />
-        <option value="$PROJECT_DIR$/network/generate_evaluate_scrip.py" />
         <option value="$PROJECT_DIR$/network/run_v4.sh" />
         <option value="$PROJECT_DIR$/network/dsh_dishNet_param.py" />
         <option value="$PROJECT_DIR$/network/get_hashcode_v2.py" />
         <option value="$PROJECT_DIR$/network/retrieval_v2.py" />
+        <option value="$PROJECT_DIR$/network/get_hashcode_v2ep_mini.py" />
+        <option value="$PROJECT_DIR$/network/get_hashcode_v2ep_double_mini.py" />
+        <option value="$PROJECT_DIR$/network/retrieval_v2ep_mini.py" />
+        <option value="$PROJECT_DIR$/network/retrieval_v2ep_hm_mini.py" />
+        <option value="$PROJECT_DIR$/network/generate_evaluate_scrip.py" />
+        <option value="$PROJECT_DIR$/network/run_v5.sh" />
       </list>
     </option>
   </component>
@@ -309,27 +230,12 @@
             <path>
               <item name="dishRetrieval" type="b2602c69:ProjectViewProjectNode" />
               <item name="dishRetrieval" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dishRetrieval" type="b2602c69:ProjectViewProjectNode" />
               <item name="dishRetrieval" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dishRetrieval" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dishRetrieval" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dishRetrieval" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dishRetrieval" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="network" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -347,10 +253,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Pytorch-Image-Retrieval-master" />
       <recent name="$PROJECT_DIR$/network" />
-      <recent name="$PROJECT_DIR$/web/app" />
       <recent name="$PROJECT_DIR$/network/model_web" />
+      <recent name="$PROJECT_DIR$/Pytorch-Image-Retrieval-master" />
+      <recent name="$PROJECT_DIR$/web/app" />
       <recent name="$PROJECT_DIR$/crawl" />
     </key>
   </component>
@@ -549,16 +455,18 @@
       <workItem from="1556687271466" duration="1722000" />
       <workItem from="1556950418402" duration="851000" />
       <workItem from="1556984008855" duration="390000" />
+      <workItem from="1557067386938" duration="1166000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197798000" />
+    <option name="totallyTimeSpent" value="198964000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21816881" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22103004" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -586,49 +494,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/network/get_hashcode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1128">
-          <caret line="49" column="43" selection-start-line="49" selection-start-column="43" selection-end-line="49" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network/dsh_dishNet_op_adam.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="223" selection-start-line="222" selection-start-column="4" selection-end-line="223" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawl/cd.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1471" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawl/cda.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pytorch-Image-Retrieval-master/apy_others/test.py" />
-    <entry file="file://$PROJECT_DIR$/pytorch-dlbh/cifar10/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="35" column="27" lean-forward="true" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/train_list.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/train_list_mmini.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -763,27 +628,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/network/run_v3.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6936">
-          <caret line="289" column="39" selection-start-line="289" selection-start-column="39" selection-end-line="289" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network/generate_evaluate_scrip.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="69" selection-start-line="9" selection-start-column="69" selection-end-line="9" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network/run_v4.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/network/dsh_dishNet.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6792">
@@ -817,16 +661,6 @@
     <entry file="file://$PROJECT_DIR$/network/retrieval_v2_web_mini.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/network/retrieval_v2ep.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2850">
-          <caret line="119" column="68" selection-start-line="119" selection-start-column="4" selection-end-line="119" selection-end-column="68" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/network/retrieval_v2ep_hm.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2832">
@@ -838,34 +672,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/network/get_hashcode_v2_web.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network/get_hashcode_v2ep_double.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network/get_hashcode_v2ep.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network/get_hashcode_v2ep_all.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
@@ -906,6 +712,112 @@
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/get_hashcode_v2ep.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1635">
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/get_hashcode_v2ep_double.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/get_hashcode_v2ep_all.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/model_web/get_hashcode_v2ep_mini.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/get_hashcode_v2ep_mini.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="10" column="29" lean-forward="true" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/get_hashcode_mini.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/get_hashcode_v2ep_double_mini.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1569">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/retrieval_v2ep.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2856">
+          <caret line="119" column="68" selection-start-line="119" selection-start-column="4" selection-end-line="119" selection-end-column="68" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/retrieval_v2ep_mini.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1151">
+          <caret line="50" column="38" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/retrieval_v2ep_hm_mini.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2688">
+          <caret line="113" column="39" selection-start-line="113" selection-start-column="39" selection-end-line="113" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/run_v4.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/run_v3.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="706">
+          <caret line="243" column="81" lean-forward="true" selection-start-line="243" selection-start-column="10" selection-end-line="243" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/generate_evaluate_scrip.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/run_v5.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="13" column="57" lean-forward="true" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
         </state>
       </provider>
     </entry>
