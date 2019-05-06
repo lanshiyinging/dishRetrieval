@@ -80,12 +80,12 @@ class MyTestDataset(data.Dataset):
 def load_data():
     train_data = MyDataset('../../data/train_list.txt', '../../data/train_data/', transform_train)
 
-    trainloader = torch.utils.data.DataLoader(train_data, batch_size=5,
+    trainloader = torch.utils.data.DataLoader(train_data, batch_size=10,
                                               shuffle=True, num_workers=1)
 
-    test_data = MyTestDataset('../../data/test_list.txt', '../../data/test_data/', transform_test)
+    test_data = MyTestDataset('../../data/test_list.txt', '../../data/test_data/', transform_train)
 
-    testloader = torch.utils.data.DataLoader(test_data, batch_size=5,
+    testloader = torch.utils.data.DataLoader(test_data, batch_size=10,
                                              shuffle=True, num_workers=1)
 
     return trainloader, testloader
