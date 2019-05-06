@@ -54,7 +54,7 @@ def get_files(filename):
 def get_batches(image, label, resize_w, resize_h, batch_size, capacity):
     image = tf.cast(image, tf.string)
     label = tf.cast(label, tf.int64)
-    queue = tf.train.slice_input_producer([image, label], num_epochs=epoch_num)
+    queue = tf.train.slice_input_producer([image, label], num_epochs=epoch_num, shuffle=True)
     label = queue[1]
     image_c = tf.read_file(queue[0])
     image = tf.image.decode_jpeg(image_c, channels=3)
@@ -279,29 +279,6 @@ def main():
                 start_time = end_time
                 print("------------iteration %d is finished---------" % count)
                 count += 1
-                if count % 50 == 0:
-                    test_batch_img = sess.run(test_image_batches)
-                    ret = sess.run(y_conv, feed_dict={x: test_batch_img, keep_prob: 1.0})
-                    ret1 = sess.run(tf.sign(ret))
-                    acc = 0
-                    for i in range(k):
-                        minus = 0
-                        passive = 0
-                        for j in range(test_num):
-                            if ret1[j, i] == -1:
-                                minus += 1
-                            else:
-                                passive += 1
-                        if minus > passive:
-                            temp = minus/test_num
-                        else:
-                            temp = passive / test_num
-                        acc += temp
-                    acc = acc/k
-                    print("------------iteration %d accuracy %s---------" % (count, str(acc)))
-                    if not os.path.exists(model_path):
-                        os.makedirs(model_path)
-                    saver.save(sess, model_path + "model-" + str(count))
         except tf.errors.OutOfRangeError:
             print("Done!")
         finally:
@@ -310,7 +287,7 @@ def main():
         coord.join(threads)
         if not os.path.exists(model_path):
             os.makedirs(model_path)
-        saver.save(sess, model_path + "model-final")
+        saver.save(sess, model_path + "model")
         print("Optimization Finished!")
 
 if __name__ == '__main__':
