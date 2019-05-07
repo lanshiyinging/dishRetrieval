@@ -1,5 +1,5 @@
 
-for i in range(287):
+for i in range(288):
     if i <= 95:
         comm = "get%d = `python get_hashcode_v2ep_double.py %d 8`" % (i, i)
     elif i >= 192:
