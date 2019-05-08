@@ -32,8 +32,10 @@ def binary_output(dataloader):
     use_cuda = torch.cuda.is_available()
     if use_cuda:
         net.cuda()
-    full_batch_output = torch.cuda.FloatTensor()
-    full_batch_label = torch.cuda.LongTensor()
+    #full_batch_output = torch.cuda.FloatTensor()
+    #full_batch_label = torch.cuda.LongTensor()
+    full_batch_output = torch.FloatTensor()
+    full_batch_label = torch.LongTensor()
     net.eval()
     for batch_idx, (inputs, targets) in enumerate(dataloader):
         if use_cuda:
