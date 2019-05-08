@@ -56,12 +56,12 @@ def precision(train_binary, train_label, test_binary, test_label):
     classes = np.max(test_label) + 1
     for i in range(classes):
         if i == 0:
-            test_sample_binary = test_binary[np.random.RandomState(seed=i).permutation(np.where(test_label==i)[0])[:2]]
-            test_sample_label = np.array([i]).repeat(2)
+            test_sample_binary = test_binary[np.random.RandomState(seed=i).permutation(np.where(test_label==i)[0])[:1]]
+            test_sample_label = np.array([i]).repeat(1)
             continue
         else:
-            test_sample_binary = np.concatenate([test_sample_binary, test_binary[np.random.RandomState(seed=i).permutation(np.where(test_label==i)[0])[:2]]])
-            test_sample_label = np.concatenate([test_sample_label, np.array([i]).repeat(2)])
+            test_sample_binary = np.concatenate([test_sample_binary, test_binary[np.random.RandomState(seed=i).permutation(np.where(test_label==i)[0])[:1]]])
+            test_sample_label = np.concatenate([test_sample_label, np.array([i]).repeat(1)])
     query_times = test_sample_binary.shape[0]
     trainset_len = train_binary.shape[0]
     AP = np.zeros(query_times)
