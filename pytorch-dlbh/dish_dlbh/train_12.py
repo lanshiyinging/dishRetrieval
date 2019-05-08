@@ -24,7 +24,7 @@ parser.add_argument('--pretrained', type=int, default=0, metavar='pretrained_mod
                     help='loading pretrained model(default = None)')
 parser.add_argument('--bits', type=int, default=12, metavar='bts',
                     help='binary bits')
-parser.add_argument('--path', type=str, default='model', metavar='P',
+parser.add_argument('--path', type=str, default='model_12', metavar='P',
                     help='path directory')
 args = parser.parse_args()
 
