@@ -14,7 +14,7 @@ from torch.autograd import Variable
 import torch.backends.cudnn as cudnn
 import torch.optim.lr_scheduler
 import loadData
-import loadData_mini
+
 
 parser = argparse.ArgumentParser(description='Deep Hashing evaluate mAP')
 parser.add_argument('--pretrained', type=str, default=49, metavar='pretrained_model',
@@ -100,7 +100,7 @@ def main():
         test_label = torch.load('./result/test_label')
     
     else:
-        trainloader, testloader = loadData_mini.load_data()
+        trainloader, testloader = loadData.load_data()
         train_binary, train_label = binary_output(trainloader)
         test_binary, test_label = binary_output(testloader)
         if not os.path.isdir('result'):
