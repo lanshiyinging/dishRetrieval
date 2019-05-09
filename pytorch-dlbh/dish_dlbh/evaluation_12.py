@@ -92,23 +92,23 @@ def precision(train_binary, train_label, test_binary, test_label):
 
 
 def main():
-    if os.path.exists('./result/train_binary') and os.path.exists('./result/train_label') and \
-       os.path.exists('./result/test_binary') and os.path.exists('./result/test_label') and args.pretrained == 0:
-        train_binary = torch.load('./result/train_binary')
-        train_label = torch.load('./result/train_label')
-        test_binary = torch.load('./result/test_binary')
-        test_label = torch.load('./result/test_label')
+    if os.path.exists('./result_12/train_binary') and os.path.exists('./result_12/train_label') and \
+       os.path.exists('./result_12/test_binary') and os.path.exists('./result_12/test_label') and args.pretrained == 0:
+        train_binary = torch.load('./result_12/train_binary')
+        train_label = torch.load('./result_12/train_label')
+        test_binary = torch.load('./result_12/test_binary')
+        test_label = torch.load('./result_12/test_label')
     
     else:
         trainloader, testloader = loadData.load_data()
         train_binary, train_label = binary_output(trainloader)
         test_binary, test_label = binary_output(testloader)
-        if not os.path.isdir('result'):
-            os.mkdir('result')
-        torch.save(train_binary, './result/train_binary')
-        torch.save(train_label, './result/train_label')
-        torch.save(test_binary, './result/test_binary')
-        torch.save(test_label, './result/test_label')
+        if not os.path.isdir('result_12'):
+            os.mkdir('result_12')
+        torch.save(train_binary, './result_12/train_binary')
+        torch.save(train_label, './result_12/train_label')
+        torch.save(test_binary, './result_12/test_binary')
+        torch.save(test_label, './result_12/test_label')
     
     
     precision(train_binary, train_label, test_binary, test_label)
