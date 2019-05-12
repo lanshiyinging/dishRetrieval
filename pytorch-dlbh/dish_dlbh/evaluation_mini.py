@@ -13,8 +13,8 @@ from torchvision import datasets, models, transforms
 from torch.autograd import Variable
 import torch.backends.cudnn as cudnn
 import torch.optim.lr_scheduler
-import loadData
 import loadData_mini
+
 
 parser = argparse.ArgumentParser(description='Deep Hashing evaluate mAP')
 parser.add_argument('--pretrained', type=str, default=49, metavar='pretrained_model',
@@ -56,12 +56,12 @@ def precision(train_binary, train_label, test_binary, test_label):
     classes = np.max(test_label) + 1
     for i in range(classes):
         if i == 0:
-            test_sample_binary = test_binary[np.random.RandomState(seed=i).permutation(np.where(test_label==i)[0])[:1]]
-            test_sample_label = np.array([i]).repeat(1)
+            test_sample_binary = test_binary[np.random.RandomState(seed=i).permutation(np.where(test_label==i)[0])[:2]]
+            test_sample_label = np.array([i]).repeat(2)
             continue
         else:
-            test_sample_binary = np.concatenate([test_sample_binary, test_binary[np.random.RandomState(seed=i).permutation(np.where(test_label==i)[0])[:1]]])
-            test_sample_label = np.concatenate([test_sample_label, np.array([i]).repeat(1)])
+            test_sample_binary = np.concatenate([test_sample_binary, test_binary[np.random.RandomState(seed=i).permutation(np.where(test_label==i)[0])[:2]]])
+            test_sample_label = np.concatenate([test_sample_label, np.array([i]).repeat(2)])
     query_times = test_sample_binary.shape[0]
     trainset_len = train_binary.shape[0]
     AP = np.zeros(query_times)
@@ -92,23 +92,28 @@ def precision(train_binary, train_label, test_binary, test_label):
 
 
 def main():
-    if os.path.exists('./result_mini/train_binary') and os.path.exists('./result_mini/train_label') and \
-       os.path.exists('./result_mini/test_binary') and os.path.exists('./result_mini/test_label') and args.pretrained == 0:
-        train_binary = torch.load('./result_mini/train_binary')
-        train_label = torch.load('./result_mini/train_label')
-        test_binary = torch.load('./result_mini/test_binary')
-        test_label = torch.load('./result_mini/test_label')
+    result_path = "result_mini"
+    train_binary_path = './%s/train_binary' % result_path
+    train_label_path = './%s/train_label' % result_path
+    test_binary_path = './%s/test_binary' % result_path
+    test_label_path = './%s/test_label' % result_path
+    if os.path.exists(train_binary_path) and os.path.exists(train_label_path) and \
+       os.path.exists(test_binary_path) and os.path.exists(test_label_path) and args.pretrained == 0:
+        train_binary = torch.load(train_binary_path)
+        train_label = torch.load(train_label_path)
+        test_binary = torch.load(test_binary_path)
+        test_label = torch.load(test_label_path)
     
     else:
         trainloader, testloader = loadData_mini.load_data()
         train_binary, train_label = binary_output(trainloader)
         test_binary, test_label = binary_output(testloader)
-        if not os.path.isdir('result_mini'):
-            os.mkdir('result_mini')
-        torch.save(train_binary, './result_mini/train_binary')
-        torch.save(train_label, './result_mini/train_label')
-        torch.save(test_binary, './result_mini/test_binary')
-        torch.save(test_label, './result_mini/test_label')
+        if not os.path.isdir(result_path):
+            os.mkdir(result_path)
+        torch.save(train_binary, train_binary_path)
+        torch.save(train_label, train_label_path)
+        torch.save(test_binary, test_binary_path)
+        torch.save(test_label, test_label_path)
     
     
     precision(train_binary, train_label, test_binary, test_label)

@@ -17,7 +17,7 @@ import loadData
 
 
 parser = argparse.ArgumentParser(description='Deep Hashing evaluate mAP')
-parser.add_argument('--pretrained', type=str, default=49, metavar='pretrained_model',
+parser.add_argument('--pretrained', type=str, default=32, metavar='pretrained_model',
                     help='loading pretrained model(default = None)')
 parser.add_argument('--bits', type=int, default=12, metavar='bts',
                     help='binary bits')
