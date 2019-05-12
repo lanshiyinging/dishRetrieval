@@ -98,7 +98,7 @@ def test():
 
 def main():
     if args.pretrained:
-        net.load_state_dict(torch.load('./{}/{}'.format("model_12", args.pretrained)))
+        net.load_state_dict(torch.load('./{}/{}.model'.format("model_12", args.pretrained)))
         for epoch in range(start_epoch, start_epoch+args.epoch):
             train(epoch)
             test()
