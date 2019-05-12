@@ -17,7 +17,7 @@ import loadData
 
 
 parser = argparse.ArgumentParser(description='Deep Hashing evaluate mAP')
-parser.add_argument('--pretrained', type=str, default=32, metavar='pretrained_model',
+parser.add_argument('--pretrained', type=str, default=49, metavar='pretrained_model',
                     help='loading pretrained model(default = None)')
 parser.add_argument('--bits', type=int, default=12, metavar='bts',
                     help='binary bits')
@@ -92,23 +92,28 @@ def precision(train_binary, train_label, test_binary, test_label):
 
 
 def main():
-    if os.path.exists('./result_12/train_binary') and os.path.exists('./result_12/train_label') and \
-       os.path.exists('./result_12/test_binary') and os.path.exists('./result_12/test_label') and args.pretrained == 0:
-        train_binary = torch.load('./result_12/train_binary')
-        train_label = torch.load('./result_12/train_label')
-        test_binary = torch.load('./result_12/test_binary')
-        test_label = torch.load('./result_12/test_label')
+    result_path = "result_12"
+    train_binary_path = './%s/train_binary' % result_path
+    train_label_path = './%s/train_label' % result_path
+    test_binary_path = './%s/test_binary' % result_path
+    test_label_path = './%s/test_label' % result_path
+    if os.path.exists(train_binary_path) and os.path.exists(train_label_path) and \
+       os.path.exists(test_binary_path) and os.path.exists(test_label_path) and args.pretrained == 0:
+        train_binary = torch.load(train_binary_path)
+        train_label = torch.load(train_label_path)
+        test_binary = torch.load(test_binary_path)
+        test_label = torch.load(test_label_path)
     
     else:
         trainloader, testloader = loadData.load_data()
         train_binary, train_label = binary_output(trainloader)
         test_binary, test_label = binary_output(testloader)
-        if not os.path.isdir('result_12'):
-            os.mkdir('result_12')
-        torch.save(train_binary, './result_12/train_binary')
-        torch.save(train_label, './result_12/train_label')
-        torch.save(test_binary, './result_12/test_binary')
-        torch.save(test_label, './result_12/test_label')
+        if not os.path.isdir(result_path):
+            os.mkdir(result_path)
+        torch.save(train_binary, train_binary_path)
+        torch.save(train_label, train_label_path)
+        torch.save(test_binary, test_binary_path)
+        torch.save(test_label, test_label_path)
     
     
     precision(train_binary, train_label, test_binary, test_label)
