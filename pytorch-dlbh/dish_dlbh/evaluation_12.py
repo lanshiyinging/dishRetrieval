@@ -17,11 +17,11 @@ import loadData
 
 
 parser = argparse.ArgumentParser(description='Deep Hashing evaluate mAP')
-parser.add_argument('--pretrained', type=str, default=49, metavar='pretrained_model',
+parser.add_argument('--pretrained', type=str, default=32, metavar='pretrained_model',
                     help='loading pretrained model(default = None)')
-parser.add_argument('--bits', type=int, default=24, metavar='bts',
+parser.add_argument('--bits', type=int, default=12, metavar='bts',
                     help='binary bits')
-parser.add_argument('--path', type=str, default='model', metavar='P',
+parser.add_argument('--path', type=str, default='model_12', metavar='P',
                     help='path directory')
 args = parser.parse_args()
 
@@ -92,7 +92,7 @@ def precision(train_binary, train_label, test_binary, test_label):
 
 
 def main():
-    result_path = "result"
+    result_path = "result_12"
     train_binary_path = './%s/train_binary' % result_path
     train_label_path = './%s/train_label' % result_path
     test_binary_path = './%s/test_binary' % result_path

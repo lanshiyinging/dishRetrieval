@@ -20,11 +20,11 @@ parser.add_argument('--momentum', type=float, default=0.9, metavar='M',
                     help='SGD momentum (default: 0.9)')
 parser.add_argument('--epoch', type=int, default=100, metavar='epoch',
                     help='epoch')
-parser.add_argument('--pretrained', type=int, default=0, metavar='pretrained_model',
+parser.add_argument('--pretrained', type=int, default=49, metavar='pretrained_model',
                     help='loading pretrained model(default = None)')
 parser.add_argument('--bits', type=int, default=24, metavar='bts',
                     help='binary bits')
-parser.add_argument('--path', type=str, default='model', metavar='P',
+parser.add_argument('--path', type=str, default='model_pre', metavar='P',
                     help='path directory')
 args = parser.parse_args()
 
@@ -98,8 +98,12 @@ def test():
 
 def main():
     if args.pretrained:
-        net.load_state_dict(torch.load('./{}/{}'.format(args.path, args.pretrained)))
-        test()
+        net.load_state_dict(torch.load('./{}/{}.model'.format("model", args.pretrained)))
+        for epoch in range(start_epoch, start_epoch+args.epoch):
+            train(epoch)
+            test()
+            scheduler.step()
+        #test()
     else:
         #if os.path.isdir('{}'.format(args.path)):
             #shutil.rmtree('{}'.format(args.path))

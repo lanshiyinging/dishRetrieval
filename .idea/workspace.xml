@@ -45,7 +45,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/network/get_hashcode_v2ep_double.py">
+        <entry file="file://$PROJECT_DIR$/pytorch-dlbh/dish_dlbh/evaluation_mini_12.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="625">
               <caret line="96" column="67" selection-start-line="96" selection-start-column="67" selection-end-line="96" selection-end-column="67" />
@@ -252,11 +252,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pytorch-dlbh/dish_dlbh" />
       <recent name="$PROJECT_DIR$/Pytorch-Image-Retrieval-master" />
       <recent name="$PROJECT_DIR$/network" />
       <recent name="$PROJECT_DIR$/web/app" />
       <recent name="$PROJECT_DIR$/network/model_web" />
-      <recent name="$PROJECT_DIR$/crawl" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -271,7 +271,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.generate_evaluate_scrip">
+  <component name="RunManager" selected="Python.generate_train_scrip">
     <configuration name="generate_evaluate_scrip" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="dishRetrieval" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -384,7 +384,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.generate_evaluate_scrip" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.preDealPic" />
         <item itemvalue="Python.get_hashcode_v2" />
@@ -691,7 +690,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pytorch-dlbh/dish_dlbh/net.py">
+    <entry file="file://$PROJECT_DIR$/network/retrieval_v2_web_mini.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="22" selection-start-line="22" selection-end-line="22" />
