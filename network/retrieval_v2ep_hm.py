@@ -104,7 +104,8 @@ def main():
             candi_pic_hashcode = v.split(',')
             temp_dis = 0
             for code1, code2 in zip(candi_pic_hashcode, test_pic_hashcode):
-                temp_dis += abs(float(code1)-float(code2))
+                if code1 != code2:
+                    temp_dis += 1
             hm_dis_list[k] = temp_dis
         sort_hm_dis = sorted(hm_dis_list.items(), key=lambda x: x[1])
         for i in range(5):

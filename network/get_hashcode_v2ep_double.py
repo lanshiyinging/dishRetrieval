@@ -59,7 +59,7 @@ def main():
         os.makedirs(output_dir)
     #already_get = open(output_dir+'train_output.txt', 'r').read()
     with tf.Session() as sess:
-        saver = tf.train.import_meta_graph(model_dir+'model-final.meta')
+        saver = tf.train.import_meta_graph(model_dir+'model.meta')
         saver.restore(sess, tf.train.latest_checkpoint(model_dir))
         #y_conv = dsh_dishNet.dsh_dish_net(x)
         y_conv = tf.get_collection('y_conv')[0]
